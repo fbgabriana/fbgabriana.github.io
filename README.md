@@ -1,4 +1,4 @@
-# Bamm's Repository
+# Bamm's KodeGo Repository
 
 This is Bamm's public repository for KodeGo bootcamp projects.
 
