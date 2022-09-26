@@ -213,6 +213,10 @@ main aside div.boxinfo p {
 	margin: 0;
 	padding: 0;
 }
+aside.empty {
+	opacity: 0;
+	min-width: 25em;
+}
 
 /* The footer */
 footer>p {
