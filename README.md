@@ -8,4 +8,4 @@ It contains the following folders:
 
 * [miniproject1](miniproject1/) - Philippine Astronomy Magazine, a requirement for KodeGo's web development course.
 
-* [harmonicmeans](harmonicmeans/) - Web site for his sister's musical band.
+* [harmonicmeans](harmonicmeans/) - Website for his sister's musical band.
