@@ -2,7 +2,7 @@
 
 This is Bamm's public repository for KodeGo bootcamp projects.
 
-It contains the following folders:
+It contains the following subfolders:
 
 * [proposals](proposals/) - Bamm's KodeGo project proposals.
 
