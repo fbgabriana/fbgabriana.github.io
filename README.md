@@ -2,11 +2,11 @@
 
 This is Bamm's public repository for KodeGo bootcamp projects.
 
-It contains the following:
+It contains the following folders:
 
-* [proposals](proposals) - Bamm's KodeGo project proposals.
+* [proposals](proposals/index.md) - Bamm's KodeGo project proposals.
 
-* [miniproject1](miniproject1/template.html) - Philippine Astronomy Magazine, a requirement for KodeGo's web development course.
+* [miniproject1](miniproject1/index.md) - Philippine Astronomy Magazine, a requirement for KodeGo's web development course.
 
-* harmonicmeans - Web site for his sister's musical band.
+* [harmonicmeans](harmonicmeans/index.md) - Web site for his sister's musical band.
 
