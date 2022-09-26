@@ -1,0 +1,66 @@
+@import "woff.css";
+
+@page {
+	margin: 20mm 25mm;
+}
+
+/* Don't display the semantic tag labels */
+.semantic-tag-label {display: none;}
+
+/* Don't display the nav bar */
+nav {display: none;}
+
+/* Styles for document content */
+body {
+	margin: 0;
+}
+header h1 {
+	text-align: center;
+	margin: 0 0 0.5em 0;
+}
+header h1 a {
+	text-decoration: inherit;
+	color: inherit;
+}
+article {
+	margin: 0;
+	font-size: 1rem;
+}
+article p {
+	margin: 0.1em 0;
+	line-height: 1.5em;
+	max-width: 40em;
+}
+article p+p {
+	text-indent: 3em;
+}
+article p:first-of-type::first-letter {
+	float: left;
+	font-size: 4em;
+	font-weight: bold;
+	line-height: 0.5em;
+	margin: 0.1em 0.1em -0.1em -0.1em;
+	opacity: 0.75;
+}
+article p:first-of-type>span:first-child {
+	text-transform: uppercase;
+	font-size: 0.85em;
+	letter-spacing: 0.17em;
+}
+aside div {
+	margin: 20pt 48pt;
+	margin-top: 30pt;
+}
+aside div p {
+	border: 1pt solid gray;
+	padding: 10pt;
+}
+footer>p {
+	margin: 0;
+	height: 45pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: smaller;
+}
+

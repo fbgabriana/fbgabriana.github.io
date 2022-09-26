@@ -1,0 +1,226 @@
+@import "woff.css";
+
+/* Label the semantic tags */
+.semantic-tag-label {position: absolute; font-size: smaller; opacity: 0.0;}
+
+/* Define backgrounds */
+body>header {
+	background-color: hsl(215, 58.3333%, 12.5000%);
+	background-image: url("svg/header-bg.svg"), linear-gradient(90deg, hsl(215, 58.3333%, 12.5000%) 0%, hsl(215, 50.0000%, 33.8975%) 75%, hsl(215, 66.6667%, 55.2950%) 100%);
+	background-position: center top;
+	background-size: cover;
+	color: #ffffe0;
+}
+body>footer {
+	background-color: hsl(215, 50.0000%, 12.5000%);
+	background-image: url("svg/footer-bg.svg"), linear-gradient(90deg, hsl(215, 50.0000%, 12.5000%) 0%, hsl(215, 25.0000%, 33.8975%) 55%, hsl(215, 50.0000%, 12.5000%) 120%);
+	background-position: center top;
+	background-size: cover;
+	color: #ffffe0;
+}
+body>footer p {
+	background-color: hsla(215, 50.0000%, 12.5000%, 0.25);
+}
+body>aside {
+	background-color: white;
+	background-image: url("svg/sidebar-bg.svg"), linear-gradient(90deg, hsl(36.70, 60.9375%, 98.0000%) 0%, hsl(42.35, 60.9375%, 98.0000%) 60%, transparent 100%);
+	background-position: center top;
+	background-size: cover;
+	color: #202020;
+}
+body>aside nav {
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 10px 10px 80px rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+}
+body>main   {
+	background-color: white;
+	color: #202020;
+	box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
+}
+body>main>section {background-color: white; color: #202020;}
+body>main>aside   {background-color: white; color: #202020;}
+
+/* Styles for document content */
+body {
+	margin: 0;
+	height: 100vh;
+}
+header h1 {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin: 0;
+	height: 80px;
+	font-size: 2rem;
+	color: hsl(215, 25.0000%, 70.588%);
+	padding-left: 20px;
+	text-shadow: 0 0 10px hsla(35, 50.0000%, 75.0000%, 0.75);
+}
+header h1 a {
+	text-decoration: inherit;
+	color: inherit;
+}
+header h1 a:hover {
+	text-shadow: 0 0 20px hsla(35, 50.0000%, 75.0000%, 1);
+}
+header nav {
+	text-align: center;
+}
+header nav ul {
+	margin: 0 20px;
+	padding: 0;
+}
+header nav li {
+	display: inline-block;
+}
+header nav li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(215, 65.500%, 25.0000%);
+	color: #e8e8e8;
+	text-decoration: none;
+	height: 2em;
+	padding: 0 1em;
+	min-width: 4em;
+	font-size: 0.8rem;
+	border-bottom: 1px solid rgba(0,0,0,0.75);
+	border-left: 1px solid rgba(0,0,0,0.75);
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	line-height: 1.25em;
+}
+header nav li a:hover {
+	background-color: hsl(215, 50.0000%, 33.8975%);
+	box-shadow: 0 0 20px hsla(35, 50.0000%, 75.0000%, 0.25);
+	color: #f0f0e8;
+}
+header nav li a:active {
+	color: #ffff80;
+}
+aside nav {
+	min-width: 150px;
+	max-width: 300px;
+	padding: 10px 20px;
+}
+aside nav>ul {
+	list-style: none;
+	padding: 0;
+	margin: 1em auto;
+}
+aside nav>ul li a {
+	display: block;
+	padding: 0.25em 1em;
+	background-color: #eeeeee;
+	color: hsl(215, 66.6667%, 50.0000%);
+	margin: 4px;
+	text-decoration: none;
+	line-height: 1.5em;
+	border-right: 1px solid transparent;
+}
+aside nav>ul li a:hover {
+	background-color: #f6f6f6;
+	border-right: 1px solid hsla(215, 66.6667%, 50.0000%, 0.5);
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+main aside {
+	width: 180px;
+}
+main aside div.boxinfo {
+	box-sizing: border-box;
+	margin: 20px;
+	border: 1px solid #c0c0c0;
+	padding: 1em;
+	min-width: 150px;
+	background-color: #f0f0f0;
+	font-size: 1rem;
+	box-shadow: 1px 1px 2px #909090;
+}
+main aside div.boxinfo p {
+	margin: 0;
+	padding: 0;
+}
+main article {
+	margin: 0 auto;
+	padding: 20px;
+	font-size: 1rem;
+	max-width: 40em;
+}
+article h2 {
+	margin: 0 0 1em 0;
+}
+article p {
+	margin: 0.5em 0;
+	line-height: 1.5em;
+}
+article p+p {
+	text-indent: 3em;
+}
+article p:first-of-type::first-letter {
+	float: left;
+	font-size: 4em;
+	font-weight: bold;
+	line-height: 0.75em;
+	margin: 0.05em 0.05em -0.05em -0.1em;
+	opacity: 0.75;
+}
+article p:first-of-type>span:first-child {
+	text-transform: uppercase;
+	font-size: 0.85em;
+	letter-spacing: 0.17em;
+}
+footer>p {
+	margin: 0;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: smaller;
+	color: hsl(215, 50.0000%, 75.0000%);
+	text-shadow: 0 0 1em hsla(35, 50.0000%, 75.0000%, 0.5);
+}
+
+@media screen and (min-width: calc(150px + 0.6*40em + 4*20px) ) {
+
+	/* Switch flex direction when wide enough */
+	main {
+		flex-direction: row;
+	}
+	main>section {flex: 1 1 auto;}
+	main>aside   {flex: 0 0 25%;}
+
+	main aside div.boxinfo {
+		margin: 20px;
+	}
+	main aside div.boxinfo:first-of-type {
+		margin-top: 40px;
+	}
+
+	@media screen and (min-width: calc(2*150px + 0.6*40em + 6*20px) ) {
+
+		/* Code to define the grid */
+		body {
+			display: grid;
+			grid-template-areas:
+			"header header header"
+			"aside   main   main"
+			"footer footer footer";
+		}
+		body>header {grid-area: header;}
+		body>footer {grid-area: footer;}
+		body>main   {grid-area: main;}
+		body>aside  {grid-area: aside;}
+
+		header nav {
+			text-align: right;
+		}
+	}
+}
+
