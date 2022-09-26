@@ -1,5 +1,5 @@
 # Harmonic Means
 
-My sister asked me to make this website for her musical band _Harmonic Means_.
+When my sister learned that I was taking a web developer course at KodeGo, she asked me to make a website for her musical band _Harmonic Means_.
 
 * Will be uploaded soon.
