@@ -92,13 +92,13 @@ main section {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	background-image: url("/images/page-background.jpg");
+	background-image: url("./images/page-background.jpg");
 	background-position: top center;
 	background-size: cover;
 }
 
 main section#home {
-	background-image: url("/images/opening-background-anim.gif"), url("/images/opening-background.jpg");
+	background-image: url("./images/opening-background-anim.gif"), url("./images/opening-background.jpg");
 	background-position: top center;
 	background-size: cover;
 }
