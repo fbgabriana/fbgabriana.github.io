@@ -293,7 +293,7 @@ article figure {
 	}
 }
 
-@media screen and (min-width: calc(150px + 0.6*40em + 4*20px) ) {
+@media screen and (min-width: 600px ) {
 
 	/* Switch flex direction when wide enough */
 	main {
@@ -310,7 +310,7 @@ article figure {
 		order: -1;
 	}
 
-	@media screen and (min-width: calc(2*150px + 0.6*40em + 6*20px) ) {
+	@media screen and (min-width: 900px ) {
 
 		/* Code to define the grid */
 		body {
