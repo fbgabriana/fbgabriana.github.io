@@ -213,10 +213,6 @@ main aside div.boxinfo p {
 	margin: 0;
 	padding: 0;
 }
-aside.empty {
-	opacity: 0;
-	min-width: 25em;
-}
 
 /* The footer */
 footer>p {
@@ -290,6 +286,42 @@ article figure {
 	margin: 1em;
 	font-size: smaller;
 }
+article table {
+	border-collapse: collapse;
+	font-size: 1em;
+	margin: 0.5em 0;
+}
+article table th,
+article table td {
+	border: 1px solid gray;
+	text-align: center;
+	padding: 0.2em;
+}
+article table th {
+	white-space: nowrap;
+	background-color: hsl(214, 50.0000%, 87.500%);
+	color: hsl(0, 0.0000%, 30.500%);
+}
+article table tr th:first-child {
+	font-weight: normal;
+	font-style: italic;
+	background-color: hsl(214, 50.0000%, 91.500%);
+	color: hsl(0, 0.0000%, 20.000%);
+}
+article table tr:first-child th {
+	font-weight: bold;
+	font-style: none;
+	background-color: hsl(214, 50.0000%, 87.500%);
+	color: hsl(0, 0.0000%, 30.500%);
+}
+article div.table-container {
+	display: flex;
+	flex-direction: column;
+}
+article div.table-container table+p {
+	text-align: right;
+	font-size: 85%;
+}
 
 @media screen and (max-width: 500px) {
 	header nav li {
@@ -313,6 +345,9 @@ article figure {
 	main>aside .sectionlist {
 		order: -1;
 	}
+	main>aside.empty {
+		opacity: 0;
+	}
 
 	@media screen and (min-width: 900px ) {
 
@@ -324,6 +359,7 @@ article figure {
 			"aside   main   main"
 			"footer footer footer";
 			height: 100vh;
+			grid-template-columns: 25vw 1fr;
 		}
 		body>header {grid-area: header;}
 		body>footer {grid-area: footer;}

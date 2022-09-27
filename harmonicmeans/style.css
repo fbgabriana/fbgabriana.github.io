@@ -118,6 +118,26 @@ main article {
 	box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.4);
 }
 
+main article form {
+	margin: 1em auto;
+	display: grid;
+	grid-template-columns: 5em 1fr;
+	grid-gap: 0.5em;
+}
+
+main article form label {
+	text-align: right;
+	padding-top: 0.25em;
+}
+
+main article form input {
+	min-height: 1.5em;
+}
+
+main article form button {
+	min-height: 2em;
+}
+
 footer {
 	background-color: black;
 	color: #b9b9b9;
