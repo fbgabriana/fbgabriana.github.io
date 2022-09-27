@@ -248,7 +248,7 @@ article a:active {
 	text-decoration: none;
 	color: hsl(214, 65.0000%, 50.0000%);
 }
-article hr.print-page-break {
+article hr.page-break {
 	display: none;
 }
 

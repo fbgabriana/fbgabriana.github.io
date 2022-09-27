@@ -84,7 +84,7 @@ article table td {
 article table tr th:first-child {
 	border-left: 1pt solid gray;
 }
-article hr.print-page-break {
+article hr.page-break {
 	page-break-after: always;
 }
 
