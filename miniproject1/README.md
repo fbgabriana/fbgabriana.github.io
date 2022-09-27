@@ -6,5 +6,5 @@
 
 **_Update_: Uploaded website with placeholder pages.**
 
-* [View what I have so far (under construction)](home/)
+* [See what I have so far](home/)
 
