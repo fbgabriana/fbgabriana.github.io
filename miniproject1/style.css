@@ -1,0 +1,337 @@
+@import "woff.css";
+
+/* Label the semantic tags */
+.semantic-tag-label {position: absolute; font-size: smaller; opacity: 0.0;}
+
+/* Define backgrounds */
+body>header {
+	background-color: hsl(214, 58.3333%, 12.5000%);
+	background-image: url("svg/header-bg.svg"), linear-gradient(90deg, hsl(214, 58.3333%, 12.5000%) 0%, hsl(214, 50.0000%, 33.8975%) 75%, hsl(214, 66.6667%, 55.2950%) 100%);
+	background-position: center top;
+	background-size: cover;
+	color: #ffffe0;
+}
+body>footer {
+	background-color: hsl(214, 50.0000%, 12.5000%);
+	background-image: url("svg/footer-bg.svg"), linear-gradient(90deg, hsl(214, 50.0000%, 12.5000%) 0%, hsl(214, 25.0000%, 33.8975%) 55%, hsl(214, 50.0000%, 12.5000%) 120%);
+	background-position: center top;
+	background-size: cover;
+	color: #ffffe0;
+}
+body>footer p {
+	background-color: hsla(214, 50.0000%, 12.5000%, 0.25);
+}
+body>aside {
+	background-color: white;
+	background-image: url("svg/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
+	background-position: center top;
+	background-size: cover;
+	color: #202020;
+}
+body>aside nav {
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 10px 10px 80px rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+}
+body>main   {
+	background-color: white;
+	color: #202020;
+	box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
+}
+body>main>section {background-color: white; color: #202020;}
+body>main>aside   {background-color: white; color: #202020;}
+
+/* Styles for document content */
+body {
+	margin: 0;
+}
+
+/* The header */
+header h1 {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	white-space: nowrap;
+	margin: 0;
+	height: 80px;
+	padding: 0 20px;
+	font-size: 48px;
+	color: hsl(214, 33.3333%, 75.0000%);
+	font-family: "Arial Narrow";
+}
+header h1 a {
+	text-decoration: inherit;
+	color: inherit;
+	background-image: radial-gradient(hsla(214, 50%, 20%, 0.2) 0%, hsla(214, 50%, 20%, 0.1) 50%, transparent 75%);
+}
+header h1 a:hover {
+	background-image: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.1) 50%, transparent 75%);
+}
+header h1 a img {
+	vertical-align: text-top;
+	margin-top: 0.25em;
+	height: 1.25em;
+}
+header nav {
+	text-align: center;
+}
+header #menubtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	display: none;
+	background-image: radial-gradient(hsla(214, 45%, 45%, 0.25) 0%, hsla(214, 45%, 45%, 0.10) 50%, transparent 100%);
+}
+header #menubtn:hover {
+	background-image: radial-gradient(hsla(214, 20%, 90%, 0.25) 0%, hsla(214, 20%, 90%, 0.10) 50%, transparent 80%);
+}
+header nav ul {
+	margin: 0 20px;
+	padding: 0;
+}
+header nav li {
+	display: inline-block;
+	margin: 1px 0;
+}
+header nav li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	min-height: 2em;
+	min-width: 4em;
+	padding: 0 1em;
+	font-size: 0.83333rem;
+	border-bottom: 1px solid rgba(0,0,0,0.75);
+	border-left: 1px solid rgba(0,0,0,0.75);
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	background-color: hsl(214, 65.500%, 25.0000%);
+	color: hsl(77.88, 34.500%, 90.6250%);
+}
+header nav li a:hover {
+	background-color: hsl(214, 50.0000%, 33.8975%);
+	color: hsl(77.88, 62.2222%, 93.3333%);
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
+}
+header nav li a:active {
+	color: #ffff80;
+}
+header nav li:first-child a {
+	border-top-left-radius: 0.5em;
+}
+
+/* The left side navigation bar */
+aside nav {
+	padding: 10px;
+}
+aside nav>ul {
+	list-style: none;
+	padding: 0;
+	margin: 1em auto;
+}
+aside nav>ul>li:first-child a {
+	border-top-left-radius: 6px;
+}
+aside nav>ul li a {
+	display: block;
+	padding: 0.25em 1em;
+	margin: 0.25em;
+	line-height: 1.5em;
+	text-decoration: none;
+	border-right: 1px solid transparent;
+	background-color: hsl(39.525, 6.6667%, 93.3333%);
+	color: hsl(214, 66.6667%, 55.2950%);
+}
+aside nav>ul li a:hover {
+	border-right: 1px solid hsla(214, 66.6667%, 50.0000%, 0.5);
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	background-color: hsl(39.525, 6.6667%, 94.5000%);
+	color: hsl(214, 66.6667%, 62.2000%);
+}
+aside nav>ul li a:active {
+	border-right: 1px solid hsla(214, 66.6667%, 45.0000%, 0.5);
+	background-color: hsl(214, 6.6667%, 93.3333%);
+	color: hsl(214, 66.6667%, 40.0000%);
+}
+
+/* The main content */
+main {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+main article {
+	margin: 0 auto;
+	padding: 20px;
+	font-size: 1rem;
+	max-width: 40em;
+}
+
+/* The right sidebar */
+main aside div.sectionlist h4 {
+	margin: 20px;
+}
+main aside div.sectionlist ul {
+	margin: 20px;
+	padding: 0 20px;
+	color: gray;
+}
+main aside div.sectionlist ul li {
+	margin: 1em 0;
+	padding: 0;
+}
+main aside div.sectionlist ul li a {
+	color: hsl(214, 80.0000%, 40.0000%);
+}
+main aside div.sectionlist ul li a:hover {
+	color: hsl(214, 80.0000%, 55.0000%);
+}
+main aside div.sectionlist ul li a:active {
+	color: hsl(214, 80.0000%, 50.0000%);
+	text-decoration: none;
+}
+main aside div.boxinfo {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 10px 20px;
+	border: 1px solid hsl(39.525, 15.000%, 75.000%);
+	padding: 1em;
+	min-width: 150px;
+	background-color: hsl(39.525, 50.000%, 93.750%);
+	font-size: 1rem;
+	box-shadow: 1px 1px 2px hsla(39.525, 10.000%, 56.250%, 0.5);
+	border-top-left-radius: 13px;
+	border-top-right-radius: 2px;
+	border-bottom-left-radius: 3px;
+}
+main aside div.boxinfo p {
+	margin: 0;
+	padding: 0;
+}
+aside.empty {
+	opacity: 0;
+	min-width: 25em;
+}
+
+/* The footer */
+footer>p {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 1em;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.83333em;
+	color: hsl(214, 40.0000%, 80.0000%);
+	text-align: center;
+	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
+}
+
+/* Typography */
+
+article {
+	font-size: 1rem;
+}
+article h2 {
+	margin: 0 0 0.71em 0;
+	font-size: 1.73em;
+}
+article h3 {
+	margin: 1em 0 0 0;
+	font-size: 1.17em;
+}
+article p {
+	margin: 0.5em 0;
+	line-height: 1.5em;
+	text-indent: 3em;
+}
+article p:first-of-type {
+	text-indent: 0;
+}
+article p:first-of-type::first-letter {
+	float: left;
+	font-size: 4em;
+	font-weight: bold;
+	line-height: 0.75em;
+	margin: 0.05em 0.05em -0.05em -0.1em;
+	opacity: 0.75;
+}
+article p:first-of-type>span:first-child {
+	text-transform: uppercase;
+	font-size: 0.85em;
+	letter-spacing: 0.17em;
+}
+article a {
+	text-decoration: none;
+	color: hsl(214, 65.0000%, 40.0000%);
+}
+article a:hover {
+	text-decoration: underline;
+	color: hsl(214, 65.0000%, 55.0000%);
+}
+article a:active {
+	text-decoration: none;
+	color: hsl(214, 65.0000%, 50.0000%);
+}
+article img {
+	display: block;
+	width: 240px;
+	height: 180px;
+	background-color: hsl(34, 13.3333%, 87.5000%);
+}
+article figure {
+	float: right;
+	margin: 1em;
+	font-size: smaller;
+}
+
+@media screen and (max-width: 500px) {
+	header nav li {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 600px ) {
+
+	/* Switch flex direction when wide enough */
+	main {
+		flex-direction: row;
+	}
+	main>section {flex: 1 1 auto;}
+	main>aside   {flex: 0 0 30%;}
+
+	main>aside {
+		display: flex;
+		flex-direction: column;
+	}
+	main>aside .sectionlist {
+		order: -1;
+	}
+
+	@media screen and (min-width: 900px ) {
+
+		/* Code to define the grid */
+		body {
+			display: grid;
+			grid-template-areas:
+			"header header header"
+			"aside   main   main"
+			"footer footer footer";
+			height: 100vh;
+		}
+		body>header {grid-area: header;}
+		body>footer {grid-area: footer;}
+		body>main   {grid-area: main;}
+		body>aside  {grid-area: aside;}
+
+		header nav {
+			text-align: right;
+		}
+	}
+}
