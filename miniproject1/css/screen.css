@@ -314,6 +314,12 @@ article table tr:first-child th {
 	background-color: hsl(214, 50.0000%, 87.500%);
 	color: hsl(0, 0.0000%, 30.500%);
 }
+article table.table-row-striped tr:nth-child(even) td {
+	background: hsl(214, 0.000%, 92.1875%);
+}
+article table.table-row-striped tr:nth-child(odd) td {
+	background: hsl(214, 0.000%, 100%);
+}
 article div.table-container {
 	display: flex;
 	flex-direction: column;
