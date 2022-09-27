@@ -377,11 +377,12 @@ article form button {
 		body {
 			display: grid;
 			grid-template-areas:
-			"header header header"
-			"aside   main   main"
-			"footer footer footer";
+			"header header"
+			"aside   main"
+			"footer footer";
 			height: 100vh;
-			grid-template-columns: 25vw 1fr;
+			grid-template-columns: 25vw auto;
+			grid-template-rows: 110px auto 60px;
 		}
 		body>header {grid-area: header;}
 		body>footer {grid-area: footer;}
