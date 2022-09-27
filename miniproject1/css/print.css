@@ -38,6 +38,7 @@ header h1 a img {
 /* The main content */
 main article {
 	margin: 0;
+	max-width: 40em;
 }
 
 /* The right sidebar */

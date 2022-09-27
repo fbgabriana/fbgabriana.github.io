@@ -167,11 +167,10 @@ main {
 	overflow: auto;
 }
 main article {
-	margin: 0 auto;
-	padding: 20px;
-	font-size: 1rem;
 	max-width: 40em;
+	margin: 0 auto;
 	margin-bottom: 2em;
+	padding: 20px;
 }
 
 /* The right sidebar */
