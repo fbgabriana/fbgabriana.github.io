@@ -53,21 +53,43 @@
 		</section>
 		<aside>
 			<span class="semantic-tag-label">Aside</span>
-			<div class="boxinfo">
-				<p>Additional information related to, but not part of, the article.</p>
-			</div>
-			<div class="boxinfo">
-				<p>Additional information related to, but not part of, the article.</p>
-			</div>
 			<div class="sectionlist">
-				<h4>More articles about the solar system</h4>
-				<ul>
-					<li><a href="#">Sed ut perspiciatis unde omnis</a></li>
-					<li><a href="#">Ut enim ad minima veniam, quis nostrum exercitationem</a></li>
-					<li><a href="#">Nemo enim ipsam voluptatem</a></li>
-					<li><a href="#">Quis autem vel eum iure reprehenderit</a></li>
+				<h4>Choose a solar system object</h4>
+				<ul id="solarlist">
+					<li>Sun</li>
+					<li>Mercury</li>
+					<li>Venus</li>
+					<li>Earth</li>
+					<li>Mars</li>
+					<li>Jupiter</li>
+					<li>Saturn</li>
+					<li>Uranus</li>
+					<li>Neptune</li>
+					<li>Pluto</li>
+					<li>Eris</li>
+					<li>Ceres</li>
+					<li>Haumea</li>
+					<li>Makemake</li>
+					<li>Sedna</li>
+					<li>Quaoar</li>
+					<li>Orcus</li>
+					<li>Gonggong</li>
+					<li>Varuna</li>
 				</ul>
 			</div>
+			<style>
+				#solarlist li {margin: 0 1em}
+				#solarlist li a {text-decoration: none;}
+			</style>
+			<script>
+				var solarlist = document.getElementById("solarlist");
+				var li = solarlist.getElementsByTagName("li");
+				var solarname = "";
+				for (i = 0; i < li.length; i++) {
+					solarname = li[i].innerHTML;
+					li[i].innerHTML = "<a href=\"" + solarname.toLowerCase() + ".html\">" + solarname + "</a>"
+				}
+			</script>
 		</aside>
 	</main>
 	<aside>
