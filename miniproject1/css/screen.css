@@ -255,7 +255,7 @@ article p:first-of-type::first-letter {
 	font-size: 4em;
 	font-weight: bold;
 	line-height: 0.75em;
-	margin: 0.05em 0.05em -0.05em -0.1em;
+	margin: 0.05em 0.05em -0.05em 0;
 	opacity: 0.75;
 }
 article p:first-of-type>span:first-child {
