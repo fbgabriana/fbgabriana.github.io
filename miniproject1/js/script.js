@@ -29,8 +29,15 @@ function windowResize() {
 	}
 }
 
+function setDocumentTitle() {
+	heading = document.getElementsByTagName("article")[0].getElementsByTagName("h2")[0];
+	document.title = "Philippine Astronomy: " + heading.innerHTML;
+	console.log(location.href)
+}
+
 window.onload = function() {
 	windowResize();
+	setDocumentTitle();
 }
 
 window.onresize = function() {
