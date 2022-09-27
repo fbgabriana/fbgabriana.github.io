@@ -6,5 +6,5 @@
 
 **_Update_: Uploaded website with placeholder pages.**
 
-* [View the site](home/)
+* [View the site (under construction)](home/)
 
