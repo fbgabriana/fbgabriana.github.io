@@ -3,3 +3,8 @@
 **_Update_: I have finished the template for this project.**
 
 * [View the template](template.html)
+
+**_Update_: Uploaded website with placeholder pages.**
+
+* [View the site](home/)
+
