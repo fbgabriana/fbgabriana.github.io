@@ -328,6 +328,22 @@ article div.table-container table+p {
 	text-align: right;
 	font-size: 85%;
 }
+article form {
+	margin: 1em auto;
+	display: grid;
+	grid-template-columns: 10em 1fr;
+	grid-gap: 0.5em;
+}
+article form label {
+	text-align: right;
+	padding-top: 0.25em;
+}
+article form input {
+	min-height: 1.5em;
+}
+article form button {
+	min-height: 2em;
+}
 
 @media screen and (max-width: 500px) {
 	header nav li {
