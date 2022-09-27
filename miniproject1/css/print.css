@@ -1,4 +1,5 @@
 @import "woff.css";
+@import "typography.css";
 
 @page {
 	margin: 0.8in 1.0in;
@@ -34,6 +35,16 @@ header h1 a img {
 	height: 1.25em;
 }
 
+/* The main content */
+main article {
+	margin: 0;
+}
+
+/* The right sidebar */
+aside div.boxinfo:first-of-type {
+	margin-top: 20px;
+}
+
 /* The footer */
 footer>p {
 	margin: 0;
@@ -42,11 +53,6 @@ footer>p {
 	align-items: center;
 	justify-content: center;
 	font-size: smaller;
-}
-
-/* Boxed info */
-aside div.boxinfo:first-of-type {
-	margin-top: 20px;
 }
 
 aside div.boxinfo {
@@ -64,104 +70,20 @@ aside div.boxinfo p {
 	padding: 0;
 }
 
-/* Typography */
+/* Print-specific Typography */
 
-article {
-	margin: 0;
-	font-size: 1rem;
-}
-article h2 {
-	margin: 0 0 0.71em 0;
-	font-size: 1.73em;
-}
-article h3 {
-	margin: 1em 0 0 0;
-	font-size: 1.17em;
-}
-article p {
-	margin: 0.1em 0;
-	line-height: 1.5em;
-	max-width: 40em;
-	text-indent: 3em;
-}
-article p:first-of-type {
-	text-indent: 0;
-}
-article p:first-of-type::first-letter {
-	float: left;
-	font-size: 4em;
-	font-weight: bold;
+article>p:first-of-type::first-letter {
 	line-height: 0.5em;
 	margin: 0.1em 0.1em -0.1em -0.1em;
-	opacity: 0.75;
-}
-article p:first-of-type>span:first-child {
-	text-transform: uppercase;
-	font-size: 0.85em;
-	letter-spacing: 0.17em;
-}
-article img {
-	display: block;
-	width: 240px;
-	height: 180px;
-	background-color: #e0e0e0;
-}
-article figure {
-	float: right;
-	margin: 1em;
-	font-size: smaller;
-}
-article table {
-	border-collapse: collapse;
-	font-size: 1em;
-	margin: 0.5em 0;
 }
 article table th,
 article table td {
 	border: 0.5pt solid gray;
-	text-align: center;
-	padding: 0.2em;
-}
-article table th {
-	white-space: nowrap;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
 }
 article table tr th:first-child {
-	font-weight: normal;
-	font-style: italic;
-	background-color: hsl(214, 50.0000%, 91.500%);
-	color: hsl(0, 0.0000%, 20.000%);
 	border-left: 1pt solid gray;
 }
-article table tr:first-child th {
-	font-weight: bold;
-	font-style: none;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
-}
-article div.table-container {
-	display: flex;
-	flex-direction: column;
-}
-article div.table-container table+p {
-	text-align: right;
-	font-size: 85%;
-}
-article form {
-	margin: 1em auto;
-	display: grid;
-	grid-template-columns: 10em 1fr;
-	grid-gap: 0.5em;
-}
-article form label {
-	text-align: right;
-	padding-top: 0.25em;
-}
-article form input {
-	min-height: 1.5em;
-}
-article form button {
-	min-height: 2em;
+article hr.print-page-break {
+	page-break-after: always;
 }
 

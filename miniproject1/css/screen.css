@@ -1,4 +1,5 @@
 @import "woff.css";
+@import "typography.css";
 
 /* Label the semantic tags */
 .semantic-tag-label {position: absolute; font-size: smaller; opacity: 0.0;}
@@ -229,39 +230,11 @@ footer>p {
 	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
 }
 
-/* Typography */
+/* Screen-specific Typography */
 
-article {
-	font-size: 1rem;
-}
-article h2 {
-	margin: 0 0 0.71em 0;
-	font-size: 1.73em;
-}
-article h3 {
-	margin: 1em 0 0 0;
-	font-size: 1.17em;
-}
-article p {
-	margin: 0.5em 0;
-	line-height: 1.5em;
-	text-indent: 3em;
-}
-article p:first-of-type {
-	text-indent: 0;
-}
-article p:first-of-type::first-letter {
-	float: left;
-	font-size: 4em;
-	font-weight: bold;
+article>p:first-of-type::first-letter {
 	line-height: 0.75em;
 	margin: 0.05em 0.05em -0.05em -0.1em;
-	opacity: 0.75;
-}
-article p:first-of-type>span:first-child {
-	text-transform: uppercase;
-	font-size: 0.85em;
-	letter-spacing: 0.17em;
 }
 article a {
 	text-decoration: none;
@@ -275,74 +248,8 @@ article a:active {
 	text-decoration: none;
 	color: hsl(214, 65.0000%, 50.0000%);
 }
-article img {
-	display: block;
-	width: 240px;
-	height: 180px;
-	background-color: hsl(34, 13.3333%, 87.5000%);
-}
-article figure {
-	float: right;
-	margin: 1em;
-	font-size: smaller;
-}
-article table {
-	border-collapse: collapse;
-	font-size: 1em;
-	margin: 0.5em 0;
-}
-article table th,
-article table td {
-	border: 1px solid gray;
-	text-align: center;
-	padding: 0.2em;
-}
-article table th {
-	white-space: nowrap;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
-}
-article table tr th:first-child {
-	font-weight: normal;
-	font-style: italic;
-	background-color: hsl(214, 50.0000%, 91.500%);
-	color: hsl(0, 0.0000%, 20.000%);
-}
-article table tr:first-child th {
-	font-weight: bold;
-	font-style: none;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
-}
-article table.table-row-striped tr:nth-child(even) td {
-	background: hsl(214, 0.000%, 92.1875%);
-}
-article table.table-row-striped tr:nth-child(odd) td {
-	background: hsl(214, 0.000%, 100%);
-}
-article div.table-container {
-	display: flex;
-	flex-direction: column;
-}
-article div.table-container table+p {
-	text-align: right;
-	font-size: 85%;
-}
-article form {
-	margin: 1em auto;
-	display: grid;
-	grid-template-columns: 10em 1fr;
-	grid-gap: 0.5em;
-}
-article form label {
-	text-align: right;
-	padding-top: 0.25em;
-}
-article form input {
-	min-height: 1.5em;
-}
-article form button {
-	min-height: 2em;
+article hr.print-page-break {
+	display: none;
 }
 
 @media screen and (max-width: 500px) {
