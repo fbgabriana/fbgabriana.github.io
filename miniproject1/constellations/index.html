@@ -53,21 +53,113 @@
 		</section>
 		<aside>
 			<span class="semantic-tag-label">Aside</span>
-			<div class="boxinfo">
-				<p>Additional information related to, but not part of, the article.</p>
-			</div>
-			<div class="boxinfo">
-				<p>Additional information related to, but not part of, the article.</p>
-			</div>
 			<div class="sectionlist">
-				<h4>More articles on Constellation</h4>
-				<ul>
-					<li><a href="#">Sed ut perspiciatis unde omnis</a></li>
-					<li><a href="#">Ut enim ad minima veniam, quis nostrum exercitationem</a></li>
-					<li><a href="#">Nemo enim ipsam voluptatem</a></li>
-					<li><a href="#">Quis autem vel eum iure reprehenderit</a></li>
+				<h4>Choose a constellation</h4>
+				<ul id="constellist">
+					<li>Andromeda</li>
+					<li>Antlia</li>
+					<li>Apus</li>
+					<li>Aquarius</li>
+					<li>Aquila</li>
+					<li>Ara</li>
+					<li>Aries</li>
+					<li>Auriga</li>
+					<li>Boötes</li>
+					<li>Caelum</li>
+					<li>Camelopardalis</li>
+					<li>Cancer</li>
+					<li>Canes Venatici</li>
+					<li>Canis Major</li>
+					<li>Canis Minor</li>
+					<li>Capricornus</li>
+					<li>Carina</li>
+					<li>Cassiopeia</li>
+					<li>Centaurus</li>
+					<li>Cepheus</li>
+					<li>Cetus</li>
+					<li>Chamaeleon</li>
+					<li>Circinus</li>
+					<li>Columba</li>
+					<li>Coma Berenices</li>
+					<li>Corona Australis</li>
+					<li>Corona Borealis</li>
+					<li>Corvus</li>
+					<li>Crater</li>
+					<li>Crux</li>
+					<li>Cygnus</li>
+					<li>Delphinus</li>
+					<li>Dorado</li>
+					<li>Draco</li>
+					<li>Equuleus</li>
+					<li>Eridanus</li>
+					<li>Fornax</li>
+					<li>Gemini</li>
+					<li>Grus</li>
+					<li>Hercules</li>
+					<li>Horologium</li>
+					<li>Hydra</li>
+					<li>Hydrus</li>
+					<li>Indus</li>
+					<li>Lacerta</li>
+					<li>Leo</li>
+					<li>Leo Minor</li>
+					<li>Lepus</li>
+					<li>Libra</li>
+					<li>Lupus</li>
+					<li>Lynx</li>
+					<li>Lyra</li>
+					<li>Mensa</li>
+					<li>Microscopium</li>
+					<li>Monoceros</li>
+					<li>Musca</li>
+					<li>Norma</li>
+					<li>Octans</li>
+					<li>Ophiuchus</li>
+					<li>Orion</li>
+					<li>Pegasus</li>
+					<li>Perseus</li>
+					<li>Phoenix</li>
+					<li>Pictor</li>
+					<li>Pisces</li>
+					<li>Piscis Austrinus</li>
+					<li>Pleiades</li>
+					<li>Praesepe</li>
+					<li>Puppis</li>
+					<li>Pyxis</li>
+					<li>Reticulum</li>
+					<li>Sagitta</li>
+					<li>Sagittarius</li>
+					<li>Scorpius</li>
+					<li>Sculptor</li>
+					<li>Scutum</li>
+					<li>Serpens</li>
+					<li>Sextans</li>
+					<li>Taurus</li>
+					<li>Telescopium</li>
+					<li>Triangulum</li>
+					<li>Triangulum Australe</li>
+					<li>Tucana</li>
+					<li>Ursa Major</li>
+					<li>Ursa Minor</li>
+					<li>Vela</li>
+					<li>Virgo</li>
+					<li>Volans</li>
+					<li>Vulpecula</li>
 				</ul>
 			</div>
+			<style>
+				#constellist li {margin: 0 1em}
+				#constellist li a {text-decoration: none;}
+			</style>
+			<script>
+				var constellist = document.getElementById("constellist");
+				var li = constellist.getElementsByTagName("li");
+				var constelname = "";
+				for (i = 0; i < li.length; i++) {
+					constelname = li[i].innerHTML;
+					li[i].innerHTML = "<a href=\"" + constelname.toLowerCase() + ".html\">" + constelname + "</a>"
+				}
+			</script>
 		</aside>
 	</main>
 	<aside>
