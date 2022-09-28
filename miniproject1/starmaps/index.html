@@ -94,7 +94,7 @@
 					a = document.getElementsByClassName("maptable")[0].getElementsByTagName("a");
 					for (let i = 0; i < a.length; i++) {
 						var mapnum = a[i].innerHTML;
-						a[i].href = "./map#" + mapnum.padStart(2, '0');
+						a[i].href = "./map/#" + mapnum.padStart(2, '0');
 						a[i].title = "Go to Map " + mapnum;
 					}
 				</script>
