@@ -42,8 +42,9 @@ function setLinksActive() {
 			a[i].classList.add("current-page");
 			a[i].href = "javascript:void(0)";
 		}
-		if (a[i].href.includes(currentLocation)) {
+		if (currentLocation.includes(a[i].href)) {
 			a[i].classList.add("current-section");
+			console.log(a[i].href);
 		}
 	}
 }
