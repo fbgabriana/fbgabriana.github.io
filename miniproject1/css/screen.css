@@ -170,10 +170,13 @@ aside nav>ul li a.current-section {
 	border-right: 1px solid hsla(214, 33.3333%, 40.0000%, 0.35);
 	background-color: hsl(214, 6.6667%, 92.5000%);
 	background-image: radial-gradient(hsla(214, 50%, 50%, 0.1) 0%, hsla(214, 50%, 50%, 0.05) 50%, transparent 75%);;
-	color: hsl(214, 33.3333%, 40.0000%);
+	color: hsl(214, 33.3333%, 50.0000%);
 }
 aside nav>ul li a.current-page {
 	border-right: 1px solid hsla(214, 1.5000%, 50.0000%, 0.35);
+	background-color: hsl(214, 3.3333%, 92.5000%);
+	background-image: radial-gradient(hsla(214, 25%, 50%, 0.1) 0%, hsla(214, 25%, 50%, 0.05) 50%, transparent 75%);;
+	color: hsl(214, 13.3333%, 55.2950%);
 	cursor: default;
 }
 
@@ -214,8 +217,8 @@ main aside div.sectionlist ul li a:active {
 	text-decoration: none;
 }
 main aside div.sectionlist ul li a.current-page {
-	color: hsl(214, 10.0000%, 40.0000%);
-	text-shadow: 0px 0px 1px hsl(34, 10.0000%, 93.3333%);
+	color: hsl(214, 10.0000%, 50.0000%);
+	text-shadow: 0px 0px 1px hsl(34, 10.0000%, 95.0000%);
 	text-decoration: none;
 	cursor: default;
 }
