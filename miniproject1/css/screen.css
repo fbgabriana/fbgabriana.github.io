@@ -204,6 +204,11 @@ main aside div.sectionlist ul li a:active {
 	color: hsl(214, 80.0000%, 50.0000%);
 	text-decoration: none;
 }
+main aside div.sectionlist ul li a.current {
+	color: hsl(214, 10.0000%, 40.0000%);
+	text-decoration: none;
+	cursor: default;
+}
 main aside div.boxinfo {
 	display: inline-block;
 	box-sizing: border-box;

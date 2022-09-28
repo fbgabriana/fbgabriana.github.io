@@ -32,14 +32,15 @@ function windowResize() {
 function setDocumentTitle() {
 	var heading = document.getElementsByTagName("article")[0].getElementsByTagName("h2")[0];
 	document.title = "Philippine Astronomy: " + heading.innerHTML;
-	console.log(location.href)
 }
 
 function setLinksActive() {
 	var a = document.getElementsByTagName("a");
 	for (i=0; i<a.length; i++) {
 		if (a[i].href == location.href) {
-			a.classList.add("current");
+			a[i].classList.add("current");
+			a[i].href = "javascript:void(0)";
+			console.log(a[i].classList);
 		}
 	}
 }
