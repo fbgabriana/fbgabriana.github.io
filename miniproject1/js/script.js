@@ -36,11 +36,14 @@ function setDocumentTitle() {
 
 function setLinksActive() {
 	var a = document.getElementsByTagName("a");
+	var currentLocation = location.href.replace("index.html","");
 	for (i=0; i<a.length; i++) {
-		if (a[i].href == location.href) {
-			a[i].classList.add("current");
+		if (a[i].href == currentLocation) {
+			a[i].classList.add("current-page");
 			a[i].href = "javascript:void(0)";
-			console.log(a[i].classList);
+		}
+		if (a[i].href.includes(currentLocation)) {
+			a[i].classList.add("current-section");
 		}
 	}
 }

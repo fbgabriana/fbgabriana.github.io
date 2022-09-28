@@ -121,7 +121,7 @@ header nav li a:hover {
 header nav li a:active {
 	color: #ffff80;
 }
-header nav li a.current {
+header nav li a.current-page {
 	color: #ffff80;
 }
 header nav li:first-child a {
@@ -162,7 +162,7 @@ aside nav>ul li a:active {
 	background-color: hsl(214, 6.6667%, 93.3333%);
 	color: hsl(214, 66.6667%, 40.0000%);
 }
-aside nav>ul li a.current {
+aside nav>ul li a.current-page {
 	border-right: 1px solid hsla(214, 66.6667%, 50.0000%, 0.5);
 	background-color: hsl(214, 3.3333%, 93.3333%);
 	color: hsl(214, 33.3333%, 40.0000%);
@@ -204,7 +204,7 @@ main aside div.sectionlist ul li a:active {
 	color: hsl(214, 80.0000%, 50.0000%);
 	text-decoration: none;
 }
-main aside div.sectionlist ul li a.current {
+main aside div.sectionlist ul li a.current-page {
 	color: hsl(214, 10.0000%, 40.0000%);
 	text-decoration: none;
 	cursor: default;
