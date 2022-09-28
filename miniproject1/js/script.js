@@ -30,8 +30,10 @@ function windowResize() {
 }
 
 function setDocumentTitle() {
-	var heading = document.querySelector("article").querySelector("h2");
-	document.title = "Philippine Astronomy: " + heading.innerHTML;
+	var websiteTitleElement = document.querySelector("h1 a img");
+	var articleTitleElement = document.querySelector("article h2");
+	document.title = websiteTitleElement.alt + ": " + articleTitleElement.innerHTML;
+	websiteTitleElement.parentElement.title = "Back to Home";
 }
 
 function setCurrentPage() {
@@ -41,10 +43,10 @@ function setCurrentPage() {
 		if (a[i].href == currentLocation) {
 			a[i].classList.add("current-page");
 			a[i].removeAttribute("href");
+			a[i].removeAttribute("title");
 		}
 		if (currentLocation.includes(a[i].href)) {
 			a[i].classList.add("current-section");
-			console.log(a[i].href);
 		}
 	}
 }
