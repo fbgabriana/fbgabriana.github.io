@@ -97,50 +97,49 @@
 		<object id="objmap" />
 	</main>
 	<script>
-		check_n = document.getElementById("starmap_n");
-		check_n_init = check_n.value; check_n.remove(0);
-		if (check_n_init == "") {
-			check_n.selectedIndex = window.location.hash.substring(1);
-		}
-		check_n.addEventListener("change", function() {
-			setmap();
-		});
-
 		check_b = document.getElementById("starmap_b");
 		check_g = document.getElementById("starmap_g");
-		check_b.addEventListener("click", function() {setmap();});
-		check_g.addEventListener("click", function() {setmap();});
-		window.addEventListener("load",   function() {setmap();});
+		select  = document.getElementById("starmap_n");
+
+		select_init = select.value; select.remove(0);
+		if (select_init == "") {
+			select.selectedIndex = window.location.hash.substring(1);
+		}
+
+		check_b.addEventListener("click", function(event) {setmap();});
+		check_g.addEventListener("click", function(event) {setmap();});
+		select.addEventListener("change", function(event) {setmap();});
+		window.addEventListener("load",   function(event) {setmap();});
 
 		btnprev = document.getElementById("btnprev");
 		btnnext = document.getElementById("btnnext");
 
-		btnnext.addEventListener("click", function() {nextmap()});
-		btnprev.addEventListener("click", function() {prevmap()});
-
-		function nextmap() {
-			check_n.selectedIndex++;
-			if (check_n.selectedIndex == -1) check_n.selectedIndex = 0;
-			setmap();
-		}
-
-		function prevmap() {
-			check_n.selectedIndex--;
-			if (check_n.selectedIndex == -1) check_n.selectedIndex = 23;
-			setmap();
-		}
+		btnnext.addEventListener("click", function(event) {nextmap(event)});
+		btnprev.addEventListener("click", function(event) {prevmap(event)});
 
 		document.addEventListener("keydown", function(event) {
 			var keycode = event.code;
 			if (keycode == "ArrowDown" || keycode == "ArrowRight") {
-				event.preventDefault();
-				nextmap();
+				nextmap(event);
 			}
 			if (keycode == "ArrowUp" || keycode == "ArrowLeft") {
-				event.preventDefault();
-				prevmap();
+				prevmap(event);
 			}
 		});
+
+		function nextmap(event) {
+			event.preventDefault();
+			select.selectedIndex++;
+			if (select.selectedIndex == -1) select.selectedIndex = 0;
+			setmap();
+		}
+
+		function prevmap(event) {
+			event.preventDefault();
+			select.selectedIndex--;
+			if (select.selectedIndex == -1) select.selectedIndex = 23;
+			setmap();
+		}
 
 		function sizemap() {
 			var imgmap = document.getElementById("imgmap");
@@ -149,7 +148,7 @@
 			imgmap.style.height = size + "px";
 			imgmap.style.width = size + "px";
 			imgmap.style.display = "block";
-			check_n.focus();
+			select.focus();
 		}
 
 		function setmap() {
@@ -157,7 +156,7 @@
 			mapopt += check_b.checked ? "b" : "";
 			mapopt += check_g.checked ? "g" : "";
 			if (mapopt) mapopt = "+" + mapopt;
-			mapnum = check_n.options[check_n.selectedIndex].text;
+			mapnum = select.options[select.selectedIndex].text;
 			window.location.hash = "#" + mapnum;
 			imgmap.src = "./" + mapnum + mapopt + ".svg";
 			objmap.data = "./" + mapnum + mapopt + ".pdf";
