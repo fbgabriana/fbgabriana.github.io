@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -50,8 +50,8 @@
 	<nav>
 		<form>
 		<h2><a href="../" title="Back to Map Table">Philippine Starmaps</a></h2>
-		<ul>
 		<fieldset>
+		<ul>
 		<li id="starmap_select" class="starmap_select">
 		<label for="starmap_n">Select Map: </label>
 		<button type="button" id="btnprev" title="minus 1 hour">&#9664;</button>
@@ -84,13 +84,15 @@
 		</select>
 		<button type="button" id="btnnext" title="plus 1 hour">&#9654;</button>
 		</li>
+		</ul>
 		</fieldset>
 		<fieldset>
 		<legend>Options</legend>
+		<ul>
 		<li><input type="checkbox" id="starmap_b"><label for="starmap_b">Show Constellation Borders</label></li>
 		<li><input type="checkbox" id="starmap_g"><label for="starmap_g">Show Coordinate Grid</label></li>
-		</fieldset>
 		</ul>
+		</fieldset>
 		<div><button id="btnhome" type="button" title="Back to Map Table" onclick="window.location.href='../'">Back to Map Table</button></div>
 		<div><button id="btnprint" type="button" title="Print this Map" onclick="window.location.href=objmap.data">Print this Map</button></div>
 		</form>
