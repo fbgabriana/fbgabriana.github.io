@@ -166,7 +166,7 @@ aside nav>ul li a:active {
 }
 aside nav>ul li a.current-page,
 aside nav>ul li a.current-section {
-	border-right: 1px solid hsla(214, 66.6667%, 50.0000%, 0.5);
+	border-right: 1px solid hsla(214, 33.3333%, 40.0000%, 0.4);
 	background-color: hsl(214, 3.3333%, 87.5000%);
 	color: hsl(214, 33.3333%, 40.0000%);
 }
