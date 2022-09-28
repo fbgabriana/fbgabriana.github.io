@@ -65,7 +65,7 @@ article figure {
 	float: right;
 	margin: 1em;
 	width: 240px;
-	font-size: smaller;
+	font-size: 0.833333em;
 }
 article figure.fullwidth {
 	float: none;
@@ -82,6 +82,9 @@ article figure img {
 	width: 100%;
 	height: auto;
 	background-color: hsl(34, 13.3333%, 87.5000%);
+}
+article figure figcaption {
+	text-align: center;
 }
 article table {
 	border-collapse: collapse;
