@@ -7,6 +7,19 @@ article h2 {
 	margin: 0 0 0.71em 0;
 	font-size: 1.73em;
 }
+article .subheading{
+	font-size: 1rem;
+	font-weight: none;
+	font-style: italic;
+	margin-bottom: 1.5em;
+}
+article .source{
+	margin-bottom: 1.5em;
+}
+article .news-date{
+	margin-bottom: 1em;
+	opacity: 0.6;
+}
 article h3 {
 	margin: 1em 0 0 0;
 	font-size: 1.17em;
@@ -41,16 +54,27 @@ article li {
 	margin: 0.5em 0;
 	padding: 0;
 }
-article img {
-	display: block;
-	width: 240px;
-	height: 180px;
-	background-color: hsl(34, 13.3333%, 87.5000%);
-}
 article figure {
 	float: right;
 	margin: 1em;
+	width: 240px;
 	font-size: smaller;
+}
+article figure.fullwidth {
+	float: none;
+	margin: 1.5em 0;
+	width: 100%;
+}
+article figure.halfwidth {
+	float: none;
+	margin: 1.5em 4em;
+	width: calc(100% - 8em);
+}
+article figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: hsl(34, 13.3333%, 87.5000%);
 }
 article table {
 	border-collapse: collapse;
