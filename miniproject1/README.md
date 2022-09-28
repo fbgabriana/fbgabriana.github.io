@@ -4,7 +4,7 @@
 
 * [View the template](template)
 
-**_Update_: Uploaded website with placeholder pages. Slowly building the rest of the content.**
+**_Update_: Uploaded website with placeholder pages. Slowly building content.**
 
 * [See what I have so far](home)
 
