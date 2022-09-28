@@ -121,8 +121,10 @@ header nav li a:hover {
 header nav li a:active {
 	color: #ffff80;
 }
-header nav li a.current-page {
+header nav li a.current-page,
+header nav li a.current-section {
 	color: #ffff80;
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 }
 header nav li:first-child a {
 	border-top-left-radius: 0.5em;
