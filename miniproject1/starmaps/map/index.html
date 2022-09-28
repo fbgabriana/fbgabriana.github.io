@@ -21,6 +21,7 @@
 			header h1 img {position: fixed; top: 10px; left: 20px; height: 50px;}
 			nav {position: fixed; top: 10px; right: 10px; border: 1px solid #cc0000;}
 			nav h2 {text-align: center;}
+			nav h2 a {color: inherit; text-decoration: inherit;}
 			nav div {text-align: center;}
 			nav ul {list-style-type: none; padding: 0; margin: 0;}
 			fieldset {margin: 1em; border: 1px solid gray;}
@@ -42,11 +43,11 @@
 
 <body>
 	<header>
-		<h1><a href="../../home/"><img src="../../svg/logotext.svg" alt="Philippine Astronomy" /></a></h1>
+		<h1><a href="../../home/"><img src="../../svg/logotext.svg" alt="Philippine Astronomy" title="Back to Home" /></a></h1>
 	</header>
 	<nav>
 		<form>
-		<h2>Philippine Starmaps</h2>
+		<h2><a href="../" title="Back to Map Table">Philippine Starmaps</a></h2>
 		<ul>
 		<fieldset>
 		<li id="starmap_select" class="starmap_select">
@@ -88,8 +89,8 @@
 		<li><input type="checkbox" id="starmap_g"><label for="starmap_g">Show Coordinate Grid</label></li>
 		</fieldset>
 		</ul>
-		<div><button id="btnhome" type="button" onclick="window.location.href='../'">Back to Map Table</button></div>
-		<div><button id="btnprint" type="button" onclick="window.location.href=objmap.data">Print this Map</button></div>
+		<div><button id="btnhome" type="button" title="Back to Map Table" onclick="window.location.href='../'">Back to Map Table</button></div>
+		<div><button id="btnprint" type="button" title="Print this Map" onclick="window.location.href=objmap.data">Print this Map</button></div>
 		</form>
 	</nav>
 	<main>
