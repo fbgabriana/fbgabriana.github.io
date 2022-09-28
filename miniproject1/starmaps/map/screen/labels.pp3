@@ -1,0 +1,177 @@
+objects_and_labels
+
+text "Andromeda" at 0 40 along declination towards S ;
+text "Antlia" at 10 -30 along declination towards N ;
+text "Apus" at 16 -75 along declination towards N ;
+text "Aquarius" at 23.8 -11 along declination towards SE ;
+text "Aquila" at 20 14 along declination towards S ;
+text "Ara" at 18.1 -47 along declination towards SE ;
+text "Aries" at 2.5 20 along declination towards N ;
+text "Auriga" at 6 30 along declination towards N ;
+text "Bo\\\"{o}tes" at 13.95 24 along declination towards W ;
+text "Caelum" at 5.05 -30 along declination towards SE ;
+text "Camelopardalis" at 8 62.5 along declination ;
+text "Cancer" at 8.5 24 along declination towards S ;
+text "Canes Venatici" at 12.3 35 along declination towards W ;
+text "Canis Major" at 6.3 -12 along declination towards SW ;
+text "Canis Minor" at 8.1 0.5 along declination ;
+text "Capricornus" at 21 -20 along declination towards S ;
+text "Carina" at 7 -55 along declination towards W ;
+text "Cassiopeia" at 23.8 51 along declination towards NW ;
+text "Centaurus" at 12.7 -46 along declination towards N ;
+text "Cepheus" at 0.2 69 along declination towards E ;
+text "Cetus" at 1.5 -1 along declination towards S ;
+text "Chamaeleon" at 10.15 -76 along declination towards S ;
+text "Circinus" at 15.45 -56 along declination towards SE ;
+text "Columba" at 5.1 -27.5 along declination towards SW ;
+text "Coma Berenices" at 13.3 31 along declination towards SE ;
+text "Corona Australis" at 19.2 -44.5 along declination ;
+text "Corona Borealis" at 16.4 39 along declination towards SE ;
+text "Corvus" at 12 -12 along declination towards SW ;
+text "Crater" at 11.9 -20 along declination ;
+text "Crux" at 12 -56 along declination towards SW ;
+text "Cygnus" at 20.4 52 along declination towards S ;
+text "Delphinus" at 20.4 19.5 along declination towards SW ;
+text "Dorado" at 4.7 -65 along declination towards W ;
+text "Draco" at 15.8 65 along declination towards W ;
+text "Equuleus" at 21 12 along declination towards SW ;
+text "Eridanus" at 4 -20 along declination ;
+text "Fornax" at 1.8 -36 along declination towards W ;
+text "Gemini" at 7 30 along declination towards N ;
+text "Grus" at 23.4 -37 along declination towards SE ;
+text "Hercules" at 17.5 20 along declination towards N ;
+text "Horologium" at 3.8 -52 along declination ;
+text "Hydra" at 10 -20 along declination towards S ;
+text "Hydrus" at 1.45 -70 along declination towards W ;
+text "Indus" at 22 -50 along declination towards SE ;
+text "Lacerta" at 22 41 along declination towards W ;
+text "Leo" at 10.55 27 along declination towards SE ;
+text "Leo Minor" at 9.6 33.5 along declination towards NW ;
+text "Lepus" at 5.5 -12 along declination towards S ;
+text "Libra" at 14.5 -10 along declination towards SW ;
+text "Lupus" at 15.1 -54.5 along declination ;
+text "Lynx" at 8 41 along declination towards N ;
+text "Lyra" at 18.3 47 along declination towards SW ;
+text "Mensa" at 7.5 -76 along declination towards SE ;
+text "Microscopium" at 20.5 -28 along declination towards SW ;
+text "Monoceros" at 6 -10 along declination  towards NW ;
+text "Musca" at 11.4 -75 along declination towards NW ;
+text "Norma" at 16 -50 along declination towards S ;
+text "Octans" at 21 -82 along declination towards S ;
+text "Ophiuchus" at 17.3 1 along declination towards N ;
+text "Orion" at 5.0 12.5 along declination towards SW ;
+text "Pavo" at 21.4 -60 along declination towards SE ;
+text "Pegasus" at 23.55 34.5 along declination towards SE ;
+text "Perseus" at 3.4 37 along declination towards S ;
+text "Phoenix" at 2.2 -40 along declination towards SE ;
+text "Pictor" at 4.6 -47 along declination towards SW ;
+text "Pisces" at 1 10 along declination towards N ;
+text "Piscis Austrinus" at 22.3 -35.5 along declination towards N ;
+text "Puppis" at 8.4 -28 along declination towards E ;
+text "Pyxis" at 9.4 -36.5 along declination ;
+text "Reticulum" at 4.5 -66.5 along declination ;
+text "Sagitta" at 19.1 18 along declination towards W ;
+text "Sagittarius" at 19 -34 along declination towards S ;
+text "Scorpius" at 16.2 -32 along declination towards W ;
+text "Sculptor" at 1.7 -26 along declination towards SE ;
+text "Scutum" at 18.95 -12 along declination towards E ;
+text "Serpens Caput" at 16.0 24.5 along declination towards SE ;
+text "Serpens Cauda" at 18.3 -14.3 along declination towards SE ;
+text "Sextans" at 10.8 -6 along declination towards E ;
+text "Taurus" at 5.3 17 along declination towards N ;
+text "Telescopium" at 18.3 -56 along declination towards NW ;
+text "Triangulum" at 2.5 28.5 along declination ;
+text "Triangulum" at 16.7 -64.1 along declination towards SE ;
+text "Australe" at 16.6 -65.7 along declination towards SE ;
+text "Tucana" at 1.3 -58 along declination towards SE ;
+text "Ursa Major" at 11 50 along declination towards N ;
+text "Ursa Minor" at 13.2 71 along declination towards SW ;
+text "Vela" at 10 -50 along declination towards N ;
+text "Virgo" at 13.5 5 along declination towards S ;
+text "Volans" at 6.7 -65 along declination towards SW ;
+text "Vulpecula" at 21 25 along declination towards N ;
+
+delete NGC 2478  NGC 651  M 88  M 86  M 90  M 58  M 59  IC 4700  NGC 6590  NGC 6595  NGC 6634  NGC 1973  NGC 1975 ;
+
+add_labels ORI 46 ;
+add_labels PSC 113 ;
+add_labels UMA 80 ;
+
+set_label_text AND 021 "\\footnotesize Alpheratz"
+set_label_text AND 043 "\\footnotesize Mirach"
+set_label_text AND 057 "\\footnotesize Almach"
+set_label_text AQL 053 "\\footnotesize Altair"
+set_label_text ARI 006 "\\footnotesize Sheratan"
+set_label_text ARI 013 "\\footnotesize Hamal"
+set_label_text AUR 013 "\\footnotesize Capella"
+set_label_text AUR 034 "\\footnotesize Menkalinan"
+set_label_text BOO 016 "\\footnotesize Arcturus"
+set_label_text CAS 011 "\\footnotesize Caph"
+set_label_text CAS 018 "\\footnotesize Schedar"
+set_label_text CET 016 "\\footnotesize Diphda"
+set_label_text CET 068 "\\footnotesize Mira"
+set_label_text CMA 002 "\\footnotesize Mirzam"
+set_label_text CMA 009 "\\footnotesize Sirius"
+set_label_text CMA 021 "\\footnotesize Adhara"
+set_label_text CMI 010 "\\footnotesize Procyon"
+set_label_text CRB 005 "\\footnotesize Alphecca"
+set_label_text CVN 012 "\\footnotesize Cor Caroli"
+set_label_text CYG 006 "\\footnotesize Albireo"
+set_label_text CYG 050 "\\footnotesize Deneb"
+set_label_text DRA 033 "\\footnotesize Eltanin"
+set_label_text GEM 013 "\\footnotesize Tejat"
+set_label_text GEM 024 "\\footnotesize Alhena"
+set_label_text GEM 066 "\\footnotesize Castor"
+set_label_text GEM 078 "\\footnotesize Pollux"
+set_label_text HYA 030 "\\footnotesize Alphard"
+set_label_text LEO 032 "\\footnotesize Regulus"
+set_label_text LEO 041 "\\footnotesize Algieba"
+set_label_text LEO 094 "\\footnotesize Denebola"
+set_label_text LYR 003 "\\footnotesize Vega"
+set_label_text OPH 055 "\\footnotesize Rasalhague"
+set_label_text ORI 019 "\\footnotesize Rigel"
+set_label_text ORI 024 "\\footnotesize Bellatrix"
+set_label_text ORI 034 "\\footnotesize Mintaka"
+set_label_text ORI 039 "\\footnotesize Meissa"
+set_label_text ORI 046 "\\footnotesize Alnilam"
+set_label_text ORI 050 "\\footnotesize Alnitak"
+set_label_text ORI 053 "\\footnotesize Saiph"
+set_label_text ORI 058 "\\footnotesize Betelgeuse"
+set_label_text PEG 053 "\\footnotesize Scheat"
+set_label_text PEG 054 "\\footnotesize Markab"
+set_label_text PEG 088 "\\footnotesize Algenib"
+set_label_text PER 026 "\\footnotesize Algol"
+set_label_text PER 033 "\\footnotesize Mirfak"
+set_label_text PSA 024 "\\footnotesize Fomalhaut"
+set_label_text PSC 113 "\\footnotesize Alrescha"
+set_label_text SCO 021 "\\footnotesize Antares"
+set_label_text SCO 035 "\\footnotesize Shaula"
+set_label_text TAU 087 "\\footnotesize Aldebaran"
+set_label_text TAU 112 "\\footnotesize Elnath"
+set_label_text UMA 048 "\\footnotesize Merak"
+set_label_text UMA 050 "\\footnotesize Dubhe"
+set_label_text UMA 064 "\\footnotesize Phecda"
+set_label_text UMA 069 "\\footnotesize Megrez"
+set_label_text UMA 077 "\\footnotesize Alioth"
+set_label_text UMA 079 "\\footnotesize Mizar"
+set_label_text UMA 080 "\\footnotesize Alcor"
+set_label_text UMA 085 "\\footnotesize Alkaid"
+set_label_text UMI 001 "\\footnotesize Polaris"
+set_label_text UMI 007 "\\footnotesize Kochab"
+set_label_text VIR 067 "\\footnotesize Spica"
+set_label_text HD 002261 "\\footnotesize Ankaa"
+set_label_text HD 010144 "\\footnotesize Achernar"
+set_label_text HD 045348 "\\footnotesize Canopus"
+set_label_text HD 054605 "\\footnotesize Wezen"
+set_label_text HD 080007 "\\footnotesize Miaplacidus"
+set_label_text HD 108248 "\\footnotesize Acrux"
+set_label_text HD 111123 "\\footnotesize Mimosa"
+set_label_text HD 122451 "\\footnotesize Hadar"
+set_label_text HD 123139 "\\footnotesize Menkent"
+set_label_text HD 128620 "\\footnotesize Alpha Centauri"
+set_label_text HD 150798 "\\footnotesize Atria"
+set_label_text HD 158427 "\\footnotesize Choo"
+set_label_text HD 159532 "\\footnotesize Sargas"
+set_label_text HD 193924 "\\footnotesize Peacock"
+set_label_text HD 209952 "\\footnotesize Alnair"
+
