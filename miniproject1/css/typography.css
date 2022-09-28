@@ -45,6 +45,13 @@ article>p:first-of-type>span:first-child {
 	font-size: 0.85em;
 	letter-spacing: 0.17em;
 }
+article .article-list h3 {
+	margin: 1.5em 0 0 0;
+	font-size: 1.17em;
+}
+article .article-list p {
+	text-indent: 3em;
+}
 article ul {
 	margin: 1em 0;
 	padding: 0 4em;
