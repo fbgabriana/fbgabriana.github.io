@@ -1,7 +1,7 @@
 // Philippine Astronomy Magazine
 
 function toggleMenuBar() {
-	menubar = document.getElementById("menubar");
+	var menubar = document.getElementById("menubar");
 	if (menubar.style.display == "none") {
 		menubar.style.display = "block";
 	}
@@ -11,9 +11,9 @@ function toggleMenuBar() {
 }
 
 function windowResize() {
-	menubar = document.getElementById("menubar");
-	menubtn = document.getElementById("menubtn");
-	heading = document.getElementsByTagName("h1")[0];
+	var menubar = document.getElementById("menubar");
+	var menubtn = document.getElementById("menubtn");
+	var heading = document.getElementsByTagName("h1")[0];
 	if (window.innerWidth <= 500) {
 		heading.style.fontSize = window.innerWidth / 192 + "rem";
 		menubar.style.display = "none";
@@ -30,7 +30,7 @@ function windowResize() {
 }
 
 function setDocumentTitle() {
-	heading = document.getElementsByTagName("article")[0].getElementsByTagName("h2")[0];
+	var heading = document.getElementsByTagName("article")[0].getElementsByTagName("h2")[0];
 	document.title = "Philippine Astronomy: " + heading.innerHTML;
 	console.log(location.href)
 }
