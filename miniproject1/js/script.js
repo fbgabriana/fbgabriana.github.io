@@ -35,9 +35,19 @@ function setDocumentTitle() {
 	console.log(location.href)
 }
 
+function setLinksActive() {
+	var a = document.getElementsByTagName("a");
+	for (i=0; i<a.length; i++) {
+		if (a[i].href == location.href) {
+			a.classList.add("current");
+		}
+	}
+}
+
 window.onload = function() {
 	windowResize();
 	setDocumentTitle();
+	setLinksActive();
 }
 
 window.onresize = function() {

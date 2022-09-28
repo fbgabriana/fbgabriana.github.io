@@ -121,6 +121,9 @@ header nav li a:hover {
 header nav li a:active {
 	color: #ffff80;
 }
+header nav li a.current {
+	color: #ffff80;
+}
 header nav li:first-child a {
 	border-top-left-radius: 0.5em;
 }
