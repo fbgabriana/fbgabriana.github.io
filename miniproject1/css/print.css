@@ -85,6 +85,7 @@ article table tr th:first-child {
 	border-left: 1pt solid gray;
 }
 article hr.page-break {
+	visibility: hidden;
 	page-break-after: always;
 }
 
