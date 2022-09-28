@@ -34,7 +34,7 @@ function setDocumentTitle() {
 	document.title = "Philippine Astronomy: " + heading.innerHTML;
 }
 
-function setLinksActive() {
+function setCurrentPage() {
 	var a = document.getElementsByTagName("a");
 	var currentLocation = location.href.replace("index.html","");
 	for (i=0; i<a.length; i++) {
@@ -52,7 +52,7 @@ function setLinksActive() {
 window.onload = function() {
 	windowResize();
 	setDocumentTitle();
-	setLinksActive();
+	setCurrentPage();
 }
 
 window.onresize = function() {
