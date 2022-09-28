@@ -2,9 +2,9 @@
 
 **_Update_: I have finished the template for this project.**
 
-* [View the template](template)
+* [View the template](template/)
 
 **_Update_: Uploaded website with placeholder pages. Slowly building content.**
 
-* [See what I have so far](home)
+* [See what I have so far](home/)
 
