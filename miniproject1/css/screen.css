@@ -111,20 +111,20 @@ header nav li a {
 	border-top-left-radius: 0.25em;
 	border-top-right-radius: 0.25em;
 	background-color: hsl(214, 65.500%, 25.0000%);
-	color: hsl(60, 34.500%, 90.6250%);
+	color: hsl(77.88, 34.500%, 90.6250%);
 }
 header nav li a:hover {
 	background-color: hsl(214, 50.0000%, 33.8975%);
-	color: hsl(60, 62.2222%, 93.3333%);
-	box-shadow: 0 0 20px hsla(60, 50.0000%, 75.0000%, 0.25);
+	color: hsl(77.88, 62.2222%, 93.3333%);
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 }
 header nav li a:active {
-	color: #ffff80;
+	color: hsl(60, 93.3333%, 75.000%);
 }
 header nav li a.current-page,
 header nav li a.current-section {
-	box-shadow: 0 0 20px hsla(60, 50.0000%, 75.0000%, 0.25);
-	color: hsl(60, 93.3333%, 75.000%);
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
+	color: hsl(60, 93.3333%, 60.000%);
 	cursor: default;
 }
 header nav li:first-child a {
