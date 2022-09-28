@@ -16,9 +16,11 @@
 		}
 
 		@media screen {
-			body {background-color: black; color: lightgray;}
+			body {background-color: hsl(214, 58.3333%, 3.3333%); color: hsl(37, 13.3333%, 82.745%);}
 			#imgmap, #objmap {display: none;}
-			header h1 a img {position: fixed; top: 10px; left: 20px; height: 50px;}
+			header h1 a {display: block; position: fixed; top: 10px; left: 20px;}
+			header h1 a:hover {background-image: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.1) 50%, transparent 75%);}
+			header h1 a img {height: 52px;}
 			nav {position: fixed; top: 10px; right: 10px; border: 1px solid #cc0000;}
 			nav h2 {text-align: center;}
 			nav h2 a {color: inherit; text-decoration: inherit;}
