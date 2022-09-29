@@ -29,7 +29,7 @@ article p {
 	line-height: 1.5em;
 }
 article>p {
-	text-indent: 3em;
+	text-indent: 2.5em;
 }
 article>p:first-of-type {
 	text-indent: 0;
@@ -50,7 +50,7 @@ article .article-list h3 {
 	font-size: 1.17em;
 }
 article .article-list p {
-	text-indent: 3em;
+	text-indent: 2.5em;
 }
 article ul {
 	margin: 1em 0;
