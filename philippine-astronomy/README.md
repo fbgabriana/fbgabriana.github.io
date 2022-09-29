@@ -1,10 +1,6 @@
-# Mini Project 1 - Philippine Astronomy Magazine
+# Philippine Astronomy Magazine
 
-**_Update_: I have finished the template for this project.**
+This folder contains the Philippine Astronomy Magazine, which began as miniproject1. It was forked to continue development after the submission of the project.
 
-* [View the template](template/)
-
-**_Update_: Uploaded website with placeholder pages. Slowly building content.**
-
-* [See what I have so far](home/)
+* [View the site](home/)
 
