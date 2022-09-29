@@ -14,5 +14,5 @@ It contains the following folders:
 
   - All subsequent development to the site has been moved to the philippine-astronomy folder.
 
-* [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, continuation of miniproject1.
+* [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, a continuation of miniproject1.
 
