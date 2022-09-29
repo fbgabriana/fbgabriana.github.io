@@ -1,0 +1,29 @@
+# Screen Style
+
+switch colored_stars on
+
+color background 0 0 0
+
+color constellation_lines 0.6431372549019608 0.0 0.0 #a40000
+color ecliptic 0.7058823529411765 0.0784313725490196 0.0784313725490196 #b41414R
+color boundaries 0.23529411764705882 0.7058823529411765 0.39215686274509804 #3cb464
+color highlighted_boundaries 0.8784313725490196 0 0 #e00000
+color milky_way 0.0 0.0 0.1568627450980392 #000028
+color grid 0.32941176470588235 0.32941176470588235 0.32941176470588235 #545454
+color nebulae 0.8313725490196079 0.0 0.8313725490196079 #d400d4
+color labels 0.4392156862745098 0.4392156862745098 0.4392156862745098 #707070
+color text_labels 0.23529411764705882 0.7058823529411765 0.47058823529411765 #3cb478
+
+line_width constellation_lines 0.035
+line_width ecliptic 0.049497 # 0.018
+line_width boundaries 0.035 # 0.035
+line_width highlighted_boundaries 0.049497 # 0.035
+line_width grid 0.018 # 0.025 
+line_width nebulae 0.018
+
+line_style constellation_lines solid
+line_style ecliptic dashed
+line_style boundaries dashed
+line_style highlighted_boundaries dashed
+line_style grid solid
+line_style nebulae dashed
