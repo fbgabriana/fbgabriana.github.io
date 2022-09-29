@@ -1,5 +1,7 @@
 # Mini Project 1 - Philippine Astronomy Magazine
 
+This is my first miniproject for the [KodeGo Web Developer Course](https://kodego.ph/courses/1) I am currently taking.
+
 **_Update_: I have finished the template for this project.**
 
 * [View the template](template/)
