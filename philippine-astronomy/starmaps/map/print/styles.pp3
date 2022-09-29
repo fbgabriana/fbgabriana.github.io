@@ -1,0 +1,29 @@
+# Print Style
+
+switch colored_stars off
+color stars 0.13725490196078433 0.12156862745098039 0.12549019607843137 #231f20
+color background 1 1 1
+
+color constellation_lines 0.612072279892349 0.784313725490196 0.485966935793925 #9cc87c
+color ecliptic 0.379607843137255 0.638431372549020 0.733333333333333 #61a3bb
+color boundaries 0.760784313725490 0.447520184544406 0.432602845059592 #c2726e
+color highlighted_boundaries 0.800000000000000 0.000000000000000 0.000000000000000 #cc0000
+color milky_way 0.517339484813533 0.909803921568627 0.599400230680508 #84e899
+color grid 0.674509803921569 0.674509803921569 0.674509803921569 #acacac
+color nebulae 0.109803921568628 0.105928489042676 0.105928489042676 #1c1b1b
+color labels 0.286274509803922 0.275048058439062 0.275048058439062 #494646
+color text_labels 0.439215686274510 0.423713956170704 0.423713956170704 #706c6c
+
+line_width constellation_lines 0.035
+line_width ecliptic 0.049497 # 0.018
+line_width boundaries 0.035 # 0.035
+line_width highlighted_boundaries 0.049497 # 0.035
+line_width grid 0.018 # 0.025 
+line_width nebulae 0.018
+
+line_style constellation_lines solid
+line_style ecliptic dashed
+line_style boundaries dashed
+line_style highlighted_boundaries dashed
+line_style grid solid
+line_style nebulae dashed
