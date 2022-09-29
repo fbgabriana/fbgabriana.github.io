@@ -6,7 +6,9 @@
 
 **_Update_: Uploaded website with placeholder pages. Slowly building content.**
 
-* [See what I have so far](home/)
+**_Update_: The project has been submitted.**
+
+* [See the final version](home/)
 
 **_Update_: This folder is now frozen to preserve the state when it was submitted.**
 
