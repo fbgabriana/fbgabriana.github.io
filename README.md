@@ -8,7 +8,7 @@ It contains the following folders:
 
 * [miniproject1](miniproject1/) - a requirement for KodeGo's web development course.
 
-	- To preserve the state when it was submitted, henceforth no more changes will be made to this folder.
+	- To preserve the state when it was submitted, no more changes will be made to this folder.
 
 	- All subsequent development to the site has been moved to the philippine-astronomy folder.
 
