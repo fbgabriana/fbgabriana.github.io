@@ -6,7 +6,7 @@ It contains the following folders:
 
 * [proposals](proposals/) - My KodeGo project proposals.
 
-* [harmonicmeans](harmonicmeans/) - Website of Harmonic Means, my sister's musical band.
+* [harmonicmeans](harmonicmeans/) - Website of _Harmonic Means_, my sister's musical band.
 
 * [miniproject1](miniproject1/) - a requirement for KodeGo's web development course.
 
@@ -14,5 +14,5 @@ It contains the following folders:
 
   - All subsequent development to the site has been moved to the philippine-astronomy folder.
 
-* [philippine-astronomy](philippine-astronomy/) - Philippine Astronomy Magazine, continuation of miniproject1.
+* [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, continuation of miniproject1.
 
