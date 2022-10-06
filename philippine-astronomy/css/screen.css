@@ -169,7 +169,7 @@ aside nav>ul li a.current-section {
 	border-right: 1px solid hsla(214, 33.3333%, 40.0000%, 0.35);
 	background-color: hsl(214, 6.6667%, 92.5000%);
 	background-image: radial-gradient(hsla(214, 25%, 50%, 0.1) 0%, hsla(214, 25%, 50%, 0.05) 50%, transparent 75%);;
-	color: hsl(214, 33.3333%, 55.2950%);
+	color: hsl(214, 50.0000%, 55.2950%);
 }
 aside nav>ul li a.current-page {
 	border-right: 1px solid hsla(214, 1.5000%, 50.0000%, 0.35);
