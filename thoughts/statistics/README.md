@@ -1,6 +1,6 @@
 # Some Random Thoughts
 
-[fbgabriana](/) > [thoughts](/thoughts/) > [statistics](/thoughts/statistics/)
+[Random Thoughts](/thoughts/) > [statistics](/thoughts/statistics/)
 
 * [Random Thoughts](/thoughts/)
 	* [statistics](/thoughts/statistics/)
