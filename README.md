@@ -16,3 +16,5 @@ It contains the following folders:
 
 * [harmonicmeans](harmonicmeans/) - Website of _Harmonic Means_, my sister's musical band.
 
+* [thoughts](thoughts/) - some random thoughts.
+
