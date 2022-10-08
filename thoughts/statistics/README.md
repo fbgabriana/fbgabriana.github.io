@@ -2,6 +2,6 @@
 
 [Random Thoughts](/thoughts/) > [Statistics](/thoughts/statistics/)
 
-* [central-tendency](/thoughts/central-tendency/)
+* [Central Tendency](/thoughts/central-tendency/)
 	* [Thoughts on measures of central tendency](/thoughts/central-tendency/central-tendency.pdf)
 
