@@ -4,3 +4,5 @@
 
 * [Statistics](/thoughts/statistics/)
 
+* [Linguistics](/thoughts/linguistics/)
+
