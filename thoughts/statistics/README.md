@@ -1,6 +1,6 @@
 # Some Random Thoughts
 
-[Random Thoughts](/thoughts/) > [statistics](/thoughts/statistics/)
+[Random Thoughts](/thoughts/) > [Statistics](/thoughts/statistics/)
 
 * [Random Thoughts](/thoughts/)
 	* [statistics](/thoughts/statistics/)
