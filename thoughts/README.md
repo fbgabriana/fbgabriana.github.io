@@ -1,6 +1,6 @@
 # Some Random Thoughts
 
-thoughts > statistics
+fbgabriana > thoughts
 
 * Random Thoughts
 	* [Statistics](statistics/)
