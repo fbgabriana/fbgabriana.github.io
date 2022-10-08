@@ -2,6 +2,6 @@
 
 [Random Thoughts](/thoughts/)
 
-	* [statistics](/thoughts/statistics/)
-		* [central-tendency](/thoughts/central-tendency/)
+* [statistics](/thoughts/statistics/)
+	* [central-tendency](/thoughts/central-tendency/)
 
