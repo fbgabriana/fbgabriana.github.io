@@ -1,7 +1,8 @@
 # Some Random Thoughts
 
-thoughts > statistics
+thoughts
 
 * Statistics
 	* [Central Tendency](central-tendency/)
 		* [Thoughts on measures of central tendency](central-tendency.pdf)
+
