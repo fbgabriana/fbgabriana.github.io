@@ -106,6 +106,7 @@ main p {
 	width: 640px;
 	margin: 60px;
 	color: #404040;
+	text-shadow: 0px 0px 20px hsl(207, 90%, 95.0000%);
 }
 
 footer>p {
