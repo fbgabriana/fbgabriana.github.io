@@ -119,6 +119,7 @@ main p.message span {
 main p.message span.boost {
 	background-color: hsla(60, 100%, 50%, 1);
 	border-bottom-left-radius: 0.4em;
+	border-top-right-radius: 0.2em 0.1em;
 }
 
 footer>p {
