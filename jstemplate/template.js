@@ -1,4 +1,4 @@
-class Template {
+class HTMLTemplate {
 	constructor(path) {
 		this.path = path;
 		this.selector = "";
@@ -19,7 +19,7 @@ class Template {
 }
 
 window.addEventListener("DOMContentLoaded", event => {
-	let template = new Template("template.html");
+	let template = new HTMLTemplate("template.html");
 	template.selector = "#content";
 	template.loadContent();
 });
