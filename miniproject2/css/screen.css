@@ -80,7 +80,7 @@ header>nav li a {
 	font-size: 18px;
 	text-decoration: none;
 	color: hsl(207, 34.500%, 90.6250%);
-	background-image: radial-gradient(hsla(207, 0%, 80%, 0.2) 0%, hsla(207, 0%, 80%, 0.1) 10%, transparent 80%);
+	background-image: radial-gradient(hsla(207, 0%, 80%, 0.2) 0%, hsla(207, 0%, 80%, 0.1) 20%, transparent 80%);
 }
 header>nav li a:hover {
 	box-shadow: 0 0 10px hsla(207, 24.5000%, 80.000%, 0.25);
@@ -166,6 +166,7 @@ footer>p {
 		display: block;
 	}
 	header>nav li a {
+		background-image: radial-gradient(hsla(207, 0%, 50%, 0.1) 0%, hsla(207, 0%, 50%, 0.07) 20%, transparent 80%);
 		width: calc(100vw - 190px);
 		font-size: 14px;
 	}
