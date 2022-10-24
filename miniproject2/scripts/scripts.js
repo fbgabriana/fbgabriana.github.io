@@ -2,7 +2,7 @@ let backgroundTransition = () => {
 	let img = [];
 	for (let i = 0; i < 6; i++) {
 		img[i] = new Image();
-		img[i].src = `images/background${j}.jpg`;
+		img[i].src = `images/background${i}.jpg`;
 	}
 	setTimeout(() => {
 		let i = 0;
