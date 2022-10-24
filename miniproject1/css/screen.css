@@ -75,19 +75,9 @@ header h1 a img {
 }
 header nav {
 	text-align: center;
-}
-header #menubtn {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	height: 40px;
-	width: 40px;
-	cursor: pointer;
-	display: none;
-	background-image: radial-gradient(hsla(214, 45%, 45%, 0.25) 0%, hsla(214, 45%, 45%, 0.10) 50%, transparent 100%);
-}
-header #menubtn:hover {
-	background-image: radial-gradient(hsla(214, 20%, 90%, 0.25) 0%, hsla(214, 20%, 90%, 0.10) 50%, transparent 80%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 header nav ul {
 	margin: 0 20px;

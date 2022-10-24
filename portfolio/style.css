@@ -1,0 +1,199 @@
+@media screen {
+
+	body {
+		display: grid;
+		grid-template-columns: 20em auto 20em;
+		grid-template-rows: 120px auto 80px;
+		margin: 0;
+		min-height: 100vh;
+		height: 100vh;
+		font-family: sans-serif;
+		overflow: hidden;
+	}
+
+	header,
+	footer {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+
+	section {
+		margin: 0 2em;
+	}
+
+	main {
+		overflow: auto;
+	}
+
+	.semantic-tag-label {
+		position: absolute;
+	}
+
+	header {
+		background-color: #cccccc;
+	}
+
+	aside {
+		background-color: #dddddd;
+	}
+
+	main {
+		background-color: #ffffff;
+	}
+
+	section {
+		background-color: #ffffff;
+	}
+
+	footer {
+		background-color: #cccccc;
+	}
+
+	header h1 {
+		text-align: center;
+	}
+
+	header img {
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		top: 0;
+		right: 0;
+	}
+
+	header .contact {
+		display: none;
+	}
+
+	header nav {
+		text-align: center;
+	}
+
+	header nav li {
+		display: inline-block;
+	}
+
+	header nav li a {
+		display: block;
+		padding: 0.25em 1em;
+		text-decoration: none;
+		color: #0033ff;
+		background-color: #dddddd;
+	}
+
+	header nav li a:hover {
+		color: #0066ff;
+		background-color: #eeeeee;
+	}
+
+	aside .linklist {
+		padding: 10px;
+	}
+
+	aside .linklist>ul {
+		list-style: none;
+		padding: 0;
+		margin: 1em;
+	}
+
+	aside .linklist li a {
+		display: block;
+		padding: 0.25em 1em;
+		background-color: #eeeeee;
+		margin: 4px;
+		color: #0033ff;
+	}
+
+	aside .linklist li a:hover {
+		background-color: #fcfcfc;
+	}
+
+	aside .linklist p {
+		margin: 1em;
+	}
+
+	aside div {
+		background-color: #fcfcfc;
+		margin: 20px;
+		margin-top: 30px;
+		border: 1px solid gray;
+		padding: 1em;
+	}
+
+	article p {
+		margin: 0.5em 0;
+		line-height: 1.5em;
+	}
+
+	article p+p {
+		text-indent: 3em;
+	}
+
+	article p:first-child::first-letter {
+		font-size: 3.5em;
+		font-weight: bold;
+		float: left;
+		margin: 2px 2px -2px -4px;
+		opacity: 0.6;
+	}
+
+	article p:first-child>span:first-child {
+		font-variant: small-caps;
+	}
+
+	aside .contact,
+	aside .social {
+		font-size: 0.85em;
+	}
+
+	aside .contact a {
+		color: #0033cc;
+	}
+
+	aside .contact a:hover {
+		color: #0080ff;
+	}
+
+	aside .social li {
+		display: inline-block;
+		margin: 0 16px 0 0;
+	}
+
+	aside .social a img {
+		width: 48px;
+		height: 48px;
+	}
+
+	aside .social a:hover img {
+		opacity: 0.8;
+	}
+
+	footer p {
+		text-align: center;
+		line-height: 50px;
+	}
+
+	main section li {
+		margin: 1em 0;
+	}
+
+}
+
+@media print {
+
+	body {
+		font-family: "Cambria";
+	}
+
+	header img {
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		top: 0;
+		right: 0;
+	}
+
+	nav, aside, footer {
+		display: none;
+	}
+}

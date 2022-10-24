@@ -1,0 +1,115 @@
+/* Label the semantic tags */
+.semantic-tag-label {position: absolute; font-size: 10px; opacity: 0.0;}
+
+body {
+	display: grid;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+	height: 100vh;
+	grid-template-rows: 100px auto 40px;
+}
+body>header {grid-area: header;}
+body>footer {grid-area: footer;}
+body>main   {grid-area: main;}
+
+body {
+	margin: 0;
+	background-image: url("../images/background.jpg");
+	font-family: Verdana;
+	font-size: 16px;
+}
+body>header>nav {
+	margin: 20px 0 0 0;
+	padding-right: 20px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	background-image: linear-gradient(180deg, hsla(207, 21.3333%, 18.5000%, 0.2) 0%, hsl(207, 21.3333%, 18.5000%, 1.0) 8%, hsl(207, 21.3333%, 18.5000%, 1.0) 92%, hsl(207, 21.3333%, 18.5000%, 0.2) 100%);
+	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 18.5000%, 0.5);
+	color: #ffffe0;
+}
+body>header>h1 {
+	position: absolute;
+	margin: 0;
+	top: 10px;
+	left: 20px;
+	box-shadow: 0px 0px 10px hsla(53, 100%, 50.000%, 0.5);
+}
+body>header>h1 img {
+	display: block;
+	border-radius: 8px;
+	width: 100px;
+	height: 100px;
+}
+body>footer {
+	background-image: linear-gradient(180deg, hsla(207, 21.3333%, 18.5000%, 0.2) 0%, hsl(207, 21.3333%, 18.5000%, 1.0) 8%);
+	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 18.5000%, 0.5);
+	color: #ffffe0;
+	z-index: -1;
+}
+body>footer p {
+	background-color: hsla(207, 21.3333%, 12.5000%, 0.25);
+	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 12.5000%, 0.5);
+}
+body>main   {
+	color: #202020;
+	box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.5);
+}
+
+header>nav ul {
+	margin: 0;
+	padding: 0;
+}
+header>nav li {
+	display: inline-block;
+	margin: 1px 0;
+}
+header>nav li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	min-height: 2em;
+	min-width: 4em;
+	padding: 0 1em;
+	border-radius: 0.25em;
+	color: hsl(207, 34.500%, 90.6250%);
+}
+header>nav li a:hover {
+	box-shadow: 0 0 10px hsla(207, 24.5000%, 80.000%, 0.25);
+	background-color: hsl(207, 24.5000%, 24.5000%);
+	color: hsl(207, 34.500%, 95.0000%);
+}
+header>nav li a:active {
+	color: hsl(207, 13.3333%, 75.000%);
+}
+header>nav li a.current-page,
+header>nav li a.current-section {
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
+	color: hsl(60, 93.3333%, 60.000%);
+	cursor: default;
+}
+
+footer>p {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 1em;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	color: hsl(207, 40.0000%, 80.0000%);
+	text-align: center;
+	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
+}
+
+@media screen and (max-width: 500px) {
+	header nav li {
+		display: block;
+	}
+}
+
