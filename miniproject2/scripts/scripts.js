@@ -19,4 +19,3 @@ let backgroundTransition = () => {
 		}, 1000);
 	})
 }
-
