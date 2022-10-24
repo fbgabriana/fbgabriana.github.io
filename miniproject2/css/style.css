@@ -85,10 +85,10 @@ header>nav li a {
 header>nav li a:hover {
 	box-shadow: 0 0 10px hsla(207, 24.5000%, 80.000%, 0.25);
 	background-color: hsl(207, 24.5000%, 24.5000%);
-	color: hsl(53, 80.000%, 80.0000%);
+	color: hsl(54, 87.5000%, 92.5000%);
 }
 header>nav li a:active {
-	color: hsl(207, 13.3333%, 75.000%);
+	color: hsl(54, 42.0000%, 84.0000%);
 }
 header>nav li a.current-page,
 header>nav li a.current-section {
