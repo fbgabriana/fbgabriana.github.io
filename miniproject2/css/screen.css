@@ -17,6 +17,7 @@ body>main   {grid-area: main;}
 body {
 	margin: 0;
 	background-image: url("../images/background.jpg");
+	background-size: cover;
 	font-family: Verdana;
 	font-size: 16px;
 }
@@ -91,6 +92,20 @@ header>nav li a.current-section {
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 	color: hsl(60, 93.3333%, 60.000%);
 	cursor: default;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+main p {
+	text-align: right;
+	font-size: 60px;
+	width: 640px;
+	margin: 60px;
+	color: #404040;
 }
 
 footer>p {
