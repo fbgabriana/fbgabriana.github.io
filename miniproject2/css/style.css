@@ -103,7 +103,7 @@ main {
 	justify-content: right;
 }
 
-main p.message {
+main p.mission {
 	text-align: right;
 	font-size: 60px;
 	width: 10.8em;
@@ -115,10 +115,10 @@ main p.message {
 	border-radius: 2em;
 	box-shadow: 0px 0px 40px hsla(0, 0%, 100%, 0.8);
 }
-main p.message span {
+main p.mission span {
 	display: block;
 }
-main p.message span.boost {
+main p.mission span.boost {
 	background-color: hsla(60, 100%, 50%, 1);
 	border-bottom-left-radius: 0.4em;
 	border-top-right-radius: 0.2em 0.1em;
@@ -140,7 +140,7 @@ footer>p {
 }
 
 @media screen and (max-width: 760px) {
-	main p.message {
+	main p.mission {
 		font-size: 7.5vw;
 	}
 	header>nav li a {
