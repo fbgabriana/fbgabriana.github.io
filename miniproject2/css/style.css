@@ -95,8 +95,8 @@ header>nav li a:active {
 header>nav li a.current-page,
 header>nav li a.current-section {
 	box-shadow: inset 0 0 15px hsla(60, 12.5000%, 6.6667%, 0.6);
-	background-color: hsl(207, 24.5000%, 24.5000%);
-	color: hsl(60, 80.000%, 75.0000%);
+	background-color: hsl(207, 22.5000%, 22.5000%);
+	color: hsl(60, 75.000%, 75.0000%);
 	cursor: default;
 }
 
@@ -165,6 +165,10 @@ main article {
 	padding: 0 2.5em;
 }
 
+main article hr.page-break {
+	display: none;
+}
+
 footer>p {
 	margin: 0;
 	box-sizing: border-box;
@@ -218,6 +222,10 @@ footer>p {
 @media print {
 	@page {
 		margin: 1.5cm 1cm;
+	}
+	main article hr.page-break {
+		visibility: hidden;
+		page-break-after: always;
 	}
 }
 
