@@ -124,6 +124,21 @@ main p.mission span.boost {
 	border-top-right-radius: 0.2em 0.1em;
 	white-space: nowrap;
 }
+main button.quote {
+	font-size: 12px;
+	border: 1px solid #b4b4b4;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+	background-color: #e0e0e0;
+	box-shadow: 0 0 20px hsla(207, 10.000%, 40.000%, 0.20);
+}
+main button.quote:hover {
+	background-color: #e8e8e8;
+}
+main button.quote:active {
+	background-color: #e0e0e0;
+	box-shadow: inset 0 0 0.5em hsla(207, 0.000%, 10.000%, 0.15);
+}
 
 footer>p {
 	margin: 0;
