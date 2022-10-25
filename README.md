@@ -12,6 +12,8 @@ It contains the following folders:
 
 	- All subsequent development to the site has been moved to the philippine-astronomy folder.
 
+* [miniproject2](miniproject2/) - group project for KodeGo's web development course.
+
 * [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, a continuation of miniproject1.
 
 * [harmonicmeans](harmonicmeans/) - Website of _Harmonic Means_, my sister's musical band.
