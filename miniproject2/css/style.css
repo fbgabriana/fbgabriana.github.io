@@ -210,6 +210,9 @@ footer>p {
 		width: calc(100vw - 190px);
 		font-size: 14px;
 	}
+	main article {
+		min-height: calc(100vh - 185px);
+	}
 }
 
 @media print {
