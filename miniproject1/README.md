@@ -12,9 +12,11 @@ This is my first miniproject for the [KodeGo Web Developer Course](https://kodeg
 
 * [See the final version](home/)
 
-**_Update_: This folder is now frozen to preserve the state when it was submitted.**
+**_Update_: This folder is now frozen.**
 
-* This folder has been forked into the [philippine-astronomy](/philippine-astronomy/) folder.
+	- To preserve the state when it was submitted, no more changes will be made to this folder.
 
-* All subsequent updates to this website shall occur at that folder instead.
+	- This folder has been forked into the [philippine-astronomy](/philippine-astronomy/) folder.
+
+	- All subsequent updates to this website shall occur at that folder instead.
 

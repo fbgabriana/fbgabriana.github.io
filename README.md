@@ -8,10 +8,6 @@ It contains the following folders:
 
 * [miniproject1](miniproject1/) - a requirement for KodeGo's web development course.
 
-	- To preserve the state when it was submitted, no more changes will be made to this folder.
-
-	- All subsequent development to the site has been moved to the philippine-astronomy folder.
-
 * [miniproject2](miniproject2/) - group project for KodeGo's web development course.
 
 * [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, a continuation of miniproject1.
