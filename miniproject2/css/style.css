@@ -39,6 +39,7 @@ header>h1 {
 	left: 20px;
 	border-radius: 8px;
 	box-shadow: 0px 0px 10px hsla(53, 100%, 50.000%, 0.5);
+	font-size: 32px;
 }
 header>h1 img {
 	display: block;
