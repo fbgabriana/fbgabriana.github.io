@@ -130,7 +130,7 @@ main p.mission span {
 	display: block;
 }
 main p.mission span.boost {
-	background-color: #fed700;
+	background-color: hsla(60, 100%, 50%, 1);
 	border-bottom-left-radius: 0.4em;
 	border-top-right-radius: 0.2em 0.1em;
 	white-space: nowrap;
