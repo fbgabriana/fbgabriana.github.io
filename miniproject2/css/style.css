@@ -3,31 +3,28 @@
 
 body {
 	display: grid;
-	grid-template-areas:
-	"header"
-	"main"
-	"footer";
-	height: 100vh;
+	grid-template-areas: "header" "main" "footer";
 	grid-template-rows: 100px auto 40px;
+	height: 100vh;
 }
-body>header {grid-area: header;}
-body>footer {grid-area: footer;}
-body>main   {grid-area: main;}
+body>header {grid-area: "header";}
+body>main   {grid-area: "main";}
+body>footer {grid-area: "footer";}
 
 body {
 	margin: 0;
 	background-image: url("../images/background.jpg");
 	background-size: cover;
-	font-family: Verdana;
+	font-family: "Verdana";
 	font-size: 16px;
 }
 header>nav {
-	margin: 20px 0 0 0;
-	padding-right: 20px;
-	height: 80px;
 	display: flex;
 	align-items: center;
 	justify-content: right;
+	margin: 20px 0 0 0;
+	padding-right: 20px;
+	height: 80px;
 	background-image: linear-gradient(180deg, hsla(207, 21.3333%, 18.5000%, 0.2) 0%, hsl(207, 21.3333%, 18.5000%, 1.0) 8%, hsl(207, 21.3333%, 18.5000%, 1.0) 92%, hsl(207, 21.3333%, 18.5000%, 0.2) 100%);
 	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 18.5000%, 0.2);
 	color: #ffffe0;
@@ -38,8 +35,9 @@ header>h1 {
 	top: 10px;
 	left: 20px;
 	border-radius: 8px;
-	box-shadow: 0px 0px 10px hsla(53, 100%, 50.000%, 0.5);
+	box-shadow: 0px 0px 10px hsla(60, 90%, 50%, 0.4);
 	font-size: 32px;
+	z-index: 2;
 }
 header>h1 img {
 	background-color: hsla(60, 90%, 50%, 1.0);
