@@ -44,6 +44,8 @@ header>h1 a {
 	font-size: 24px;
 	text-decoration: none;
 	text-align: center;
+	line-height: 100px;
+	vertical-align: middle;
 }
 header>h1 a:link:active {
 	margin: 1px 0 0 0;
@@ -54,7 +56,6 @@ header>h1 img {
 	border-radius: 8px;
 	width: 100px;
 	height: 100px;
-	line-height: 100px;
 }
 header>nav ul {
 	margin: 0;
