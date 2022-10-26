@@ -3,15 +3,8 @@
 
 body {
 	display: grid;
-	grid-template-areas: "header" "main" "footer";
 	grid-template-rows: 100px auto 40px;
 	height: 100vh;
-}
-body>header {grid-area: "header";}
-body>main   {grid-area: "main";}
-body>footer {grid-area: "footer";}
-
-body {
 	margin: 0;
 	background-image: url("../images/background.jpg");
 	background-repeat: no-repeat;
@@ -246,6 +239,5 @@ hr.page-break {
 		visibility: hidden;
 		page-break-after: always;
 	}
-
 }
 
