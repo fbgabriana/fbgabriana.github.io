@@ -47,21 +47,6 @@ header>h1 img {
 	width: 100px;
 	height: 100px;
 }
-footer {
-	background-image: linear-gradient(180deg, hsla(207, 21.3333%, 18.5000%, 0.2) 0%, hsl(207, 21.3333%, 18.5000%, 1) 8%);
-	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 18.5000%, 0.2);
-	color: #ffffe0;
-	z-index: -1;
-}
-footer p {
-	background-color: hsla(207, 21.3333%, 12.5000%, 0.25);
-	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 12.5000%, 0.5);
-}
-main   {
-	color: #202020;
-	box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.5);
-}
-
 header>nav ul {
 	margin: 0;
 	padding: 0;
@@ -105,8 +90,9 @@ main {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
+	color: #202020;
+	box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.5);
 }
-
 main section.landing-message {
 	display: flex;
 	align-items: center;
@@ -115,7 +101,6 @@ main section.landing-message {
 	width: 100%;
 	height: 100%;
 }
-
 main p.mission {
 	text-align: right;
 	font-size: 60px;
@@ -153,7 +138,6 @@ main button.quote:active {
 	background-color: #e0e0e0;
 	box-shadow: inset 0 0 0.5em hsla(207, 0.000%, 10.000%, 0.15);
 }
-
 main article {
 	box-sizing: border-box;
 	margin: 2px 0;
@@ -166,6 +150,11 @@ main article {
 	padding: 0 2.5em;
 }
 
+footer {
+	background-image: linear-gradient(180deg, hsla(207, 21.3333%, 18.5000%, 0.2) 0%, hsl(207, 21.3333%, 18.5000%, 0.8) 8%, hsl(207, 21.3333%, 18.5000%, 1.0) 80%);
+	box-shadow: 0px 0px 10px hsla(207, 21.3333%, 18.5000%, 0.2);
+	z-index: -1;
+}
 footer>p {
 	margin: 0;
 	box-sizing: border-box;
@@ -177,7 +166,7 @@ footer>p {
 	font-size: 12px;
 	color: hsl(207, 40.0000%, 80.0000%);
 	text-align: center;
-	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
+	text-shadow: 0 0 2px hsla(27, 40.0000%, 20.0000%, 0.5);
 }
 
 @media screen and (max-width: 760px) {
