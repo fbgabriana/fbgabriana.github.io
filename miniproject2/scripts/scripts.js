@@ -1,10 +1,13 @@
 let setBackground = () => {
+
+	let scheme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "-dark" : "";
+
 	if (location.href.includes("home.html") || location.href.includes("template.html")) {
-		document.body.style.backgroundImage = `url(images/background0.jpg), url(images/background.jpg)`;
+		document.body.style.backgroundImage = `url(images/background0${scheme}.jpg), url(images/background${scheme}.jpg)`;
 		let img = [];
 		for (let i = 0; i < 6; i++) {
 			img[i] = new Image();
-			img[i].src = `images/background${i}.jpg`;
+			img[i].src = `images/background${i}${scheme}.jpg`;
 		}
 		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
 		setTimeout(() => {
@@ -17,7 +20,7 @@ let setBackground = () => {
 			}, 4000);
 
 			let replaceBackground = (i, j) => {
-				document.body.style.backgroundImage = `url(images/background${i}.jpg), url(images/background${j}.jpg)`;
+				document.body.style.backgroundImage = `url(images/background${i}${scheme}.jpg), url(images/background${j}${scheme}.jpg)`;
 			}
 			let replaceText = i => {
 				document.querySelector(".boost").childNodes[0].nodeValue = benefits[i];
@@ -25,13 +28,13 @@ let setBackground = () => {
 		}, 1000);
 	}
 	if (location.href.includes("about.html")) {
-		document.body.style.backgroundImage = `url(images/background1.jpg), url(images/background.jpg)`;
+		document.body.style.backgroundImage = `url(images/background1${scheme}.jpg), url(images/background${scheme}.jpg)`;
 	}
 	if (location.href.includes("projects.html")) {
-		document.body.style.backgroundImage = `url(images/background3.jpg), url(images/background.jpg)`;
+		document.body.style.backgroundImage = `url(images/background3${scheme}.jpg), url(images/background${scheme}.jpg)`;
 	}
 	if (location.href.includes("contact.html")) {
-		document.body.style.backgroundImage = `url(images/background4.jpg), url(images/background.jpg)`;
+		document.body.style.backgroundImage = `url(images/background4${scheme}.jpg), url(images/background${scheme}.jpg)`;
 	}
 }
 
