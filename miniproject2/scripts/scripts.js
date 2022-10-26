@@ -20,7 +20,7 @@ let setBackground = () => {
 				document.body.style.backgroundImage = `url(images/background${i}.jpg), url(images/background${j}.jpg)`;
 			}
 			let replaceText = i => {
-				document.querySelector(".boost").innerHTML = benefits[i];
+				document.querySelector(".boost").childNodes[0].nodeValue = benefits[i];
 			}
 		}, 1000);
 	}
