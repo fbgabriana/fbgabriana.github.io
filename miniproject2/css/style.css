@@ -14,6 +14,7 @@ body>footer {grid-area: "footer";}
 body {
 	margin: 0;
 	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: "Verdana";
 	font-size: 16px;
