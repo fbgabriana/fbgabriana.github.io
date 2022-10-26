@@ -116,7 +116,8 @@ main p.mission span {
 	display: block;
 }
 main p.mission span.boost {
-	background-color: hsla(60, 100%, 50%, 0.8);
+	background-color: hsla(60, 100%, 50%, 0.5);
+	border: 2px solid hsla(60, 100%, 50%, 0.9);
 	border-bottom-left-radius: 0.4em;
 	border-top-right-radius: 0.2em 0.1em;
 	white-space: nowrap;
