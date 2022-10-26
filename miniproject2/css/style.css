@@ -75,11 +75,13 @@ header>nav li a {
 	white-space: nowrap;
 }
 header>nav li a:hover {
+	border-radius: 1em;
 	box-shadow: 0 0 10px hsla(207, 24.5000%, 80.000%, 0.25);
 	background-color: hsl(207, 24.5000%, 24.5000%);
 	color: hsl(207, 20.000%, 95.0000%);
 }
 header>nav li a:active {
+	border-radius: 1em;
 	box-shadow: 0 0 10px hsla(207, 24.5000%, 50.000%, 0.25);
 	color: hsl(60, 60.000%, 75.000%);
 }
@@ -146,6 +148,7 @@ main button.quote:active {
 	background-color: #e0e0e0;
 	box-shadow: inset 0 0 0.5em hsla(207, 0.000%, 10.000%, 0.15);
 }
+
 main article {
 	box-sizing: border-box;
 	margin: 2px 0;
@@ -157,7 +160,6 @@ main article {
 	border-radius: 2em;
 	padding: 0 2.5em;
 }
-
 main article h1 {
 	color: #606060;
 }
@@ -212,10 +214,14 @@ footer>p {
 		width: calc(100vw - 190px);
 		font-size: 14px;
 	}
+	header>nav li a:hover {
+		border-radius: 0.25em;
+	}
 	header>nav li a.current-page,
 	header>nav li a.current-section {
 		background-color: hsla(207, 21.3333%, 22.5000%, 1.0);
 		box-shadow: inset 0 0 10px hsla(207, 21.3333%, 18.5000%, 0.6);
+		border-radius: 0.25em;
 	}
 	main article {
 		min-height: calc(100vh - 185px);
