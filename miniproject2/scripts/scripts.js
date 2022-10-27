@@ -18,7 +18,7 @@ let setBackground = () => {
 		let s = setColorScheme();
 		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
 		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
-		setTimeout(() => {
+		setTimeout(waitForPreload = () => {
 			let i = 0;
 			let j = 0;
 			setInterval(() => {
