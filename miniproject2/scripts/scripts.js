@@ -26,13 +26,13 @@ let setBackground = () => {
 		f = getFrameNumber(); p = (f - 1) % 6;
 		s = getColorScheme();
 		if (location.href.includes("home.html")) {
-			let boost = document.querySelector(".boost");
-			if (boost) boost.childNodes[0].nodeValue = benefits[f];
 			if (b) {
 				document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
 			} else {
 				document.body.style.backgroundImage = `url(images/background${f}${s}.jpg), url(images/background${p}${s}.jpg)`;
 			}
+			let boost = document.querySelector(".boost");
+			if (boost) boost.childNodes[0].nodeValue = benefits[f];
 		}
 		if (location.href.includes("about.html")) {
 			document.body.style.backgroundImage = `url(images/background1${s}.jpg), url(images/background${s}.jpg)`;
