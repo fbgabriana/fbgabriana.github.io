@@ -1,4 +1,4 @@
-# Mini Project 2 - WebCDS Company Website
+# Mini Project 2 - Cyber Homies Company Website
 
 This is a group miniproject for the [KodeGo Web Developer Course](https://kodego.ph/courses/1) I am taking.
 
