@@ -10,14 +10,15 @@ let setBackground = () => {
 	}
 	preloadImages();
 
-	let setColorScheme = () => {
+	let getColorScheme = () => {
 		return (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "-dark" : ""
 	};
 
 	if (location.href.includes("home.html")) {
-		let s = setColorScheme();
-		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
+		let s = getColorScheme();
 		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
+		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
+
 		setTimeout(waitForPreload = () => {
 			let i = 0;
 			let j = 0;
@@ -28,7 +29,7 @@ let setBackground = () => {
 			}, 4000);
 
 			let replaceBackground = (i, j) => {
-				s = setColorScheme();
+				let s = getColorScheme();
 				document.body.style.backgroundImage = `url(images/background${i}${s}.jpg), url(images/background${j}${s}.jpg)`;
 			}
 			let replaceText = i => {
@@ -39,7 +40,7 @@ let setBackground = () => {
 	}
 
 	setInterval(() => {
-		let s = setColorScheme();
+		let s = getColorScheme();
 		if (location.href.includes("about.html")) {
 			document.body.style.backgroundImage = `url(images/background1${s}.jpg), url(images/background${s}.jpg)`;
 		}
