@@ -16,8 +16,9 @@ let setBackground = () => {
 
 	if (location.href.includes("home.html")) {
 		let s = getColorScheme();
-		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
 		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
+
+		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
 
 		setTimeout(waitForPreload = () => {
 			let i = 0;
