@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1000.000000px" height="1000.000000px" viewBox="0 0 1000.000000 1000.000000">
-	<g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" stroke="none">
+	<g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" fill="hsl(60, 92%, 0%)" stroke="none">
 		<style>
 			rect { fill: hsl(60, 92%, 50%) }
 			@media (prefers-color-scheme: dark) { rect { fill: hsl(60, 92%, 40%) } }
