@@ -1,15 +1,22 @@
 let setBackground = () => {
 
-	let s = "";
-	setInterval(() => { s = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "-dark" : "" }, 1000);
-
-	if (location.href.includes("home.html") || location.href.includes("template.html")) {
-		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
-		let img = [];
+	let preloadImages = () => {
+		let img1 = []; let img2 = [];
 		for (let i = 0; i < 6; i++) {
-			img[i] = new Image();
-			img[i].src = `images/background${i}${s}.jpg`;
+			img1[i] = new Image(); img2[i] = new Image();
+			img1[i].src = `images/background${i}.jpg`;
+			img2[i].src = `images/background${i}-dark.jpg`;
 		}
+	}
+	preloadImages();
+
+	let setColorScheme = () => {
+		return (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "-dark" : ""
+	};
+
+	if (location.href.includes("home.html")) {
+		let s = setColorScheme();
+		document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
 		let benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
 		setTimeout(() => {
 			let i = 0;
@@ -21,22 +28,28 @@ let setBackground = () => {
 			}, 4000);
 
 			let replaceBackground = (i, j) => {
+				s = setColorScheme();
 				document.body.style.backgroundImage = `url(images/background${i}${s}.jpg), url(images/background${j}${s}.jpg)`;
 			}
 			let replaceText = i => {
-				document.querySelector(".boost").childNodes[0].nodeValue = benefits[i];
+				let boost = document.querySelector(".boost");
+				if (boost) document.querySelector(".boost").childNodes[0].nodeValue = benefits[i];
 			}
 		}, 1000);
 	}
-	if (location.href.includes("about.html")) {
-		document.body.style.backgroundImage = `url(images/background1${s}.jpg), url(images/background${s}.jpg)`;
-	}
-	if (location.href.includes("projects.html")) {
-		document.body.style.backgroundImage = `url(images/background3${s}.jpg), url(images/background${s}.jpg)`;
-	}
-	if (location.href.includes("contact.html")) {
-		document.body.style.backgroundImage = `url(images/background4${s}.jpg), url(images/background${s}.jpg)`;
-	}
+
+	setInterval(() => {
+		let s = setColorScheme();
+		if (location.href.includes("about.html")) {
+			document.body.style.backgroundImage = `url(images/background1${s}.jpg), url(images/background${s}.jpg)`;
+		}
+		if (location.href.includes("projects.html")) {
+			document.body.style.backgroundImage = `url(images/background3${s}.jpg), url(images/background${s}.jpg)`;
+		}
+		if (location.href.includes("contact.html")) {
+			document.body.style.backgroundImage = `url(images/background4${s}.jpg), url(images/background${s}.jpg)`;
+		}
+	}, 100);
 }
 
 let setCurrentPage = () => {
