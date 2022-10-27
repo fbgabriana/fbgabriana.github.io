@@ -23,7 +23,7 @@ let setBackground = () => {
 	preloadImages();
 
 	const changeFrame = (b) => {
-		f = getFrameNumber(); p = (f - 1) % 6;
+		f = getFrameNumber(); p = (f + 5) % 6;
 		s = getColorScheme();
 		if (location.href.includes("home.html")) {
 			if (b) {
