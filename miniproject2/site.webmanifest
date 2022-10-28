@@ -3,7 +3,7 @@
 	"short_name": "Cyber Homies",
 	"icons": [
 		{
-			"src": "images/siteicon.svg",
+			"src": "site.icon",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		}
