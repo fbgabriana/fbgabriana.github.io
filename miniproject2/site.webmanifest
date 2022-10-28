@@ -1,10 +1,9 @@
 {
-	"name": "",
-	"short_name": "",
+	"name": "Cyber Homies",
+	"short_name": "Cyber Homies",
 	"icons": [
 		{
-			"src": "images/android-icon.svg",
-			"sizes": "any",
+			"src": "images/favicon.svg",
 			"type": "image/svg+xml"
 		}
 	],
