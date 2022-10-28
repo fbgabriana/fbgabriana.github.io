@@ -12,5 +12,5 @@ This is a group miniproject for the [KodeGo Web Developer Course](https://kodego
 
 * Control files:
 
-  - (site.webmanifest)
-  - (site.webicon.svg)
+  - [site.webmanifest](site.webmanifest)
+  - [site.webicon.svg](site.webicon.svg)
