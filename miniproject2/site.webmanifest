@@ -8,7 +8,5 @@
 			"sizes": "512x512"
 		}
 	],
-	"theme_color": "hsl(60, 92%, 50%)",
-	"background_color": "hsl(60, 92%, 50%)",
-	"display": "standalone"
+	"background_color": "transparent"
 }
