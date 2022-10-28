@@ -7,7 +7,7 @@
 			"src" : "site.webicon.svg",
 			"type" : "image/svg+xml",
 			"sizes" : "512x512",
-			"purpose" : "maskable"
+			"purpose" : "any"
 		}
 	],
 	"display" : "browser"
