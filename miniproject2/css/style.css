@@ -244,13 +244,13 @@ hr.page-break {
 		box-shadow: 0px 0px 10px hsla(207, 21.3333%, 6.6667%, 0.2);
 	}
 	header>nav li a {
-		color: hsl(207, 27.6%, 72.5%);
+		color: hsl(42, 25.0%, 75.0%);
 		background-image: radial-gradient(hsla(207, 0%, 64%, 0.2) 0%, hsla(207, 0%, 64%, 0.1) 20%, transparent 80%);
 	}
 	header>nav li a:hover {
 		box-shadow: 0 0 10px hsla(207, 19.6%, 64.0%, 0.25);
 		background-color: hsl(207, 19.6%, 24.5%);
-		color: hsl(207, 16.0%, 76.0%);
+		color: hsl(42, 16.0%, 76.0%);
 	}
 	header>nav li a:active {
 		box-shadow: 0 0 10px hsla(207, 19.6%, 40.0%, 0.25);
@@ -264,14 +264,14 @@ hr.page-break {
 		text-shadow: 0 0 2px hsla(60, 60.0%, 60.0%, 0.25);
 	}
 	main {
-		box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 0px 60px rgba(0, 0, 7.5, 0.5);
 		color: #b8b8b8;
 	}
 	main p.mission {
-		color: hsl(207, 0%, 68.750%);
-		text-shadow: 0.04em 0.04em 0.05em hsla(207, 50%, 68.750%, 0.4);
-		background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0.2) 0%, hsla(0, 0%, 0%, 0.4) 8%);
-		box-shadow: 0px 0px 45px hsla(0, 0%, 0%, 0.6);
+		color: hsl(42, 4.0%, 75.000%);
+		text-shadow: 0.04em 0.04em 0.05em hsla(42, 50%, 68.750%, 0.4);
+		background-image: linear-gradient(90deg, hsla(0, 0%, 7.5%, 0.2) 0%, hsla(0, 0%, 7.5%, 0.4) 8%);
+		box-shadow: 0px 0px 45px hsla(0, 0%, 7.5%, 0.6);
 	}
 	main p.mission span.boost {
 		background-color: hsla(60, 100%, 40%, 0.65);
@@ -280,6 +280,10 @@ hr.page-break {
 	main article {
 		background-image: linear-gradient(90deg, hsla(0, 0%, 7.5%, 0.5) 0%, hsla(0, 0%, 7.5%, 0.8) 8%, hsla(0, 0%, 7.5%, 0.8) 92%, hsla(0, 0%, 7.5%, 0.5) 100%);
 		box-shadow: 0 0 20px hsl(0, 0%, 7.5%);
+	}
+	footer>p {
+		color: hsl(42, 40.0000%, 80.0000%);
+		text-shadow: 0 0 2px hsla(27, 40.0000%, 20.0000%, 0.5);
 	}
 }
 
