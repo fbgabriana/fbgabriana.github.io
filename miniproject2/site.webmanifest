@@ -1,6 +1,7 @@
 {
 	"name" : "Cyber Homies — Creative Web Developers",
 	"short_name" : "Cyber Homies",
+	"description" : "KodeGo W18 Group 4 Mini-Project 2",
 	"icons" : [
 		{
 			"src": "site.webicon.svg",
