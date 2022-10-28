@@ -10,5 +10,6 @@
 			"purpose" : "any"
 		}
 	],
-	"display" : "browser"
+	"display" : "browser",
+	"background_color": "hsla(60, 92%, 50%, 1.0)";
 }
