@@ -12,18 +12,18 @@
 	],
 	"shortcuts" : [
 		{
-			"name" : "About",
-			"url" : "about.html",
+			"name" : "Know Us",
+			"url" : "about.html"
 		},
 		{
-			"name" : "Contact",
-			"url" : "contact.html"
-		},
-		{
-			"name" : "Projects",
+			"name" : "Our Works",
 			"url" : "projects.html"
+		},
+		{
+			"name" : "Get in Touch",
+			"url" : "contact.html"
 		}
 	]
 	"display" : "browser",
-	"categories" : "business",
+	"categories" : "business"
 }
