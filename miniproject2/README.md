@@ -10,3 +10,7 @@ This is a group miniproject for the [KodeGo Web Developer Course](https://kodego
 
 * [View the homepage](home.html)
 
+* Control files:
+
+  - (site.webmanifest)
+  - (site.webicon.svg)
