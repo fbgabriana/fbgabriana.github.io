@@ -10,6 +10,20 @@
 			"purpose" : "any"
 		}
 	],
+	"shortcuts" : [
+		{
+			"name" : "About",
+			"url" : "about.html",
+		},
+		{
+			"name" : "Contact",
+			"url" : "contact.html"
+		},
+		{
+			"name" : "Projects",
+			"url" : "projects.html"
+		}
+	]
 	"display" : "browser",
-	"background_color": "hsla(60, 92%, 50%, 1.0)"
+	"categories" : "business",
 }
