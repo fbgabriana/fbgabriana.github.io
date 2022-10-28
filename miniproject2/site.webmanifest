@@ -1,11 +1,12 @@
 {
-	"name": "Cyber Homies — Creative Web Developers",
-	"short_name": "Cyber Homies",
-	"icons": [
+	"name" : "Cyber Homies — Creative Web Developers",
+	"short_name" : "Cyber Homies",
+	"icons" : [
 		{
 			"src": "site.webicon.svg",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		}
-	]
+	],
+	"display" : "browser"
 }
