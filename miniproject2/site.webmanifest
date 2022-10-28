@@ -5,6 +5,7 @@
 		{
 			"src": "images/mobile.svg",
 			"type": "image/svg+xml"
+			"sizes": "512x512"
 		}
 	],
 	"theme_color": "hsl(60, 92%, 50%)",
