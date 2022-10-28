@@ -6,7 +6,7 @@
             "src": "images/android-icon.svg",
             "sizes": "any",
             "type": "image/svg+xml"
-        },
+        }
     ],
     "theme_color": "hsl(60, 92%, 50%)",
     "background_color": "hsl(60, 92%, 50%)",
