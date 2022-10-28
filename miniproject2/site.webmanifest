@@ -4,7 +4,7 @@
 	"icons": [
 		{
 			"src": "images/mobile.svg",
-			"type": "image/svg+xml"
+			"type": "image/svg+xml",
 			"sizes": "512x512"
 		}
 	],
