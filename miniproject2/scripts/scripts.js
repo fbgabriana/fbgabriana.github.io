@@ -25,7 +25,7 @@ let setBackground = () => {
 	const changeFrame = (b) => {
 		f = getFrameNumber(); p = (f + 5) % 6;
 		s = getColorScheme();
-		if (location.href.includes("home.html")) {
+		if (location.href.includes("home.html") || location.href.includes("template.html")) {
 			if (b) {
 				document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
 			} else {

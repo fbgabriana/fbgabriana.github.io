@@ -232,19 +232,9 @@ hr.page-break {
 	}
 }
 
-@media print {
-	@page {
-		margin: 1.5cm 1cm;
-	}
-	hr.page-break {
-		visibility: hidden;
-		page-break-after: always;
-	}
-}
-
 @media screen and (prefers-color-scheme: dark) {
 	body {
-		background-color: black;
+		background-color: #111111;
 		background-image: url("../images/background-dark.jpg");
 	}
 	header>h1 img {
@@ -288,8 +278,8 @@ hr.page-break {
 		border: 2px solid hsla(60, 100%, 30%, 0.9);
 	}
 	main article {
-		background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0.5) 0%, hsla(0, 0%, 0%, 0.8) 8%, hsla(0, 0%, 0%, 0.8) 92%, hsla(0, 0%, 0%, 0.5) 100%);
-		box-shadow: 0 0 20px hsl(0, 0.000%, 0.000%);
+		background-image: linear-gradient(90deg, hsla(0, 0%, 7.5%, 0.5) 0%, hsla(0, 0%, 7.5%, 0.8) 8%, hsla(0, 0%, 7.5%, 0.8) 92%, hsla(0, 0%, 7.5%, 0.5) 100%);
+		box-shadow: 0 0 20px hsl(0, 0%, 7.5%);
 	}
 }
 
@@ -309,3 +299,12 @@ hr.page-break {
 	}
 }
 
+@media print {
+	@page {
+		margin: 1.5cm 1cm;
+	}
+	hr.page-break {
+		visibility: hidden;
+		page-break-after: always;
+	}
+}
