@@ -7,7 +7,7 @@ let setBackground = () => {
 	}
 
 	const getColorScheme = () => {
-		return (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "-dark" : "";
+		return window.matchMedia("(prefers-color-scheme: dark)").matches;
 	}
 
 	const benefits = ["marketability online", "growth opportunities", "competitiveness", "market expansion", "consumer services", "your credibility"];
@@ -24,7 +24,7 @@ let setBackground = () => {
 
 	const changeFrame = (b) => {
 		f = getFrameNumber(); p = (f + 5) % 6;
-		s = getColorScheme();
+		s = getColorScheme() ? "-dark" : "";
 		if (location.href.includes("home.html") || location.href.includes("template.html")) {
 			if (b) {
 				document.body.style.backgroundImage = `url(images/background0${s}.jpg), url(images/background${s}.jpg)`;
