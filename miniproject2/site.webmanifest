@@ -4,10 +4,10 @@
 	"description" : "KodeGo W18 Group 4 Mini-Project 2",
 	"icons" : [
 		{
-			"src": "site.webicon.svg",
-			"type": "image/svg+xml",
-			"sizes": "512x512",
-			"purpose": "maskable"
+			"src" : "site.webicon.svg",
+			"type" : "image/svg+xml",
+			"sizes" : "512x512",
+			"purpose" : "maskable"
 		}
 	],
 	"display" : "browser"
