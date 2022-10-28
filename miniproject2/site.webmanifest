@@ -5,7 +5,8 @@
 		{
 			"src": "site.webicon.svg",
 			"type": "image/svg+xml",
-			"sizes": "512x512"
+			"sizes": "512x512",
+			"purpose": "maskable"
 		}
 	],
 	"display" : "browser"
