@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000px" height="512.000000px" viewBox="0 0 700.000000 700.000000">
-	<rect width="5120" height="5120" fill="hsl(60, 92%, 50%)" />
+	<rect width="5120" height="5120" fill="hsla(60, 92%, 50%, 0)" />
 	<g transform="translate(94.000000,606.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
 		<circle cx="2560" cy="2560" r="3500" fill="hsl(60, 92%, 50%)" />
 		<circle cx="2560" cy="2560" r="2460" fill="#000000" />
