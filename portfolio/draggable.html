@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title></title>
+	<style>
+
+	body {
+		margin: 0;
+		font: caption;
+		font-size: 16px;
+		background-color: #d6d6d6;
+	}
+
+	.draggable {
+		position: absolute;
+		width: 250px;
+		height: 200px;
+		background-image: url("rip.svg");
+		background-position: bottom right;
+		background-size: auto;
+		border-top-left-radius: 4px 8px;
+		border-top-right-radius: 4px 8px;
+		filter: drop-shadow(0px 10px 5px hsla(0, 0%, 0%, 0.75) );
+		text-align: center;
+	}
+
+	.draggable .titlebar {
+		min-height: 1em;
+		padding: 0.5em;
+		background: linear-gradient( hsl(0, 50%, 50%) 0%, hsl(0, 50%, 30%) 25%, hsl(0, 50%, 30%) 75%, hsl(0, 50%, 20%) 100%  );
+		color: hsl(0, 50%, 95%);
+		font-weight: bold;
+		border-top-left-radius: 4px 8px;
+		border-top-right-radius: 4px 8px;
+		border-left: 1px solid hsl(0, 50%, 50%);
+		border-right: 1px solid hsl(0, 50%, 50%);
+	}
+
+	#box1 {
+		left: 100px;
+		top: 25px;
+	}
+
+	#box2 {
+		left: 400px;
+		top: 25px;
+	}
+
+	#box3 {
+		left: 700px;
+		top: 25px;
+	}
+
+	</style>
+	<script>
+
+	const Portfolio = () => {
+
+		let topZ = 1;
+
+		const addItem = element => {
+
+			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+			const dragMouseDown = event => {
+				event.preventDefault();
+				pos3 = event.clientX;
+				pos4 = event.clientY;
+				element.addEventListener("mouseup", dragMouseUp, true);
+				element.addEventListener("mousemove", dragMouseMove, true);
+				element.style.cursor = "move";
+				element.style.zIndex = topZ++;
+			}
+
+			const dragMouseMove = event => {
+				event.preventDefault();
+				pos1 = pos3 - event.clientX;
+				pos2 = pos4 - event.clientY;
+				pos3 = event.clientX;
+				pos4 = event.clientY;
+				element.style.left = (element.offsetLeft - pos1) + "px";
+				element.style.top = (element.offsetTop - pos2) + "px";
+			}
+
+			const dragMouseUp = event => {
+				event.preventDefault();
+				element.removeEventListener("mouseup", dragMouseUp, true);
+				element.removeEventListener("mousemove", dragMouseMove, true);
+				element.style.cursor = "default";
+			}
+
+			element.addEventListener("mousedown", dragMouseDown, true);
+		}
+
+		for (element of document.getElementsByClassName("draggable")) {
+			addItem(element);
+		}
+
+	}
+
+	window.addEventListener("load", event => {
+		Portfolio();
+	});
+
+	</script>
+
+</head>
+
+<body>
+
+<div id="box1" class="draggable">
+	<div class="titlebar">Box1</div>
+	<p>Put</p>
+	<p>content</p>
+	<p>here</p>
+</div>
+
+<div id="box2" class="draggable">
+	<div class="titlebar">Box2</div>
+	<p>Put</p>
+	<p>content</p>
+	<p>here</p>
+</div>
+
+<div id="box3" class="draggable">
+	<div class="titlebar">Box3</div>
+	<p>Put</p>
+	<p>content</p>
+	<p>here</p>
+</div>
+
+</body>
+</html>
+
