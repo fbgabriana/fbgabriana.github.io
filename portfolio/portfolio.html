@@ -65,28 +65,21 @@
 			this.z = 0;
 		}
 
-		addItem(id, title) {
-			let element = document.createElement("div");
+		addItem = (id, title) => {
+
+			const element = document.createElement("div");
 			element.classList.add("portfolio-item");
 			element.id = id;
 
-			let titlebar = document.createElement("div");
+			const titlebar = document.createElement("div");
 			titlebar.classList.add("titlebar");
 			titlebar.innerText = title;
 			element.appendChild(titlebar);
 
-			let content = document.createElement("div");
+			const content = document.createElement("div");
 			content.classList.add("content");
 			content.innerHTML = `<p>Content of ${id}</p>`; 
 			element.appendChild(content);
-
-			this.items.push(this[id] = {
-				get element() { return element },
-				get title()   { return titlebar.childNodes[0].nodeValue },
-				get content() { return content.innerHTML },
-				set title(string)   { titlebar.childNodes[0].nodeValue = string },
-				set content(string) { content.innerHTML = string },
-			});
 
 			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
@@ -94,8 +87,8 @@
 				event.preventDefault();
 				pos3 = event.clientX;
 				pos4 = event.clientY;
-				element.addEventListener("mousemove", dragMouseMove, true);
-				element.addEventListener("mouseup", dragMouseUp, true);
+				element.addEventListener("mousemove", dragMouseMove, false);
+				element.addEventListener("mouseup", dragMouseUp, false);
 				element.style.cursor = "grabbing";
 				element.style.zIndex = this.z+++1;
 			}
@@ -113,16 +106,49 @@
 
 			const dragMouseUp = event => {
 				event.preventDefault();
-				element.removeEventListener("mouseup", dragMouseUp, true);
-				element.removeEventListener("mousemove", dragMouseMove, true);
+				element.removeEventListener("mouseup", dragMouseUp, false);
+				element.removeEventListener("mousemove", dragMouseMove, false);
 				element.style.cursor = "grab";
 			}
 
-			element.addEventListener("mousedown", dragMouseDown, true);
+			element.addEventListener("mousedown", dragMouseDown, false);
 
-			document.body.appendChild(element);
+			const portfolioItem = Object.create({
+				get id() { return id },
+				get element() { return element },
+				get title()   { return titlebar.childNodes[0].nodeValue },
+				get content() { return content.innerHTML },
+				set title(string)   { titlebar.childNodes[0].nodeValue = string },
+				set content(string) { content.innerHTML = string },
+			});
+
+			const PortfolioItem = Object.getPrototypeOf(portfolioItem); {
+				PortfolioItem.remove = () => {return this.removeItem(portfolioItem)};
+				PortfolioItem.attach = () => {return this.attachItem(portfolioItem)};
+			}
+
+			return this.attachItem(portfolioItem);
 		}
 
+		attachItem = portfolioItem => {
+			const idx = this.items.indexOf(portfolioItem);
+			if (idx == -1) {
+				this.items.push(portfolioItem);
+				this[portfolioItem.id] = portfolioItem;
+				document.body.appendChild(portfolioItem.element);
+				return portfolioItem;
+			} else return null;
+		}
+
+		removeItem = portfolioItem => {
+			const idx = this.items.indexOf(portfolioItem);
+			if (idx > -1) {
+				this.items.splice(idx, 1);
+				delete this[portfolioItem.id];
+				portfolioItem.element.remove();
+				return portfolioItem;
+			} else return null;
+		}
 	}
 
 	window.addEventListener("DOMContentLoaded", event => {
