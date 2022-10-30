@@ -55,15 +55,38 @@
 
 }
 	</style>
+
 	<script>
 
 	class Portfolio {
 
 		constructor() {
+			this.items = [];
 			this.z = 0;
 		}
 
-		addItem(element) {
+		addItem(id, title) {
+			let element = document.createElement("div");
+			element.classList.add("portfolio-item");
+			element.id = id;
+
+			let titlebar = document.createElement("div");
+			titlebar.classList.add("titlebar");
+			titlebar.innerText = title;
+			element.appendChild(titlebar);
+
+			let content = document.createElement("div");
+			content.classList.add("content");
+			content.innerHTML = `<p>Content of ${id}</p>`; 
+			element.appendChild(content);
+
+			this.items.push(this[id] = {
+				get element() { return element },
+				get title()   { return titlebar.childNodes[0].nodeValue },
+				get content() { return content.innerHTML },
+				set title(string)   { titlebar.childNodes[0].nodeValue = string },
+				set content(string) { content.innerHTML = string },
+			});
 
 			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
@@ -96,19 +119,17 @@
 			}
 
 			element.addEventListener("mousedown", dragMouseDown, true);
-		}
 
-		initialize() {
-			for (var element of document.getElementsByClassName("portfolio-item")) {
-				this.addItem(element);
-			}
+			document.body.appendChild(element);
 		}
 
 	}
 
-	window.addEventListener("load", event => {
-		let portfolio = new Portfolio();
-		portfolio.initialize();
+	window.addEventListener("DOMContentLoaded", event => {
+		portfolio = new Portfolio();
+		portfolio.addItem("box1", "Box1");
+		portfolio.addItem("box2", "Box2");
+		portfolio.addItem("box3", "Box3");
 	});
 
 	</script>
@@ -116,28 +137,6 @@
 </head>
 
 <body>
-
-<div id="box1" class="portfolio-item">
-	<div class="titlebar">Box1</div>
-	<p>Put</p>
-	<p>content</p>
-	<p>here</p>
-</div>
-
-<div id="box2" class="portfolio-item">
-	<div class="titlebar">Box2</div>
-	<p>Put</p>
-	<p>content</p>
-	<p>here</p>
-</div>
-
-<div id="box3" class="portfolio-item">
-	<div class="titlebar">Box3</div>
-	<p>Put</p>
-	<p>content</p>
-	<p>here</p>
-</div>
-
 </body>
 </html>
 
