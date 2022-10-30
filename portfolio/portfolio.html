@@ -30,13 +30,14 @@
 	.portfolio-item .titlebar {
 		min-height: 1em;
 		padding: 0.5em;
+		border-left: 4px solid hsl(42, 50%, 95%);
+		border-right: 4px solid hsl(42, 50%, 90%);
+		border-radius: 6px;
 		background-image: url("paper.png"), linear-gradient(hsl(42, 50%, 95%) 0%, hsl(42, 50%, 78%) 25%, hsl(42, 50%, 78%) 75%, hsl(42, 50%, 60%) 100%);
 		background-position: center;
 		color: hsl(42, 50%, 10%);
+		text-shadow: 0 0 1px hsl(42, 50%, 55%);
 		font-weight: bold;
-		border-radius: 6px;
-		border-left: 4px solid hsl(42, 50%, 95%);
-		border-right: 4px solid hsl(42, 50%, 90%);
 	}
 	@media (prefers-color-scheme: dark) {
 
@@ -45,11 +46,12 @@
 	}
 
 	.portfolio-item .titlebar {
+		border-left: 4px solid hsl(42, 30%, 60%);
+		border-right: 4px solid hsl(42, 30%, 58%);
 		background-image: url("paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
 		background-position: center;
 		color: hsl(42, 50%, 90%);
-		border-left: 4px solid hsl(42, 30%, 60%);
-		border-right: 4px solid hsl(42, 30%, 58%);
+		text-shadow: 0 0 1px hsl(42, 50%, 55%);
 	}
 
 	}
