@@ -11,8 +11,8 @@
 		margin: 0;
 		font: caption;
 		font-size: 16px;
-		background-color: #d6d6d6;
-	}
+		background-color: #c6c6c6;
+=	}
 
 	.portfolio-item {
 		width: 250px;
@@ -24,35 +24,33 @@
 		border-top-right-radius: 4px 8px;
 		filter: drop-shadow(0px 10px 5px hsla(0, 0%, 0%, 0.75) );
 		text-align: center;
+		cursor: default;
 	}
 
 	.portfolio-item .titlebar {
 		min-height: 1em;
 		padding: 0.5em;
-		background: linear-gradient( hsl(0, 50%, 50%) 0%, hsl(0, 50%, 30%) 25%, hsl(0, 50%, 30%) 75%, hsl(0, 50%, 20%) 100%  );
-		color: hsl(0, 50%, 95%);
+		background: linear-gradient( hsl(42, 50%, 90%) 0%, hsl(42, 50%, 65%) 25%, hsl(42, 50%, 65%) 75%, hsl(42, 50%, 40%) 100%  );
+		color: hsl(42, 50%, 10%);
 		font-weight: bold;
-		border-top-left-radius: 4px 8px;
-		border-top-right-radius: 4px 8px;
-		border-left: 1px solid hsl(0, 50%, 50%);
-		border-right: 1px solid hsl(0, 50%, 50%);
+		border-radius: 6px;
+		border-left: 4px solid hsl(42, 50%, 95%);
+		border-right: 4px solid hsl(42, 50%, 90%);
+	}
+	@media (prefers-color-scheme: dark) {
+
+	body {
+		background-color: #484848;
 	}
 
-	#box1 {
-		left: 100px;
-		top: 25px;
+	.portfolio-item .titlebar {
+		background: linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
+		color: hsl(42, 50%, 90%);
+		border-left: 4px solid hsl(42, 30%, 60%);
+		border-right: 4px solid hsl(42, 30%, 60%);
 	}
 
-	#box2 {
-		left: 400px;
-		top: 25px;
 	}
-
-	#box3 {
-		left: 700px;
-		top: 25px;
-	}
-
 	</style>
 	<script>
 
@@ -70,9 +68,9 @@
 				event.preventDefault();
 				pos3 = event.clientX;
 				pos4 = event.clientY;
-				element.addEventListener("mouseup", dragMouseUp, true);
 				element.addEventListener("mousemove", dragMouseMove, true);
-				element.style.cursor = "move";
+				element.addEventListener("mouseup", dragMouseUp, true);
+				element.style.cursor = "grabbing";
 				element.style.zIndex = this.z+++1;
 			}
 
@@ -82,6 +80,7 @@
 				pos2 = pos4 - event.clientY;
 				pos3 = event.clientX;
 				pos4 = event.clientY;
+				element.style.position = "absolute";
 				element.style.left = (element.offsetLeft - pos1) + "px";
 				element.style.top = (element.offsetTop - pos2) + "px";
 			}
@@ -93,7 +92,6 @@
 				element.style.cursor = "default";
 			}
 
-			element.style.position = "absolute";
 			element.addEventListener("mousedown", dragMouseDown, true);
 		}
 
