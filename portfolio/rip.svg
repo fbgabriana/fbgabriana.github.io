@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1000px" height="1000px" viewBox="0 0 1000 1000">
 <style>
-	#bg { fill: hsl(42, 50%, 95%) }
+	#bg { fill: hsl(42, 50%, 90%) }
 	@media (prefers-color-scheme: dark) { #bg { fill: hsl(42, 30%, 60%) } } }
 </style>
 <g id="bg" transform="translate(0,1000) scale(0.1,-0.1)" stroke="none">
