@@ -45,7 +45,8 @@
 	}
 
 	.dropbox {
-		background-color: hsla(0, 0%, 0%, 0.3);
+		background-color: hsla(0, 0%, 0%, 0.1);
+		background-size: contain;
 	}
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +61,10 @@
 		background-image: url("paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
 		background-position: center;
 		color: hsl(42, 50%, 85%);
+	}
+
+	.dropbox {
+		background-color: hsla(0, 0%, 100%, 0.1);
 	}
 
 }
@@ -168,6 +173,7 @@
 			if (y==undefined) y = (innerHeight - h) / 2;
 
 			const element = document.createElement("div");
+			element.id = id;
 			element.style.position = "absolute";
 			element.style.left = x + "px";
 			element.style.top = y + "px";
@@ -177,6 +183,7 @@
 			document.body.appendChild(element);
 
 			this.element = element;
+			this.style = element.style;
 			this.rect = element.getBoundingClientRect();
 
 			window.addEventListener("mouseup", event => { 
@@ -198,7 +205,8 @@
 		portfolio.addItem("box2", "Box2");
 		portfolio.addItem("box3", "Box3");
 
-		dropbox1 = new DropBox("dropbox1", 300, 300, 400, 100);
+		dropbox1 = new DropBox("moreinfo", 256, 256, 400, 100);
+		dropbox1.style.backgroundImage = "url(moreinfo.svg)";
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				// Do stuff...
@@ -206,7 +214,8 @@
 			}
 		}
 
-		dropbox2 = new DropBox("dropbox2", 300, 300, 800, 100);
+		dropbox2 = new DropBox("viewsite", 256, 256, 800, 100);
+		dropbox2.style.backgroundImage = "url(viewsite.svg)";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				// Do stuff...
