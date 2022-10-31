@@ -200,6 +200,10 @@
 	}
 
 	window.addEventListener("DOMContentLoaded", event => {
+		main();
+	});
+
+	let main = () => {
 
 		portfolio = new Portfolio();
 		portfolio.addItem("box1", "Box1");
@@ -223,7 +227,7 @@
 				console.log(`Dropped ${portfolio[element.id].title} in dropbox2`);
 			}
 		}
-	});
+	}
 
 	</script>
 
