@@ -161,7 +161,9 @@
 	}
 
 	class DropBox {
-		constructor(w, h, x, y) {
+		constructor(id, w, h, x, y) {
+			if (w==undefined) w = 256;
+			if (h==undefined) h = 256;
 			if (x==undefined) x = (innerWidth - w) / 2;
 			if (y==undefined) y = (innerHeight - h) / 2;
 
@@ -178,10 +180,10 @@
 			this.rect = element.getBoundingClientRect();
 
 			window.addEventListener("mouseup", event => { 
-				if (event.clientX > dropbox.rect.left  &&
-					event.clientX < dropbox.rect.right &&
-					event.clientY > dropbox.rect.top   &&
-					event.clientY < dropbox.rect.bottom ){
+				if (event.clientX > this.rect.left  &&
+					event.clientX < this.rect.right &&
+					event.clientY > this.rect.top   &&
+					event.clientY < this.rect.bottom ){
 					this.ondrop(event);
 				}
 			});
@@ -190,15 +192,25 @@
 	}
 
 	window.addEventListener("DOMContentLoaded", event => {
+
 		portfolio = new Portfolio();
 		portfolio.addItem("box1", "Box1");
 		portfolio.addItem("box2", "Box2");
 		portfolio.addItem("box3", "Box3");
-		dropbox = new DropBox(400, 300);
-		dropbox.ondrop = event => {
+
+		dropbox1 = new DropBox("dropbox1", 300, 300, 400, 100);
+		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				// Do stuff...
-				console.log(`Dropped ${portfolio[element.id].title} in dropbox!`);
+				console.log(`Dropped ${portfolio[element.id].title} in dropbox1`);
+			}
+		}
+
+		dropbox2 = new DropBox("dropbox2", 300, 300, 800, 100);
+		dropbox2.ondrop = event => {
+			if (element = event.target.closest(".portfolio-item")) {
+				// Do stuff...
+				console.log(`Dropped ${portfolio[element.id].title} in dropbox2`);
 			}
 		}
 	});
@@ -209,4 +221,6 @@
 
 <body>
 </body>
+
 </html>
+
