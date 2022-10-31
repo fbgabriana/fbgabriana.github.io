@@ -133,9 +133,9 @@
 		attachItem = portfolioItem => {
 			const idx = this.items.indexOf(portfolioItem);
 			if (idx == -1) {
-				this.items.push(portfolioItem);
-				this[portfolioItem.id] = portfolioItem;
 				document.body.appendChild(portfolioItem.element);
+				this[portfolioItem.id] = portfolioItem;
+				this.items.push(portfolioItem);
 				return portfolioItem;
 			} else return null;
 		}
@@ -164,5 +164,6 @@
 
 <body>
 </body>
+
 </html>
 
