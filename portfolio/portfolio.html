@@ -188,8 +188,7 @@
 		createDialog() {
 			const dialog = document.createElement("dialog");
 			dialog.classList.add("dropbox-dialog");
-			dialog.innerHTML = "\n \
-				<button id='closebutton' class='closebutton'>✕</button>\n"
+			dialog.innerHTML = "<button id='closebutton' class='closebutton'>✕</button>\n"
 			dialog.addEventListener("click", (event) => {
 				if (event.target == closebutton) dialog.close();
 			});
@@ -197,7 +196,7 @@
 			return this.dialog = dialog;
 		}
 
-		ondrop() {void(0)}
+		ondrop() { void(0) }
 	}
 
 	let reposition = () => {
