@@ -49,8 +49,12 @@ body {
 }
 
 .portfolio-item .content ul {
-	margin: 0 0 0 1em;
+	margin: 0;
 	padding: 0;
+}
+
+.portfolio-item .content li {
+	list-style-type: none;
 }
 
 .dropbox {
