@@ -73,6 +73,8 @@
 				set title(string)   { titlebar.childNodes[0].nodeValue = string },
 				get content() { return content.innerHTML },
 				set content(string) { content.innerHTML = string },
+				get url() { return element.dataset.url },
+				set url(string) { element.dataset.url = string },
 				get thumb() { return content.dataset.thumb },
 				set thumb(string) {
 					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs-dark" : "thumbs" ;
@@ -183,17 +185,35 @@
 		portfolio = new Portfolio();
 
 		portfolio.addItem("philastronomy", "Philippine Astronomy");
+		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
+		portfolio["philastronomy"].thumb = "philastronomy.png";
+		portfolio["philastronomy"].url = "https://fbgabriana.github.io/philippine-astronomy/home/";
+
 		portfolio.addItem("harmonicmeans", "Harmonic Means");
+		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
+		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
+		portfolio["harmonicmeans"].url = "https://fbgabriana.github.io/harmonicmeans/home.html";
+
 		portfolio.addItem("gg-tournament", "GG Tournament");
+		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
+		portfolio["gg-tournament"].thumb = "gg-tournament.png";
+		portfolio["gg-tournament"].url = "https://fbgabriana.github.io/gg-tournament/gg-tournament.html";
+
 		portfolio.addItem("cyberhomies", "Cyber Homies");
+		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
+		portfolio["cyberhomies"].thumb = "cyberhomies.png";
+		portfolio["cyberhomies"].url = "https://fbgabriana.github.io/miniproject2/home.html";
+
 		portfolio.addItem("instructions", "Instructions");
+		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
+		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
 		dropbox1 = new DropBox("moreinfo");
 		dropbox1.style.backgroundImage = "url(moreinfo.svg)";
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
-				// Do stuff...
 				console.log(`Dropped ${portfolio[element.id].title} in dropbox1`);
+				// Do stuff...
 			}
 		}
 
@@ -201,21 +221,13 @@
 		dropbox2.style.backgroundImage = "url(viewsite.svg)";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
-				// Do stuff...
-				console.log(`Dropped ${portfolio[element.id].title} in dropbox2`);
+				if (portfolio[element.id].url) {
+					window.open(portfolio[element.id].url);
+				} else {
+					console.log(`No URL associated with item '${portfolio[element.id].title}'`);
+				}
 			}
 		}
-
-		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
-		portfolio["philastronomy"].thumb = "philastronomy.png";
-		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
-		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
-		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
-		portfolio["gg-tournament"].thumb = "gg-tournament.png";
-		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
-		portfolio["cyberhomies"].thumb = "cyberhomies.png";
-		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
-		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
 		reposition();
 	}
