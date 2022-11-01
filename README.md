@@ -16,3 +16,5 @@ It contains the following folders:
 
 * [thoughts](thoughts/) - some random thoughts.
 
+* [portfolio](portfolio/) - some random thoughts.
+
