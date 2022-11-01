@@ -74,7 +74,10 @@
 				get content() { return content.innerHTML },
 				set content(string) { content.innerHTML = string },
 				get thumb() { return content.dataset.thumb },
-				set thumb(string) { content.style.backgroundImage=`url(thumbs/${content.dataset.thumb = string})` },
+				set thumb(string) {
+					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs-dark" : "thumbs" ;
+					content.style.backgroundImage=`url(${thumbs}/${content.dataset.thumb = string})`
+				},
 				get pos() { let rect = element.getBoundingClientRect(); return [rect.left, rect.top]},
 				set pos(arr) { this.style.left = arr[0] + "px"; this.style.top = arr[1] + "px"},
 				get center() { let rect = element.getBoundingClientRect(); return [rect.left + rect.width/2, rect.top + rect.height/2]},
@@ -117,6 +120,15 @@
 			}
 			return 0;
 		}
+
+		adjustColorTheme() {
+			for (var i = 0; i < this.items.length; i++) {
+				let content = this.items[i].element.querySelector(".content");
+				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs-dark" : "thumbs" ;
+				content.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
+			}
+			return 0;
+		}
 	}
 
 	class DropBox {
@@ -142,6 +154,10 @@
 			});
 		}
 		ondrop() {void(0)}
+	}
+
+	window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
+		portfolio.adjustColorTheme();
 	}
 
 	let reposition = () => {
