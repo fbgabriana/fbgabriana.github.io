@@ -1,3 +1,4 @@
+@import "woff.css";
 
 body {
 	margin: 0;
@@ -30,7 +31,7 @@ body {
 	padding: 0.5em;
 	border-radius: 6px;
 	background-position: center;
-	font-family: "Aquabase";
+	font-family: "AquaBase";
 	font-weight: bold;
 }
 

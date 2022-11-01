@@ -5,6 +5,7 @@
 		src: url("../woff/screen/lsans.woff") format("woff");
 		font-weight: normal;
 		font-style: normal;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -12,6 +13,7 @@
 		src: url("../woff/screen/lsansd.woff") format("woff");
 		font-weight: bold;
 		font-style: normal;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -19,6 +21,7 @@
 		src: url("../woff/screen/lsansdi.woff") format("woff");
 		font-weight: bold;
 		font-style: italic;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -26,6 +29,7 @@
 		src: url("../woff/screen/lsansi.woff") format("woff");
 		font-weight: normal;
 		font-style: italic;
+	    font-display: swap;
 	}
 
 	body {
@@ -40,6 +44,7 @@
 		src: url("../woff/print/PlayfairDisplay.woff") format("woff");
 		font-weight: normal;
 		font-style: normal;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -47,6 +52,7 @@
 		src: url("../woff/print/PlayfairDisplayB.woff") format("woff");
 		font-weight: bold;
 		font-style: normal;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -54,6 +60,7 @@
 		src: url("../woff/print/PlayfairDisplayBI.woff") format("woff");
 		font-weight: bold;
 		font-style: italic;
+	    font-display: swap;
 	}
 
 	@font-face {
@@ -61,6 +68,7 @@
 		src: url("../woff/print/PlayfairDisplayI.woff") format("woff");
 		font-weight: normal;
 		font-style: italic;
+	    font-display: swap;
 	}
 
 	body {

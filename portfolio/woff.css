@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "AquaBase";
+    src: url("woff/aquabase.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Handlee";
+    src: url("woff/handlee.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
