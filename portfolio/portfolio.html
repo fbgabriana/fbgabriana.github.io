@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="portfolio.css">
+	<link rel="stylesheet" href="stylesheet/portfolio.css">
 
 	<script>
 
@@ -77,7 +77,7 @@
 				set url(string) { element.dataset.url = string },
 				get thumb() { return content.dataset.thumb },
 				set thumb(string) {
-					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs-dark" : "thumbs" ;
+					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
 					content.style.backgroundImage=`url(${thumbs}/${content.dataset.thumb = string})`
 				},
 				get pos() { let rect = element.getBoundingClientRect(); return [rect.left, rect.top]},
@@ -126,7 +126,7 @@
 		adjustColorTheme() {
 			for (var i = 0; i < this.items.length; i++) {
 				let content = this.items[i].element.querySelector(".content");
-				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs-dark" : "thumbs" ;
+				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
 				content.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
 			}
 			return 0;
@@ -220,7 +220,7 @@
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
 		dropbox1 = new DropBox("moreinfo");
-		dropbox1.style.backgroundImage = "url(moreinfo.svg)";
+		dropbox1.style.backgroundImage = "url(icons/moreinfo.svg)";
 		dropbox1.element.innerHTML = "More info";
 		dropbox1.createDialog("dropbox1-dialog");
 		dropbox1.ondrop = event => {
@@ -230,7 +230,7 @@
 		}
 
 		dropbox2 = new DropBox("viewsite");
-		dropbox2.style.backgroundImage = "url(viewsite.svg)";
+		dropbox2.style.backgroundImage = "url(icons/viewsite.svg)";
 		dropbox2.element.innerHTML = "View the site";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
