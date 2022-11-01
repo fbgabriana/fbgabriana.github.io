@@ -37,6 +37,8 @@
 
 			const dragPointerDown = event => {
 				event.preventDefault();
+				if (event.target.hasPointerCapture(event.pointerId))
+					event.target.releasePointerCapture(event.pointerId);
 				clientX = event.clientX;
 				clientY = event.clientY;
 				window.addEventListener("pointermove", dragPointerMove, false);
@@ -137,14 +139,12 @@
 
 		constructor(id) {
 
+			this.id = id;
+
 			const element = document.createElement("div");
-			element.id = id;
+			element.id = this.id;
 			element.classList.add("dropbox");
 			document.body.appendChild(element);
-
-			this.element = element;
-			this.style = element.style;
-			this.rect = element.getBoundingClientRect();
 
 			window.addEventListener("pointerup", event => {
 				if (event.clientX > this.rect.left  &&
@@ -154,6 +154,35 @@
 					this.ondrop(event);
 				}
 			});
+
+		}
+
+		get element() {
+			return document.getElementById(this.id);
+		}
+
+		get style() {
+			return this.element && this.element.style;
+		}
+
+		get rect() {
+			return this.element && this.element.getBoundingClientRect();
+		}
+
+		get caption() {
+			return this.element && this.element.innerHTML;
+		}
+
+		set caption(string) {
+			if (this.element) this.element.innerHTML = string;
+		}
+
+		get icon() {
+			return this.element && this.element.style.backgroundImage;
+		}
+
+		set icon(string) {
+			if (this.element) this.element.style.backgroundImage = string;
 		}
 
 		createDialog() {
@@ -176,8 +205,6 @@
 		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
 		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
 		dropbox2.style.top = (innerHeight - 256)* 3.5/4 + "px";
-		dropbox1.rect = dropbox1.element.getBoundingClientRect();
-		dropbox2.rect = dropbox2.element.getBoundingClientRect();
 		portfolio.alignItems(true);
 	}
 
@@ -222,8 +249,8 @@
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
 		dropbox1 = new DropBox("moreinfo");
-		dropbox1.style.backgroundImage = "url(icons/moreinfo.svg)";
-		dropbox1.element.innerHTML = "More info";
+		dropbox1.icon = "url(icons/moreinfo.svg)";
+		dropbox1.caption = "More info";
 		dropbox1.createDialog("dropbox1-dialog");
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
@@ -232,8 +259,8 @@
 		}
 
 		dropbox2 = new DropBox("viewsite");
-		dropbox2.style.backgroundImage = "url(icons/viewsite.svg)";
-		dropbox2.element.innerHTML = "View the site";
+		dropbox2.icon = "url(icons/viewsite.svg)";
+		dropbox2.caption = "View the site";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
