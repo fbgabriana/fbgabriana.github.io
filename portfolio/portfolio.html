@@ -155,6 +155,17 @@
 				}
 			});
 		}
+		createDialog() {
+			const dialog = document.createElement("dialog");
+			dialog.classList.add("dropbox-dialog");
+			dialog.innerHTML = "\n \
+				<button id='closebutton' class='closebutton'>✕</button>\n"
+			dialog.addEventListener("click", (event) => {
+				if (event.target == closebutton) dialog.close();
+			});
+			document.body.appendChild(dialog);
+			return this.dialog = dialog;
+		}
 		ondrop() {void(0)}
 	}
 
@@ -210,15 +221,17 @@
 
 		dropbox1 = new DropBox("moreinfo");
 		dropbox1.style.backgroundImage = "url(moreinfo.svg)";
+		dropbox1.element.innerHTML = "More info";
+		dropbox1.createDialog("dropbox1-dialog");
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
-				console.log(`Dropped ${portfolio[element.id].title} in dropbox1`);
-				// Do stuff...
+				dropbox1.dialog.showModal();
 			}
 		}
 
 		dropbox2 = new DropBox("viewsite");
 		dropbox2.style.backgroundImage = "url(viewsite.svg)";
+		dropbox2.element.innerHTML = "View the site";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
