@@ -1,0 +1,103 @@
+
+body {
+	margin: 0;
+	font: caption;
+	font-size: 16px;
+}
+
+.portfolio-item {
+	position: absolute;
+	width: 250px;
+	height: 200px;
+	background-image: url("paper.png"), url("rip.svg");
+	background-position: bottom right;
+	background-size: auto;
+	border-top-left-radius: 4px 8px;
+	border-top-right-radius: 4px 8px;
+	text-align: center;
+	filter: drop-shadow(0px 10px 5px hsla(0, 0%, 0%, 0.75) );
+	cursor: grab;
+}
+
+.portfolio-item.grabbing {
+	filter: drop-shadow(0px 10px 10px hsla(0, 0%, 0%, 0.75) );
+	cursor: grabbing;
+}
+
+.portfolio-item .titlebar {
+	min-height: 1em;
+	line-height: 1em;
+	padding: 0.5em;
+	border-radius: 6px;
+	background-position: center;
+	font-family: "Aquabase";
+	font-weight: bold;
+}
+
+.portfolio-item .content {
+	line-height: 1.25em;
+	font-family: "Handlee";
+	color: hsl(42, 60%, 5%);
+	height: 132px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.portfolio-item .content p {
+	margin: 0.5em;
+}
+
+.portfolio-item .content ul {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+
+.dropbox {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 16px;
+	z-index: -1;
+}
+
+@media (prefers-color-scheme: light) {
+
+	body {
+		background-color: #d8d8d8;
+	}
+
+	.portfolio-item .titlebar {
+		border-left: 4px solid hsl(42, 50%, 95%);
+		border-right: 4px solid hsl(42, 50%, 90%);
+		background-image: url("paper.png"), linear-gradient(hsl(42, 50%, 95%) 0%, hsl(42, 50%, 78%) 25%, hsl(42, 50%, 78%) 75%, hsl(42, 50%, 60%) 100%);
+		color: hsl(42, 50%, 25%);
+	}
+
+	.dropbox {
+		background-color: hsla(0, 0%, 0%, 0.1);
+	}
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+	body {
+		background-color: #484848;
+	}
+
+	.portfolio-item .titlebar {
+		border-left: 4px solid hsl(42, 30%, 60%);
+		border-right: 4px solid hsl(42, 30%, 58%);
+		background-image: url("paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
+		color: hsl(42, 50%, 85%);
+	}
+
+	.dropbox {
+		background-color: hsla(0, 0%, 100%, 0.1);
+	}
+
+}
+

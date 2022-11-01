@@ -5,74 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Portfolio</title>
-	<style>
-
-	body {
-		margin: 0;
-		font: caption;
-		font-size: 16px;
-		background-color: #d8d8d8;
-	}
-
-	.portfolio-item {
-		width: 250px;
-		height: 200px;
-		background-image: url("paper.png"), url("rip.svg");
-		background-position: bottom right;
-		background-size: auto;
-		border-top-left-radius: 4px 8px;
-		border-top-right-radius: 4px 8px;
-		text-align: center;
-		filter: drop-shadow(0px 10px 5px hsla(0, 0%, 0%, 0.75) );
-		cursor: grab;
-	}
-
-	.portfolio-item.grabbing {
-		filter: drop-shadow(0px 10px 10px hsla(0, 0%, 0%, 0.75) );
-		cursor: grabbing;
-	}
-
-	.portfolio-item .titlebar {
-		min-height: 1em;
-		line-height: 1em;
-		padding: 0.5em;
-		border-left: 4px solid hsl(42, 50%, 95%);
-		border-right: 4px solid hsl(42, 50%, 90%);
-		border-radius: 6px;
-		background-image: url("paper.png"), linear-gradient(hsl(42, 50%, 95%) 0%, hsl(42, 50%, 78%) 25%, hsl(42, 50%, 78%) 75%, hsl(42, 50%, 60%) 100%);
-		background-position: center;
-		color: hsl(42, 50%, 25%);
-		font-weight: bold;
-	}
-
-	.dropbox {
-		background-color: hsla(0, 0%, 0%, 0.1);
-		background-size: 60%;
-		background-repeat: no-repeat;
-		background-position: center;
-		border-radius: 16px;
-	}
-
-@media (prefers-color-scheme: dark) {
-
-	body {
-		background-color: #484848;
-	}
-
-	.portfolio-item .titlebar {
-		border-left: 4px solid hsl(42, 30%, 60%);
-		border-right: 4px solid hsl(42, 30%, 58%);
-		background-image: url("paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
-		background-position: center;
-		color: hsl(42, 50%, 85%);
-	}
-
-	.dropbox {
-		background-color: hsla(0, 0%, 100%, 0.1);
-	}
-
-}
-	</style>
+	<link rel="stylesheet" href="portfolio.css">
 
 	<script>
 
@@ -86,6 +19,7 @@
 		addItem = (id, title) => {
 
 			const element = document.createElement("div");
+			element.style.zIndex = this.z;
 			element.classList.add("portfolio-item");
 			element.id = id;
 
@@ -101,17 +35,17 @@
 
 			let [dX, dY, clientX, clientY] = [0, 0, 0, 0];
 
-			const dragMouseDown = event => {
+			const dragPointerDown = event => {
 				event.preventDefault();
 				clientX = event.clientX;
 				clientY = event.clientY;
-				window.addEventListener("mousemove", dragMouseMove, false);
-				window.addEventListener("mouseup", dragMouseUp, false);
+				window.addEventListener("pointermove", dragPointerMove, false);
+				window.addEventListener("pointerup", dragPointerUp, false);
 				element.classList.add("grabbing");
 				element.style.zIndex = this.z+++1;
 			}
 
-			const dragMouseMove = event => {
+			const dragPointerMove = event => {
 				event.preventDefault();
 				dX = event.clientX - clientX;
 				dY = event.clientY - clientY;
@@ -122,22 +56,29 @@
 				element.style.top = (element.offsetTop + dY) + "px";
 			}
 
-			const dragMouseUp = event => {
+			const dragPointerUp = event => {
 				event.preventDefault();
-				window.removeEventListener("mouseup", dragMouseUp, false);
-				window.removeEventListener("mousemove", dragMouseMove, false);
+				window.removeEventListener("pointerup", dragPointerUp, false);
+				window.removeEventListener("pointermove", dragPointerMove, false);
 				element.classList.remove("grabbing");
 			}
 
-			element.addEventListener("mousedown", dragMouseDown, false);
+			element.addEventListener("pointerdown", dragPointerDown, false);
 
 			const portfolioItem = Object.create({
 				get id() { return id },
 				get element() { return element },
+				get style() { return element.style },
 				get title()   { return titlebar.childNodes[0].nodeValue },
-				get content() { return content.innerHTML },
 				set title(string)   { titlebar.childNodes[0].nodeValue = string },
+				get content() { return content.innerHTML },
 				set content(string) { content.innerHTML = string },
+				get thumb() { return content.dataset.thumb },
+				set thumb(string) { content.style.backgroundImage=`url(thumbs/${content.dataset.thumb = string})` },
+				get pos() { let rect = element.getBoundingClientRect(); return [rect.left, rect.top]},
+				set pos(arr) { this.style.left = arr[0] + "px"; this.style.top = arr[1] + "px"},
+				get center() { let rect = element.getBoundingClientRect(); return [rect.left + rect.width/2, rect.top + rect.height/2]},
+				set center(arr) { let rect = element.getBoundingClientRect(); this.style.left = (arr[0] - rect.width/2) + "px"; this.style.top = (arr[1] - rect.height/2) + "px"},
 			});
 
 			const PortfolioItem = Object.getPrototypeOf(portfolioItem); {
@@ -167,22 +108,22 @@
 				return portfolioItem;
 			} else return null;
 		}
+
+		alignItems(bool) {
+			if (bool && this.z > 0) return 1;
+			let frac = innerWidth / this.items.length;
+			for (var i = 0; i < this.items.length; i++) {
+				this.items[i].center = [(i + 0.5) * frac, 125];
+			}
+			return 0;
+		}
 	}
 
 	class DropBox {
-		constructor(id, w, h, x, y) {
-			if (w==undefined) w = 256;
-			if (h==undefined) h = 256;
-			if (x==undefined) x = (innerWidth - w) / 2;
-			if (y==undefined) y = (innerHeight - h) / 2;
+		constructor(id) {
 
 			const element = document.createElement("div");
 			element.id = id;
-			element.style.position = "absolute";
-			element.style.left = x + "px";
-			element.style.top = y + "px";
-			element.style.width = w + "px";
-			element.style.height = h + "px";
 			element.classList.add("dropbox");
 			document.body.appendChild(element);
 
@@ -190,7 +131,7 @@
 			this.style = element.style;
 			this.rect = element.getBoundingClientRect();
 
-			window.addEventListener("mouseup", event => { 
+			window.addEventListener("pointerup", event => {
 				if (event.clientX > this.rect.left  &&
 					event.clientX < this.rect.right &&
 					event.clientY > this.rect.top   &&
@@ -202,19 +143,35 @@
 		ondrop() {void(0)}
 	}
 
+	let reposition = () => {
+		dropbox1.style.left = (innerWidth - 256)* 1/4 + "px";
+		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
+		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
+		dropbox2.style.top = (innerHeight - 256)* 3.5/4 + "px";
+		dropbox1.rect = dropbox1.element.getBoundingClientRect();
+		dropbox2.rect = dropbox2.element.getBoundingClientRect();
+		portfolio.alignItems(true);
+	}
+
 	window.addEventListener("DOMContentLoaded", event => {
 		main();
+	});
+
+	window.addEventListener("resize", event => {
+		reposition();
 	});
 
 	let main = () => {
 
 		portfolio = new Portfolio();
 
-		portfolio.addItem("item1", "Item1");
-		portfolio.addItem("item2", "Item2");
-		portfolio.addItem("item3", "Item3");
+		portfolio.addItem("philastronomy", "Philippine Astronomy");
+		portfolio.addItem("harmonicmeans", "Harmonic Means");
+		portfolio.addItem("gg-tournament", "GG Tournament");
+		portfolio.addItem("cyberhomies", "Cyber Homies");
+		portfolio.addItem("instructions", "Instructions");
 
-		dropbox1 = new DropBox("moreinfo", 256, 256, 400, 100);
+		dropbox1 = new DropBox("moreinfo");
 		dropbox1.style.backgroundImage = "url(moreinfo.svg)";
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
@@ -223,7 +180,7 @@
 			}
 		}
 
-		dropbox2 = new DropBox("viewsite", 256, 256, 800, 100);
+		dropbox2 = new DropBox("viewsite");
 		dropbox2.style.backgroundImage = "url(viewsite.svg)";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
@@ -231,14 +188,24 @@
 				console.log(`Dropped ${portfolio[element.id].title} in dropbox2`);
 			}
 		}
+
+		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
+		portfolio["philastronomy"].thumb = "philastronomy.png";
+		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
+		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
+		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
+		portfolio["gg-tournament"].thumb = "gg-tournament.png";
+		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
+		portfolio["cyberhomies"].thumb = "cyberhomies.png";
+		portfolio["instructions"].content = "<p>Feel free to drag and drop and reposition the items!</p>";
+		portfolio["instructions"].content += "<ul><li>The question mark gives more info</li><li>The lens lets you view the site</li></ul>";
+
+		reposition();
 	}
 
 	</script>
 
 </head>
-
 <body>
 </body>
-
 </html>
-
