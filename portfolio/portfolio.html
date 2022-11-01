@@ -156,10 +156,6 @@
 		ondrop() {void(0)}
 	}
 
-	window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
-		portfolio.adjustColorTheme();
-	}
-
 	let reposition = () => {
 		dropbox1.style.left = (innerWidth - 256)* 1/4 + "px";
 		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
@@ -170,12 +166,16 @@
 		portfolio.alignItems(true);
 	}
 
-	window.addEventListener("DOMContentLoaded", event => {
-		main();
-	});
-
 	window.addEventListener("resize", event => {
 		reposition();
+	});
+
+	window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
+		portfolio.adjustColorTheme();
+	}
+
+	window.addEventListener("DOMContentLoaded", event => {
+		main();
 	});
 
 	let main = () => {
