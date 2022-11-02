@@ -288,7 +288,7 @@
 		oncancel(event) { void(0) }
 	}
 
-	let reposition = () => {
+	let repositionItems = () => {
 		dropbox1.style.left = (innerWidth - 256)* 1/4 + "px";
 		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
 		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
@@ -297,7 +297,7 @@
 	}
 
 	window.addEventListener("resize", event => {
-		reposition();
+		repositionItems();
 	});
 
 	window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
@@ -308,25 +308,29 @@
 		main();
 	});
 
-	let main = () => {
+	var main = () => {
 
+		// Create a new portfolio and add items to them
 		portfolio = new Portfolio();
-
-		portfolio.addItem("philastronomy", "Philippine Astronomy", "https://fbgabriana.github.io/philippine-astronomy/home/");
-		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
-		portfolio["philastronomy"].thumb = "philastronomy.png";
-		portfolio["philastronomy"].infotext = " \
-			<p>Read astronomy news or play with JavaScript-powered star maps. Go through the various sections in a well-planned and easy to use magazine format.</p> \
-			<p>This web magazine provides astronomical information and tools that are of value to local astronomy enthusiasts.</p>"
-
 		portfolio.addItem("harmonicmeans", "Harmonic Means", "https://fbgabriana.github.io/harmonicmeans/home.html");
+		portfolio.addItem("philastronomy", "Philippine Astronomy", "https://fbgabriana.github.io/philippine-astronomy/home/");
+		portfolio.addItem("gg-tournament", "GG Tournament", "https://fbgabriana.github.io/gg-tournament/gg-tournament.html");
+		portfolio.addItem("cyberhomies", "Cyber Homies", "https://fbgabriana.github.io/miniproject2/home.html");
+		portfolio.addItem("instructions", "Instructions");
+
+		// Define the property values of each item
 		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
 		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
 		portfolio["harmonicmeans"].infotext = " \
 			<p>A homepage for an amateur band. Harmonic Means is a musical group founded by people with a love for both music and mathematics, thus their name.</p> \
 			<p>The site uses a simple HTML/CSS template built with a mobile-first responsive design. Works on all screen resolutions.</p>"
 
-		portfolio.addItem("gg-tournament", "GG Tournament", "https://fbgabriana.github.io/gg-tournament/gg-tournament.html");
+		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
+		portfolio["philastronomy"].thumb = "philastronomy.png";
+		portfolio["philastronomy"].infotext = " \
+			<p>Read astronomy news, play with JavaScript-powered star maps, explore the various sections in a well-planned and easy to use magazine format.</p> \
+			<p>This web magazine provides astronomical information and tools that are of value to local astronomy enthusiasts.</p>"
+
 		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
 		portfolio["gg-tournament"].thumb = "gg-tournament.png";
 		portfolio["gg-tournament"].infotext = " \
@@ -334,24 +338,29 @@
 			<p>The tournament used a 16‑player double elimination format: losers move to a losers' bracket; losing a second time results in elimination.</p> \
 			<p>The tournament took place on Nov 2, 2022 in Baguio City, Philippines.</p>";
 
-		portfolio.addItem("cyberhomies", "Cyber Homies", "https://fbgabriana.github.io/miniproject2/home.html");
 		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
 		portfolio["cyberhomies"].thumb = "cyberhomies.png";
-		portfolio["cyberhomies"].infotext = `<p>Placeholder text for ${portfolio["cyberhomies"].title}</p>`;
 		portfolio["cyberhomies"].infotext = " \
-			<p>Cyber Homies, formerly BCDS, is a team of developers who build websites for small and medium-sized companies.</p> \
+			<p>Cyber Homies, formerly BCDS, is a team of web developers who build sites and web applications for small and medium-sized companies.</p> \
 			<p>The team has experience in various web technologies like Bootstrap, NodeJS, React, MySQL, and PHP.</p> \
 			<p>This website showcases the technologies used by the team.</p>";
 
-		portfolio.addItem("instructions", "Instructions");
 		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
-		dialogbox = new DialogBox("dialogbox-moreinfo");
-
+		// Create two dropboxes
 		dropbox1 = new DropBox("moreinfo");
 		dropbox1.icon = "url(icons/moreinfo.svg)";
 		dropbox1.caption = "More info";
+
+		dropbox2 = new DropBox("viewsite");
+		dropbox2.icon = "url(icons/viewsite.svg)";
+		dropbox2.caption = "View the site";
+
+		// Create a dialogbox
+		dialogbox = new DialogBox("moreinfo-dialog");
+
+		// Define what happens when an item is dropped
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].infotext) {
@@ -364,10 +373,6 @@
 				}
 			}
 		}
-
-		dropbox2 = new DropBox("viewsite");
-		dropbox2.icon = "url(icons/viewsite.svg)";
-		dropbox2.caption = "View the site";
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
@@ -378,7 +383,9 @@
 			}
 		}
 
-		reposition();
+		// Finishing touches
+		repositionItems();
+		return 0;
 	}
 
 	</script>
