@@ -81,8 +81,8 @@
 				set content(string) { contentElement.innerHTML = string },
 				get url() { return element.dataset.url },
 				set url(string) { element.dataset.url = string },
-				get info() { return element.dataset.info },
-				set info(string) { element.dataset.info = string },
+				get infotext() { return element.dataset.infotext },
+				set infotext(string) { element.dataset.infotext = string },
 				get pos() { let rect = element.getBoundingClientRect(); return [rect.left, rect.top]},
 				set pos(arr) { this.style.left = arr[0] + "px"; this.style.top = arr[1] + "px"},
 				get center() { let rect = element.getBoundingClientRect(); return [rect.left + rect.width/2, rect.top + rect.height/2]},
@@ -315,27 +315,26 @@
 		portfolio.addItem("philastronomy", "Philippine Astronomy", "https://fbgabriana.github.io/philippine-astronomy/home/");
 		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
 		portfolio["philastronomy"].thumb = "philastronomy.png";
-		portfolio["philastronomy"].info = `Placeholder text for ${portfolio["philastronomy"].title}`;
+		portfolio["philastronomy"].infotext = `Placeholder text for ${portfolio["philastronomy"].title}`;
 
 		portfolio.addItem("harmonicmeans", "Harmonic Means", "https://fbgabriana.github.io/harmonicmeans/home.html");
 		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
 		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
-		portfolio["harmonicmeans"].info = `Placeholder text for ${portfolio["harmonicmeans"].title}`;
+		portfolio["harmonicmeans"].infotext = `Placeholder text for ${portfolio["harmonicmeans"].title}`;
 
 		portfolio.addItem("gg-tournament", "GG Tournament", "https://fbgabriana.github.io/gg-tournament/gg-tournament.html");
 		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
 		portfolio["gg-tournament"].thumb = "gg-tournament.png";
-		portfolio["gg-tournament"].info = `Placeholder text for ${portfolio["gg-tournament"].title}`;
+		portfolio["gg-tournament"].infotext = `Placeholder text for ${portfolio["gg-tournament"].title}`;
 
 		portfolio.addItem("cyberhomies", "Cyber Homies", "https://fbgabriana.github.io/miniproject2/home.html");
 		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
 		portfolio["cyberhomies"].thumb = "cyberhomies.png";
-		portfolio["cyberhomies"].info = `Placeholder text for ${portfolio["cyberhomies"].title}`;
+		portfolio["cyberhomies"].infotext = `Placeholder text for ${portfolio["cyberhomies"].title}`;
 
 		portfolio.addItem("instructions", "Instructions");
 		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
-		portfolio["instructions"].info = `Placeholder text for ${portfolio["instructions"].title}`;
 
 		dialogbox = new DialogBox("dialogbox-moreinfo");
 
@@ -344,10 +343,14 @@
 		dropbox1.caption = "More info";
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
-				dialogbox.title = portfolio[element.id].title;
-				dialogbox.content = portfolio[element.id].info;
-				dialogbox.oncancel = event => console.log(`${dialogbox.id} was cancelled`);
-				dialogbox.showModal();
+				if (portfolio[element.id].infotext) {
+					dialogbox.title = portfolio[element.id].title;
+					dialogbox.content = portfolio[element.id].infotext;
+					dialogbox.oncancel = event => console.log(`${dialogbox.id} was cancelled`);
+					dialogbox.showModal();
+				} else {
+					console.log(`No infotext associated with item '${portfolio[element.id].title}'`);
+				}
 			}
 		}
 
