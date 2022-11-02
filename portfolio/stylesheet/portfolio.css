@@ -33,6 +33,7 @@ body {
 	background-position: center;
 	font-family: "AquaBase";
 	font-weight: bold;
+	user-select: none;
 }
 
 .portfolio-item .content {
@@ -81,7 +82,17 @@ body {
 	border: 1px solid gray;
 	border-radius: 0.5em;
 	box-shadow: 0 2px 6px black;
-	padding: 0.5em;
+	padding: 0;
+}
+
+.dialogbox .titlebar {
+	margin: 0;
+	height: 2.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	user-select: none;
 }
 
 .dialogbox .closebutton {
@@ -107,6 +118,12 @@ body {
 	text-shadow: 0 0 1px gray;
 	opacity: 1.0;
 }
+.dialogbox .content {
+	padding: 1em;
+	font-size: 20px;
+	line-height: 1.25em;
+	font-family: "Handlee";
+}
 
 @media (prefers-color-scheme: light) {
 
@@ -125,7 +142,7 @@ body {
 		background-color: hsla(0, 0%, 0%, 0.1);
 	}
 
-	.dialogbox {
+	.dialogbox, .dialogbox .titlebar {
 		border-left: 1px solid hsl(42, 50%, 95%);
 		border-right: 1px solid hsl(42, 50%, 90%);
 		background-image: url("../textures/paper.png"), linear-gradient(hsl(42, 50%, 95%) 0%, hsl(42, 50%, 78%) 25%, hsl(42, 50%, 78%) 75%, hsl(42, 50%, 60%) 100%);
@@ -151,7 +168,7 @@ body {
 		background-color: hsla(0, 0%, 100%, 0.1);
 	}
 
-	.dialogbox {
+	.dialogbox, .dialogbox .titlebar {
 		border-left: 1px solid hsl(42, 30%, 60%);
 		border-right: 1px solid hsl(42, 30%, 58%);
 		background-image: url("../textures/paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );

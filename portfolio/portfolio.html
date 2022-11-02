@@ -16,16 +16,17 @@
 			this.z = 0;
 		}
 
-		addItem = (id, title) => {
+		addItem = (id, title, url) => {
 
 			const element = document.createElement("div");
-			element.style.zIndex = this.z;
-			element.classList.add("portfolio-item");
 			element.id = id;
+			element.classList.add("portfolio-item");
+			element.style.zIndex = this.z;
+			if (url) element.dataset.url = url;
 
 			const titlebar = document.createElement("div");
 			titlebar.classList.add("titlebar");
-			titlebar.innerText = title;
+			titlebar.textContent = title;
 			element.appendChild(titlebar);
 
 			const contentElement = document.createElement("div");
@@ -72,8 +73,8 @@
 				get element() { return element },
 				get contentElement() { return contentElement },
 				get style() { return element.style },
-				get title()   { return titlebar.childNodes[0].nodeValue },
-				set title(string)   { titlebar.childNodes[0].nodeValue = string },
+				get title()   { return titlebar.textContent },
+				set title(string)   { titlebar.textContent = string },
 				get longtitle() { return titlebar.dataset.longtitle },
 				set longtitle(string) { titlebar.dataset.longtitle = string },
 				get content() { return contentElement.innerHTML },
@@ -189,7 +190,7 @@
 			if (this.element) this.element.style.backgroundImage = string;
 		}
 
-		ondrop() { void(0) }
+		ondrop(event) { void(0) }
 	}
 
 	class DialogBox {
@@ -202,6 +203,10 @@
 			element.id = id;
 			element.classList.add("dialogbox");
 
+			const titlebar = document.createElement("div");
+			titlebar.id = `${this.id}-titlebar`;
+			titlebar.classList.add("titlebar");
+
 			const contentElement = document.createElement("div");
 			contentElement.id = `${this.id}-content`;
 			contentElement.classList.add("content");
@@ -209,12 +214,15 @@
 			const closebutton = document.createElement("button");
 			closebutton.id = `${this.id}-closebutton`;
 			closebutton.classList.add("closebutton");
-			closebutton.innerText = "✕";
-			closebutton.addEventListener("click", event => element.close());
+			closebutton.textContent = "✕";
+			closebutton.addEventListener("click", event => this.close());
 
-			element.appendChild(closebutton);
+			element.appendChild(titlebar);
 			element.appendChild(contentElement);
+			element.appendChild(closebutton);
 			document.body.appendChild(element);
+
+			element.addEventListener("cancel", event => this.oncancel(event) );
 		}
 
 		get element() {
@@ -223,6 +231,10 @@
 
 		get contentElement() {
 			return this.element && this.element.querySelector(".content");
+		}
+
+		get titlebar() {
+			return this.element && this.element.querySelector(".titlebar");
 		}
 
 		get style() {
@@ -241,9 +253,39 @@
 			if (this.element) this.contentElement.innerHTML = string;
 		}
 
+		get title() {
+			return this.element && this.titlebar.textContent;
+		}
+
+		set title(string) {
+			if (this.element) this.titlebar.textContent = string;
+		}
+
+		get open() {
+			return this.element && this.element.open;
+		}
+
+		get returnValue() {
+			return this.element && this.element.returnValue;
+		}
+
+		set returnValue(string) {
+			if (this.element) this.element.returnValue = string;
+		}
+
+		show() {
+			this.element.show();
+		}
+
 		showModal() {
 			this.element.showModal();
 		}
+
+		close(returnValue) {
+			this.element.close(returnValue);
+		}
+
+		oncancel(event) { void(0) }
 	}
 
 	let reposition = () => {
@@ -270,28 +312,24 @@
 
 		portfolio = new Portfolio();
 
-		portfolio.addItem("philastronomy", "Philippine Astronomy");
+		portfolio.addItem("philastronomy", "Philippine Astronomy", "https://fbgabriana.github.io/philippine-astronomy/home/");
 		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
 		portfolio["philastronomy"].thumb = "philastronomy.png";
-		portfolio["philastronomy"].url = "https://fbgabriana.github.io/philippine-astronomy/home/";
 		portfolio["philastronomy"].info = `Placeholder text for ${portfolio["philastronomy"].title}`;
 
-		portfolio.addItem("harmonicmeans", "Harmonic Means");
+		portfolio.addItem("harmonicmeans", "Harmonic Means", "https://fbgabriana.github.io/harmonicmeans/home.html");
 		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
 		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
-		portfolio["harmonicmeans"].url = "https://fbgabriana.github.io/harmonicmeans/home.html";
 		portfolio["harmonicmeans"].info = `Placeholder text for ${portfolio["harmonicmeans"].title}`;
 
-		portfolio.addItem("gg-tournament", "GG Tournament");
+		portfolio.addItem("gg-tournament", "GG Tournament", "https://fbgabriana.github.io/gg-tournament/gg-tournament.html");
 		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
 		portfolio["gg-tournament"].thumb = "gg-tournament.png";
-		portfolio["gg-tournament"].url = "https://fbgabriana.github.io/gg-tournament/gg-tournament.html";
 		portfolio["gg-tournament"].info = `Placeholder text for ${portfolio["gg-tournament"].title}`;
 
-		portfolio.addItem("cyberhomies", "Cyber Homies");
+		portfolio.addItem("cyberhomies", "Cyber Homies", "https://fbgabriana.github.io/miniproject2/home.html");
 		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
 		portfolio["cyberhomies"].thumb = "cyberhomies.png";
-		portfolio["cyberhomies"].url = "https://fbgabriana.github.io/miniproject2/home.html";
 		portfolio["cyberhomies"].info = `Placeholder text for ${portfolio["cyberhomies"].title}`;
 
 		portfolio.addItem("instructions", "Instructions");
@@ -299,14 +337,16 @@
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 		portfolio["instructions"].info = `Placeholder text for ${portfolio["instructions"].title}`;
 
-		dialogbox = new DialogBox("dialog-moreinfo");
+		dialogbox = new DialogBox("dialogbox-moreinfo");
 
 		dropbox1 = new DropBox("moreinfo");
 		dropbox1.icon = "url(icons/moreinfo.svg)";
 		dropbox1.caption = "More info";
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
+				dialogbox.title = portfolio[element.id].title;
 				dialogbox.content = portfolio[element.id].info;
+				dialogbox.oncancel = event => console.log(`${dialogbox.id} was cancelled`);
 				dialogbox.showModal();
 			}
 		}
@@ -317,7 +357,7 @@
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
-					window.open(portfolio[element.id].url, element.id);
+					window.open(portfolio[element.id].url, dropbox2.id);
 				} else {
 					console.log(`No URL associated with item '${portfolio[element.id].title}'`);
 				}
