@@ -87,7 +87,7 @@ body {
 
 .dialogbox .titlebar {
 	margin: 0;
-	height: 2.5em;
+	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
