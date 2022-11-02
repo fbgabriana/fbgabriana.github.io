@@ -122,11 +122,12 @@
 			} else return null;
 		}
 
-		alignItems(bool) {
+		arrangeItems(bool) {
 			if (bool && this.z > 0) return 1;
-			let frac = innerWidth / this.items.length;
-			for (var i = 0; i < this.items.length; i++) {
-				this.items[i].center = [(i + 0.5) * frac, 125];
+			let num = this.items.length;
+			let frac = innerWidth / num;
+			for (var i = 0; i < num; i++) {
+				this.items[i].center = [(i + 0.5) * frac, 120 + innerHeight/50*(i + (1 - num)/2)**2 ];
 			}
 			return 0;
 		}
@@ -293,7 +294,7 @@
 		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
 		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
 		dropbox2.style.top = (innerHeight - 256)* 3.5/4 + "px";
-		portfolio.alignItems(true);
+		portfolio.arrangeItems(true);
 	}
 
 	window.addEventListener("resize", event => {
