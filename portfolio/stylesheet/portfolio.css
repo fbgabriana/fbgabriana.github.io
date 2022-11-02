@@ -8,8 +8,10 @@ body {
 
 h1 {
 	font-family: "Fira Code";
-	font-size: 5vw;
+	font-size: min(75px, 8.2vw);
+	white-space: nowrap;
 	text-transform: uppercase;
+	user-select: none;
 }
 
 .portfolio-item {
@@ -67,8 +69,12 @@ h1 {
 
 .dropbox {
 	position: absolute;
-	width: 250px;
-	height: 250px;
+	max-width: 250px;
+	max-height: 250px;
+	width: min(30vw, 30vh);
+	height: min(30vw, 30vh);
+	min-width: 150px;
+	min-height: 150px;
 	background-size: 60%;
 	background-repeat: no-repeat;
 	background-position: center 40%;
@@ -77,10 +83,11 @@ h1 {
 	display: flex;
 	align-items: end;
 	justify-content: center;
-	font-weight: bold;
-	font-size: 20px;
-	line-height: 40px;
 	color: rgba(135, 135, 135, 0.96);
+	font-weight: bold;
+	font-size: min(20px, 1.5vw);
+	line-height: 40px;
+	user-select: none;
 }
 
 .dialogbox {
@@ -107,7 +114,7 @@ h1 {
 .dialogbox .content {
 	padding: 0 1em;
 	font-family: "Handlee";
-	font-size: 20px;
+	font-size: max(1.6vw, 20px);
 	line-height: 1.25em;
 	height: calc(50vh - 40px);
 	overflow: auto;
@@ -202,7 +209,7 @@ h1 {
 		border-left: 1px solid hsl(42, 30%, 60%);
 		border-right: 1px solid hsl(42, 30%, 58%);
 		background-image: url("../textures/paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
-		color: hsl(42, 50%, 85%);
+		color: hsl(42, 50%, 80%);
 	}
 
 }

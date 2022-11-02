@@ -124,10 +124,11 @@
 
 		arrangeItems(bool) {
 			if (bool && this.z > 0) return 1;
-			let num = this.items.length;
-			let frac = innerWidth / num;
-			for (var i = 0; i < num; i++) {
-				this.items[i].center = [(i + 0.5) * frac, 120 + innerHeight/50*(i + (1 - num)/2)**2 ];
+			let w = this.items[0].element.getBoundingClientRect().width;
+			let N = this.items.length;
+			let f = (innerWidth - w/2) / N;
+			for (var i = 0; i < N; i++) {
+				this.items[i].center = [(i + 0.5) * f + w/4, 120 + innerHeight/50*(i + (1 - N)/2)**2 ];
 			}
 			return 0;
 		}
@@ -292,11 +293,13 @@
 	let repositionItems = () => {
 		heading = document.querySelector("h1");
 		heading.style.left = (innerWidth - heading.getBoundingClientRect().width)* 1/2 + "px";
-		heading.style.top = (innerHeight - heading.getBoundingClientRect().height)* 1/2 - 100 + "px";
-		dropbox1.style.left = (innerWidth - 256)* 1/4 + "px";
-		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
-		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
-		dropbox2.style.top = (innerHeight - 256)* 3.5/4 + "px";
+		heading.style.top = (innerHeight - heading.getBoundingClientRect().height)* 1/2 - innerWidth/50 + "px";
+		let rect1 = dropbox1.element.getBoundingClientRect();
+		let rect2 = dropbox2.element.getBoundingClientRect();
+		dropbox1.style.left = (innerWidth - rect1.width)* 1/4 + "px";
+		dropbox2.style.left = (innerWidth - rect2.width)* 3/4 + "px";
+		dropbox1.style.top = (innerHeight - rect1.height)* 3.5/4 + "px";
+		dropbox2.style.top = (innerHeight - rect2.height)* 3.5/4 + "px";
 		portfolio.arrangeItems(true);
 	}
 
