@@ -28,10 +28,10 @@
 			titlebar.innerText = title;
 			element.appendChild(titlebar);
 
-			const content = document.createElement("div");
-			content.classList.add("content");
-			content.innerHTML = `<p>Content of ${id}</p>`; 
-			element.appendChild(content);
+			const contentElement = document.createElement("div");
+			contentElement.classList.add("content");
+			contentElement.innerHTML = `<p>Content of ${id}</p>`; 
+			element.appendChild(contentElement);
 
 			let [dX, dY, clientX, clientY] = [0, 0, 0, 0];
 
@@ -70,18 +70,21 @@
 			const portfolioItem = Object.create({
 				get id() { return id },
 				get element() { return element },
+				get contentElement() { return contentElement },
 				get style() { return element.style },
 				get title()   { return titlebar.childNodes[0].nodeValue },
 				set title(string)   { titlebar.childNodes[0].nodeValue = string },
-				get content() { return content.innerHTML },
-				set content(string) { content.innerHTML = string },
-				get url() { return element.dataset.url },
-				set url(string) { element.dataset.url = string },
-				get thumb() { return content.dataset.thumb },
+				get content() { return contentElement.innerHTML },
+				set content(string) { contentElement.innerHTML = string },
+				get thumb() { return contentElement.dataset.thumb },
 				set thumb(string) {
 					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
-					content.style.backgroundImage=`url(${thumbs}/${content.dataset.thumb = string})`
+					contentElement.style.backgroundImage=`url(${thumbs}/${contentElement.dataset.thumb = string})`
 				},
+				get url() { return element.dataset.url },
+				set url(string) { element.dataset.url = string },
+				get info() { return element.dataset.info },
+				set info(string) { element.dataset.info = string },
 				get pos() { let rect = element.getBoundingClientRect(); return [rect.left, rect.top]},
 				set pos(arr) { this.style.left = arr[0] + "px"; this.style.top = arr[1] + "px"},
 				get center() { let rect = element.getBoundingClientRect(); return [rect.left + rect.width/2, rect.top + rect.height/2]},
@@ -127,7 +130,7 @@
 
 		adjustColorTheme() {
 			for (var i = 0; i < this.items.length; i++) {
-				let content = this.items[i].element.querySelector(".content");
+				let content = this.items[i].contentElement;
 				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
 				content.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
 			}
@@ -187,16 +190,80 @@
 
 		createDialog() {
 			const dialog = document.createElement("dialog");
+			dialog.id = `${this.id}-dialog`;
 			dialog.classList.add("dropbox-dialog");
-			dialog.innerHTML = "<button id='closebutton' class='closebutton'>✕</button>\n"
+
+			const closebutton = document.createElement("button");
+			closebutton.id = `${this.id}-dialog-closebutton`;
+			closebutton.classList.add("closebutton");
+			closebutton.innerText = "✕";
+
 			dialog.addEventListener("click", (event) => {
 				if (event.target == closebutton) dialog.close();
 			});
+
+			dialog.appendChild(closebutton);
 			document.body.appendChild(dialog);
+
 			return this.dialog = dialog;
 		}
 
 		ondrop() { void(0) }
+	}
+
+
+	class DialogBox {
+
+		constructor(id) {
+
+			this.id = id;
+
+			const element = document.createElement("dialog");
+			element.id = id;
+			element.classList.add("dialogbox");
+
+			const contentElement = document.createElement("div");
+			contentElement.id = `${this.id}-content`;
+			contentElement.classList.add("content");
+
+			const closebutton = document.createElement("button");
+			closebutton.id = `${this.id}-closebutton`;
+			closebutton.classList.add("closebutton");
+			closebutton.innerText = "✕";
+			closebutton.addEventListener("click", event => element.close());
+
+			element.appendChild(closebutton);
+			element.appendChild(contentElement);
+			document.body.appendChild(element);
+		}
+
+		get element() {
+			return document.getElementById(this.id);
+		}
+
+		get contentElement() {
+			return document.getElementById(`${this.id}-content`);
+		}
+
+		get style() {
+			return this.element && this.element.style;
+		}
+
+		get rect() {
+			return this.element && this.element.getBoundingClientRect();
+		}
+
+		get content() {
+			return this.element && this.contentElement.innerHTML;
+		}
+
+		set content(string) {
+			if (this.element) this.contentElement.innerHTML = string;
+		}
+
+		showModal() {
+			this.element.showModal();
+		}
 	}
 
 	let reposition = () => {
@@ -227,6 +294,7 @@
 		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
 		portfolio["philastronomy"].thumb = "philastronomy.png";
 		portfolio["philastronomy"].url = "https://fbgabriana.github.io/philippine-astronomy/home/";
+		portfolio["philastronomy"].info = "Philippine Astronomy Magazine";
 
 		portfolio.addItem("harmonicmeans", "Harmonic Means");
 		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
@@ -247,13 +315,15 @@
 		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
+		dialogbox = new DialogBox("dialog-moreinfo");
+
 		dropbox1 = new DropBox("moreinfo");
 		dropbox1.icon = "url(icons/moreinfo.svg)";
 		dropbox1.caption = "More info";
-		dropbox1.createDialog("dropbox1-dialog");
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
-				dropbox1.dialog.showModal();
+				dialogbox.content = portfolio[element.id].info;
+				dialogbox.showModal();
 			}
 		}
 
