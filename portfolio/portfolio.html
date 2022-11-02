@@ -290,6 +290,9 @@
 	}
 
 	let repositionItems = () => {
+		heading = document.querySelector("h1");
+		heading.style.left = (innerWidth - heading.getBoundingClientRect().width)* 1/2 + "px";
+		heading.style.top = (innerHeight - heading.getBoundingClientRect().height)* 1/2 - 100 + "px";
 		dropbox1.style.left = (innerWidth - 256)* 1/4 + "px";
 		dropbox2.style.left = (innerWidth - 256)* 3/4 + "px";
 		dropbox1.style.top = (innerHeight - 256)* 3.5/4 + "px";
@@ -383,6 +386,13 @@
 				}
 			}
 		}
+
+		// Add page headings... almost forgot.
+		heading = document.createElement("h1");
+		document.body.appendChild(heading);
+		heading.innerHTML = "My Web Projects"
+		heading.style.position = "absolute";
+		heading.style.zIndex = "-1";
 
 		// Finishing touches
 		repositionItems();
