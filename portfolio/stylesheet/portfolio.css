@@ -43,6 +43,7 @@ body {
 	height: 132px;
 	background-position: bottom;
 	background-repeat: no-repeat;
+	user-select: none;
 }
 
 .portfolio-item .content p {
