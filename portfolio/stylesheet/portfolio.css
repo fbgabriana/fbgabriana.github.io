@@ -91,7 +91,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: "AquaBase";
 	font-weight: bold;
 	user-select: none;
 }
@@ -99,12 +98,13 @@ body {
 .dialogbox .closebutton {
 	position: absolute;
 	right: 8px;
-	top: 6px;
+	top: 2px;
 	outline: none;
 	margin: 2px;
 	border: none;
 	padding: 0;
 	background-color: transparent;
+	font-family: "AquaBase";
 	font-size: 24px;
 	font-weight: bold;
 	opacity: 0.8;
