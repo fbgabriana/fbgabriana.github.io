@@ -110,13 +110,14 @@ body {
 	font-size: 24px;
 	font-weight: bold;
 	opacity: 0.8;
+	user-select: none;
 }
 .dialogbox .closebutton:hover {
 	text-shadow: 0 0 1px gray;
 	opacity: 1.0;
 }
 .dialogbox .closebutton:active {
-	padding: 0 1px 1px 0;
+	padding: 1px;
 	font-size: 22px;
 	text-shadow: 0 0 1px gray;
 	opacity: 1.0;
