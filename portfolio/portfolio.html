@@ -291,15 +291,15 @@
 	}
 
 	let repositionItems = () => {
+		let rect1 = dropbox1.element.getBoundingClientRect();
+		let rect2 = dropbox2.element.getBoundingClientRect();
+		dropbox1.style.left = (innerWidth - rect1.width)* 1/5 + "px";
+		dropbox2.style.left = (innerWidth - rect2.width)* 4/5 + "px";
+		dropbox1.style.top = (innerHeight - rect1.height)* 3.5/4 + "px";
+		dropbox2.style.top = (innerHeight - rect2.height)* 3.5/4 + "px";
 		heading = document.querySelector("h1");
 		heading.style.left = (innerWidth - heading.getBoundingClientRect().width)* 1/2 + "px";
 		heading.style.top = (innerHeight - heading.getBoundingClientRect().height)* 1/2 - innerWidth/50 + "px";
-		let rect1 = dropbox1.element.getBoundingClientRect();
-		let rect2 = dropbox2.element.getBoundingClientRect();
-		dropbox1.style.left = (innerWidth - rect1.width)* 1/4 + "px";
-		dropbox2.style.left = (innerWidth - rect2.width)* 3/4 + "px";
-		dropbox1.style.top = (innerHeight - rect1.height)* 3.5/4 + "px";
-		dropbox2.style.top = (innerHeight - rect2.height)* 3.5/4 + "px";
 		portfolio.arrangeItems(true);
 	}
 
