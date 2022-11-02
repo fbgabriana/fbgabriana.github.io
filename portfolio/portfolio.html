@@ -130,9 +130,8 @@
 
 		adjustColorTheme() {
 			for (var i = 0; i < this.items.length; i++) {
-				let content = this.items[i].contentElement;
 				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
-				content.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
+				this.items[i].contentElement.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
 			}
 			return 0;
 		}
@@ -188,29 +187,8 @@
 			if (this.element) this.element.style.backgroundImage = string;
 		}
 
-		createDialog() {
-			const dialog = document.createElement("dialog");
-			dialog.id = `${this.id}-dialog`;
-			dialog.classList.add("dropbox-dialog");
-
-			const closebutton = document.createElement("button");
-			closebutton.id = `${this.id}-dialog-closebutton`;
-			closebutton.classList.add("closebutton");
-			closebutton.innerText = "✕";
-
-			dialog.addEventListener("click", (event) => {
-				if (event.target == closebutton) dialog.close();
-			});
-
-			dialog.appendChild(closebutton);
-			document.body.appendChild(dialog);
-
-			return this.dialog = dialog;
-		}
-
 		ondrop() { void(0) }
 	}
-
 
 	class DialogBox {
 
@@ -242,7 +220,7 @@
 		}
 
 		get contentElement() {
-			return document.getElementById(`${this.id}-content`);
+			return this.element && this.element.querySelector(".content");
 		}
 
 		get style() {
