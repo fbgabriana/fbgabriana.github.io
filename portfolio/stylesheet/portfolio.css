@@ -91,6 +91,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: "AquaBase";
 	font-weight: bold;
 	user-select: none;
 }
