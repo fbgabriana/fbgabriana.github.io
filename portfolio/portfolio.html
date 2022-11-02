@@ -74,13 +74,10 @@
 				get style() { return element.style },
 				get title()   { return titlebar.childNodes[0].nodeValue },
 				set title(string)   { titlebar.childNodes[0].nodeValue = string },
+				get longtitle() { return titlebar.dataset.longtitle },
+				set longtitle(string) { titlebar.dataset.longtitle = string },
 				get content() { return contentElement.innerHTML },
 				set content(string) { contentElement.innerHTML = string },
-				get thumb() { return contentElement.dataset.thumb },
-				set thumb(string) {
-					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
-					contentElement.style.backgroundImage=`url(${thumbs}/${contentElement.dataset.thumb = string})`
-				},
 				get url() { return element.dataset.url },
 				set url(string) { element.dataset.url = string },
 				get info() { return element.dataset.info },
@@ -89,6 +86,11 @@
 				set pos(arr) { this.style.left = arr[0] + "px"; this.style.top = arr[1] + "px"},
 				get center() { let rect = element.getBoundingClientRect(); return [rect.left + rect.width/2, rect.top + rect.height/2]},
 				set center(arr) { let rect = element.getBoundingClientRect(); this.style.left = (arr[0] - rect.width/2) + "px"; this.style.top = (arr[1] - rect.height/2) + "px"},
+				get thumb() { return contentElement.dataset.thumb },
+				set thumb(string) {
+					let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
+					contentElement.style.backgroundImage=`url(${thumbs}/${contentElement.dataset.thumb = string})`
+				},
 			});
 
 			const PortfolioItem = Object.getPrototypeOf(portfolioItem); {
@@ -272,26 +274,30 @@
 		portfolio["philastronomy"].content = "<p>An astronomy magazine with the Philippines in focus.</p>";
 		portfolio["philastronomy"].thumb = "philastronomy.png";
 		portfolio["philastronomy"].url = "https://fbgabriana.github.io/philippine-astronomy/home/";
-		portfolio["philastronomy"].info = "Philippine Astronomy Magazine";
+		portfolio["philastronomy"].info = `Placeholder text for ${portfolio["philastronomy"].title}`;
 
 		portfolio.addItem("harmonicmeans", "Harmonic Means");
 		portfolio["harmonicmeans"].content = "<p>A musical band of music and mathematics enthusiasts.</p>";
 		portfolio["harmonicmeans"].thumb = "harmonicmeans.png";
 		portfolio["harmonicmeans"].url = "https://fbgabriana.github.io/harmonicmeans/home.html";
+		portfolio["harmonicmeans"].info = `Placeholder text for ${portfolio["harmonicmeans"].title}`;
 
 		portfolio.addItem("gg-tournament", "GG Tournament");
 		portfolio["gg-tournament"].content = "<p>16‑player double elimination tournament: a JavaScript app to keep track of matches.</p>";
 		portfolio["gg-tournament"].thumb = "gg-tournament.png";
 		portfolio["gg-tournament"].url = "https://fbgabriana.github.io/gg-tournament/gg-tournament.html";
+		portfolio["gg-tournament"].info = `Placeholder text for ${portfolio["gg-tournament"].title}`;
 
 		portfolio.addItem("cyberhomies", "Cyber Homies");
 		portfolio["cyberhomies"].content = "<p>Cyber Homies — our team of creative web developers.</p>";
 		portfolio["cyberhomies"].thumb = "cyberhomies.png";
 		portfolio["cyberhomies"].url = "https://fbgabriana.github.io/miniproject2/home.html";
+		portfolio["cyberhomies"].info = `Placeholder text for ${portfolio["cyberhomies"].title}`;
 
 		portfolio.addItem("instructions", "Instructions");
 		portfolio["instructions"].content = "<p>Feel free to drag, drop and reposition the items!</p>";
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
+		portfolio["instructions"].info = `Placeholder text for ${portfolio["instructions"].title}`;
 
 		dialogbox = new DialogBox("dialog-moreinfo");
 
@@ -311,7 +317,7 @@
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
-					window.open(portfolio[element.id].url);
+					window.open(portfolio[element.id].url, element.id);
 				} else {
 					console.log(`No URL associated with item '${portfolio[element.id].title}'`);
 				}
