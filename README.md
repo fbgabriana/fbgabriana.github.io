@@ -16,5 +16,5 @@ It contains the following folders:
 
 * [thoughts](thoughts/) - Some random thoughts.
 
-* [portfolio](portfolio/) - Here are my projects.
+* [portfolio](portfolio/) - My web development projects.
 
