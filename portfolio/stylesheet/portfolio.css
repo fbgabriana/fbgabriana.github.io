@@ -85,7 +85,7 @@ h1 {
 	justify-content: center;
 	color: rgba(135, 135, 135, 0.96);
 	font-weight: bold;
-	font-size: min(20px, 1.5vw);
+	font-size: max(16px, min(20px, 1.5vw));
 	line-height: 40px;
 	user-select: none;
 }
