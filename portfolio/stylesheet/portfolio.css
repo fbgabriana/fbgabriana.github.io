@@ -150,20 +150,20 @@ h1 {
 @media (prefers-color-scheme: light) {
 
 	body {
-		background-color: hsl(40, 41%, 38%);
+		background-color: hsl(39, 36%, 38%);
 		background-image: url("../textures/wood-light.png");
 	}
 
 	h1 {
-		color: hsla(40, 41%, 8.5%, 0.9);
+		color: hsla(39, 36%, 8.5%, 0.9);
 		text-shadow: 0 0 25px hsla(40, 41%, 17%, 0.5);
 	}
 
 	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(40, 41%, 38%, 0.5) );
-		box-shadow: 0 0 min(30vw, 30vh) hsla(40, 41%, 38%, 0.9);
-		background-color: hsla(40, 41%, 38%, 0.25);
-		color: hsla(40, 41%, 8.5%, 0.9);
+		filter: drop-shadow(0 0 25px hsla(39, 36%, 38%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(39, 36%, 38%, 0.9);
+		background-color: hsla(39, 36%, 38%, 0.25);
+		color: hsla(39, 36%, 8.5%, 0.9);
 	}
 
 	.portfolio-item .titlebar {
