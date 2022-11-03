@@ -290,6 +290,14 @@
 		oncancel(event) { void(0) }
 	}
 
+	let addHeading = () => {
+		heading = document.createElement("h1");
+		document.body.appendChild(heading);
+		heading.textContent = "<My Web Projects/>"
+		heading.style.position = "absolute";
+		heading.style.zIndex = "-1";
+	}
+
 	let repositionItems = () => {
 		let rect1 = dropbox1.element.getBoundingClientRect();
 		let rect2 = dropbox2.element.getBoundingClientRect();
@@ -314,6 +322,7 @@
 	window.addEventListener("DOMContentLoaded", event => {
 		main();
 	});
+
 
 	var main = () => {
 
@@ -364,10 +373,7 @@
 		dropbox2.icon = "url(icons/viewsite.svg)";
 		dropbox2.caption = "View the site";
 
-		// Create a dialogbox
-		dialogbox = new DialogBox("moreinfo-dialog");
-
-		// Define what happens when an item is dropped
+		// Define what happens when used
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].infotext) {
@@ -390,15 +396,13 @@
 			}
 		}
 
-		// Add page headings
-		heading = document.createElement("h1");
-		document.body.appendChild(heading);
-		heading.innerHTML = "&lt;My Web Projects/&gt;"
-		heading.style.position = "absolute";
-		heading.style.zIndex = "-1";
+		// Create dialogbox for the moreinfo dialog
+		dialogbox = new DialogBox("moreinfo-dialog");
 
 		// Finishing touches
+		addHeading();
 		repositionItems();
+
 		return 0;
 	}
 

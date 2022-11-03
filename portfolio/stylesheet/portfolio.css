@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-	font-family: "Fira Code";
+	font-family: "Fira Code", "Monospace";
 	font-size: min(75px, 8.2vw);
 	white-space: nowrap;
 	text-transform: uppercase;
@@ -150,7 +150,7 @@ h1 {
 
 	body {
 		background-color: #d8d8d8;
-		color: #b0b0b0;
+		color: #b8b8b8;
 	}
 
 	.portfolio-item .titlebar {
@@ -184,7 +184,7 @@ h1 {
 
 	body {
 		background-color: #484848;
-		color: #606060;
+		color: #5c5c5c;
 	}
 
 	.portfolio-item .titlebar {
@@ -209,7 +209,7 @@ h1 {
 		border-left: 1px solid hsl(42, 30%, 60%);
 		border-right: 1px solid hsl(42, 30%, 58%);
 		background-image: url("../textures/paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
-		color: hsl(42, 50%, 80%);
+		color: hsl(42, 40%, 75%);
 	}
 
 }
