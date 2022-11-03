@@ -86,7 +86,7 @@ h1 {
 	align-items: end;
 	justify-content: center;
 	font-weight: bold;
-	font-size: max(16px, min(20px, 1.5vw));
+	font-size: max(18px, 1.5vw);
 	line-height: 40px;
 	user-select: none;
 }
