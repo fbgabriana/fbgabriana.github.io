@@ -150,13 +150,20 @@ h1 {
 @media (prefers-color-scheme: light) {
 
 	body {
-		background-color: hsl(23, 34%, 44.7%);
-		background-image: url("../textures/wood-light.jpg");
+		background-color: hsl(40, 41%, 38%);
+		background-image: url("../textures/wood-light.png");
 	}
 
 	h1 {
-		color: hsla(23, 68%, 11.175%, 0.9);
-		text-shadow: 0 0 25px hsla(23, 34%, 44.7%, 0.5);
+		color: hsla(40, 41%, 8.5%, 0.9);
+		text-shadow: 0 0 25px hsla(40, 41%, 17%, 0.5);
+	}
+
+	.dropbox {
+		filter: drop-shadow(0 0 25px hsla(40, 41%, 38%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(40, 41%, 38%, 0.9);
+		background-color: hsla(40, 41%, 38%, 0.25);
+		color: hsla(40, 41%, 8.5%, 0.9);
 	}
 
 	.portfolio-item .titlebar {
@@ -164,13 +171,6 @@ h1 {
 		border-right: 4px solid hsl(42, 50%, 90%);
 		background-image: url("../textures/paper.png"), linear-gradient(hsl(42, 50%, 95%) 0%, hsl(42, 50%, 78%) 25%, hsl(42, 50%, 78%) 75%, hsl(42, 50%, 60%) 100%);
 		color: hsl(42, 50%, 25%);
-	}
-
-	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(23, 34%, 44.7%, 0.5) );
-		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 44.7%, 0.9);
-		background-color: hsla(23, 34%, 44.7%, 0.25);
-		color: hsla(23, 68%, 11.175%, 0.9);
 	}
 
 	.dialogbox {
@@ -192,13 +192,20 @@ h1 {
 @media (prefers-color-scheme: dark) {
 
 	body {
-		background-color: hsl(23, 34%, 21.6%);
-		background-image: url("../textures/wood-dark.jpg");
+		background-color: hsl(38, 38%, 32%);
+		background-image: url("../textures/wood-dark.png");
 	}
 
 	h1 {
-		color: hsla(23, 68%, 5.4%, 0.9);
-		text-shadow: 0 0 25px hsla(23, 34%, 21.6%, 0.5);
+		color: hsla(38, 38%, 8%, 0.9);
+		text-shadow: 0 0 25px hsla(38, 38%, 32%, 0.5);
+	}
+
+	.dropbox {
+		filter: drop-shadow(0 0 25px hsla(38, 38%, 32%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(38, 38%, 32%, 0.9);
+		background-color: hsla(38, 38%, 32%%, 0.25);
+		color: hsla(38, 38%, 8.5%, 0.9);
 	}
 
 	.portfolio-item .titlebar {
@@ -206,13 +213,6 @@ h1 {
 		border-right: 4px solid hsl(42, 30%, 58%);
 		background-image: url("../textures/paper.png"), linear-gradient( hsl(42, 30%, 60%) 0%, hsl(42, 30%, 50%) 25%, hsl(42, 30%, 50%) 75%, hsl(42, 30%, 40%) 100%  );
 		color: hsl(42, 50%, 85%);
-	}
-
-	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(23, 34%, 21.6%, 0.5) );
-		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 21.6%, 0.9);
-		background-color: hsla(23, 34%, 21.6%, 0.25);
-		color: hsla(23, 68%, 5.4%, 0.9);
 	}
 
 	.dialogbox {
