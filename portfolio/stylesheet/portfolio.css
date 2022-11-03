@@ -151,7 +151,7 @@ h1 {
 
 	body {
 		background-color: hsl(38, 33%, 38%);
-		background-image: url("../textures/wood-light.png");
+		background-image: url("../textures/wood-light.jpg");
 	}
 
 	h1 {
@@ -193,7 +193,7 @@ h1 {
 
 	body {
 		background-color: hsl(36, 32%, 30%);
-		background-image: url("../textures/wood-dark.png");
+		background-image: url("../textures/wood-dark.jpg");
 	}
 
 	h1 {
