@@ -150,12 +150,12 @@ h1 {
 @media (prefers-color-scheme: light) {
 
 	body {
-		background-image: url("../textures/wood.jpg");
+		background-image: url("../textures/wood-light.jpg");
 	}
 
 	h1 {
-		color: hsla(23, 68%, 6.75%, 0.9);
-		text-shadow: 0 0 25px hsla(23, 34%, 27%, 0.5);
+		color: hsla(23, 68%, 11.175%, 0.9);
+		text-shadow: 0 0 25px hsla(23, 34%, 44.7%, 0.5);
 	}
 
 	.portfolio-item .titlebar {
@@ -166,10 +166,10 @@ h1 {
 	}
 
 	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(23, 34%, 27%, 0.5) );
-		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 27%, 0.9);
-		background-color: hsla(23, 34%, 27%, 0.25);
-		color: hsla(23, 68%, 6.75%, 0.9);
+		filter: drop-shadow(0 0 25px hsla(23, 34%, 44.7%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 44.7%, 0.9);
+		background-color: hsla(23, 34%, 44.7%, 0.25);
+		color: hsla(23, 68%, 11.175%, 0.9);
 	}
 
 	.dialogbox {
