@@ -9,6 +9,8 @@ body {
 h1 {
 	font-family: "Fira Code", "Monospace";
 	font-size: min(75px, 8.2vw);
+	color: rgba(135, 135, 135, 0.5);
+	text-shadow: 0 0 1px rgba(135, 135, 135, 0.5);
 	white-space: nowrap;
 	text-transform: uppercase;
 	user-select: none;
@@ -150,7 +152,6 @@ h1 {
 
 	body {
 		background-color: #d8d8d8;
-		color: #b8b8b8;
 	}
 
 	.portfolio-item .titlebar {
@@ -184,7 +185,6 @@ h1 {
 
 	body {
 		background-color: #484848;
-		color: #5c5c5c;
 	}
 
 	.portfolio-item .titlebar {
