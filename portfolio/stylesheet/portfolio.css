@@ -4,12 +4,12 @@ body {
 	margin: 0;
 	font: caption;
 	font-size: 16px;
+	background-size: cover;
 }
 
 h1 {
 	font-family: "Fira Code", "Monospace";
 	font-size: min(75px, 8.2vw);
-	color: rgba(135, 135, 135, 0.5);
 	white-space: nowrap;
 	text-transform: uppercase;
 	user-select: none;
@@ -79,12 +79,11 @@ h1 {
 	background-size: 60%;
 	background-repeat: no-repeat;
 	background-position: center 40%;
-	border-radius: 12px;
+	border-radius: 8px;
 	z-index: -1;
 	display: flex;
 	align-items: end;
 	justify-content: center;
-	color: rgba(135, 135, 135, 0.96);
 	font-weight: bold;
 	font-size: max(16px, min(20px, 1.5vw));
 	line-height: 40px;
@@ -150,7 +149,12 @@ h1 {
 @media (prefers-color-scheme: light) {
 
 	body {
-		background-color: #d8d8d8;
+		background-image: url("../textures/wood.jpg");
+	}
+
+	h1 {
+		color: hsla(23, 68%, 6.75%, 0.9);
+		text-shadow: 0 0 25px hsla(23, 34%, 27%, 0.5);
 	}
 
 	.portfolio-item .titlebar {
@@ -161,7 +165,10 @@ h1 {
 	}
 
 	.dropbox {
-		background-color: hsla(0, 0%, 0%, 0.1);
+		filter: drop-shadow(0 0 25px hsla(23, 34%, 27%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 27%, 0.9);
+		background-color: hsla(23, 34%, 27%, 0.25);
+		color: hsla(23, 68%, 6.75%, 0.9);
 	}
 
 	.dialogbox {
@@ -183,7 +190,12 @@ h1 {
 @media (prefers-color-scheme: dark) {
 
 	body {
-		background-color: #484848;
+		background-image: url("../textures/wood-dark.jpg");
+	}
+
+	h1 {
+		color: hsla(23, 68%, 5.4%, 0.9);
+		text-shadow: 0 0 25px hsla(23, 34%, 21.6%, 0.5);
 	}
 
 	.portfolio-item .titlebar {
@@ -194,7 +206,10 @@ h1 {
 	}
 
 	.dropbox {
-		background-color: hsla(0, 0%, 100%, 0.1);
+		filter: drop-shadow(0 0 25px hsla(23, 34%, 21.6%, 0.5) );
+		box-shadow: 0 0 min(30vw, 30vh) hsla(23, 34%, 21.6%, 0.9);
+		background-color: hsla(23, 34%, 21.6%, 0.25);
+		color: hsla(23, 68%, 5.4%, 0.9);
 	}
 
 	.dialogbox {
