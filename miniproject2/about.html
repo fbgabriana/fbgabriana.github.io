@@ -5,17 +5,18 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="KodeGo W18 Group 4 Mini-Project 2" />
-	<title>Cyber Homies — Creative Web Developers</title>
+	<title>Cyber Homies — Know Us</title>
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link rel="manifest" type="application/manifest+json" href="site.webmanifest">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/knowUs.css" />
 	<script type="text/javascript" src="scripts/scripts.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-
 <body>
-	<header>
+    <header>
 		<span class="semantic-tag-label">Header</span>
-		<h1><a href="home.html"><img src="images/logo.svg" alt="</>" /></a></h1>
+		<h1><a href="home.html"><img src="images/logo.png" alt="/>" /></a></h1>
 		<nav>
 			<ul id="menubar">
 				<li><a href="home.html">Home</a></li>
@@ -26,15 +27,131 @@
 		</nav>
 	</header>
 	<main>
+    
+    <article class="article-main" id="about">
+      <div class="about-1">
+        <h1>ABOUT US</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis expedita quod aspernatur voluptates saepe laudantium fugit. Unde quasi laboriosam reiciendis totam, dicta doloribus facere eius beatae alias inventore voluptatibus veritatis.</p>
+      </div>
+      <div id="about-2">
+        <div class="content-box-lg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-12 min-width-col">
+                <div class="about-item text-center">
+                  <i class="bi bi-bookmark-star-fill"></i>
+                  <h3>MISSION</h3>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis cum modi. Ab repudiandae nam necessitatibus error quae officia, doloremque est esse animi praesentium iure veniam, saepe reprehenderit sapiente voluptates.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12 min-width-col">
+                <div class="about-item text-center">
+                  <i class="bi bi-globe"></i>
+                  <h3>VISSION</h3>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis cum modi. Ab repudiandae nam necessitatibus error quae officia, doloremque est esse animi praesentium iure veniam, saepe reprehenderit sapiente voluptates.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12 min-width-col">
+                <div class="about-item text-center">
+                  <i class="bi bi-trophy-fill"></i>
+                  <h3>ACHIEVEMENTS</h3>
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis cum modi. Ab repudiandae nam necessitatibus error quae officia, doloremque est esse animi praesentium iure veniam, saepe reprehenderit sapiente voluptates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 		<span class="semantic-tag-label">Main</span>
-		<article>
-			<h1>About Us</h1>
+		<article class="article-main" style="display: flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+      <div class="about-1">
+        <h1>THE TEAM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis expedita quod aspernatur voluptates saepe laudantium fugit. Unde quasi laboriosam reiciendis totam, dicta doloribus facere eius beatae alias inventore voluptatibus veritatis.</p>
+      </div>
+      <div class="container">
+         <!--Employee Card Girl Cel-->    
+         <div class="card" style="width: 18rem; margin: 1rem">
+          <img class="card-img-top" src="/miniproject2/images/girl-profile.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Cel</h5>
+            <p class="card-text">Hello I'm Cel</p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Job</li>
+              <li class="list-group-item">Years of experience</li>
+              <li class="list-group-item">Skills</li>
+          </ul>
+            <div class="card-body">
+              
+              <a href="#" class="card-link">Portfolio</a>
+            </div>
+        </div>
+      <!--Employee Card Boy Sherwinn-->    
+        <div class="card" style="width: 18rem; margin: 1rem">
+              <img class="card-img-top" src="/miniproject2/images/boy-profile.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Sherwinn Joar A. Gomez</h5>
+                <p class="card-text">Hello I'm Ching. I'm a web developer changing the world</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Job</li>
+                <li class="list-group-item">Years of experience</li>
+                <li class="list-group-item">Skills</li>
+              </ul>
+              <div class="card-body">
+                
+                <a href="#" class="card-link">Portfolio</a>
+              </div>
+          </div>
+      <!--Employee Card Boy Bamm-->    
+        <div class="card" style="width: 18rem; margin: 1rem">
+              <img class="card-img-top" src="/miniproject2/images/boy-profile.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Bamm</h5>
+                <p class="card-text">Hello I'm Bamm</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Job</li>
+                  <li class="list-group-item">Years of experience</li>
+                  <li class="list-group-item">Skills</li>
+              </ul>
+              <div class="card-body">
+                  
+                  <a href="#" class="card-link">Portfolio</a>
+              </div>
+          </div>
+      <!--Employee Card Boy Darren-->    
+          <div class="card" style="width: 18rem; margin: 1rem">
+              <img class="card-img-top" src="/miniproject2/images/boy-profile.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Darren</h5>
+                <p class="card-text">Hello I'm Darren</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Job</li>
+                  <li class="list-group-item">Years of experience</li>
+                  <li class="list-group-item">Skills</li>
+              </ul>
+              <div class="card-body">
+                  
+                  <a href="#" class="card-link">Portfolio</a>
+              </div>
+          </div>
+      </div>
+         
+            
 		</article>
 	</main>
 	<footer>
 		<span class="semantic-tag-label">Footer</span>
 		<p>Copyright &copy; 2022 Cyber Homies. All rights reserved.</p>
 	</footer>
+  
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
-
 </html>
