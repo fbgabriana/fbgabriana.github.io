@@ -153,6 +153,7 @@
 			const textbox = document.createElement("div");
 			element.id = this.id;
 			element.classList.add("dropbox");
+			element.classList.add(`dropbox-${this.id}`);
 			iconbox.id = `${this.id}-iconbox`;
 			iconbox.classList.add("iconbox");
 			textbox.id = `${this.id}-textbox`;
@@ -317,7 +318,7 @@
 		document.body.appendChild(heading);
 		heading.textContent = "{My:Web.Projects}"
 		heading.style.position = "absolute";
-		heading.style.zIndex = "-1";
+		heading.style.zIndex = "-2";
 	}
 
 	let repositionItems = () => {
