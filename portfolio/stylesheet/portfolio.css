@@ -175,7 +175,7 @@ h1 {
 
 	h1 {
 		color: hsla(38, 33%, 22.8%, 1);
-		text-shadow: 0px 0.02em 0px hsla(38, 33%, 90%, 0.45);
+		text-shadow: 0px 0.025em 0px hsla(38, 33%, 90%, 0.45);
 	}
 
 	.dropbox {
@@ -227,7 +227,7 @@ h1 {
 
 	h1 {
 		color: hsla(36, 32%, 18%, 1);
-		text-shadow: 0px 0.02em 0px hsla(36, 32%, 72%, 0.45);
+		text-shadow: 0px 0.025em 0px hsla(36, 32%, 72%, 0.45);
 	}
 
 	.dropbox {
