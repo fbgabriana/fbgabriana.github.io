@@ -165,7 +165,7 @@ main article h2 {
 main iframe {
 	border: none;
 	width: 100%;
-	height: 100%;
+	height: calc(100vh - 220px);
 }
 
 footer {
@@ -235,6 +235,9 @@ hr.page-break {
 	main article {
 		min-height: calc(100vh - 185px);
 		padding: 0;
+	}
+	main iframe {
+		height: calc(100vh - 260px);
 	}
 }
 
