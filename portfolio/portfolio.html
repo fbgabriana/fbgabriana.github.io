@@ -149,8 +149,16 @@
 			this.id = id;
 
 			const element = document.createElement("div");
+			const iconbox = document.createElement("div");
+			const textbox = document.createElement("div");
 			element.id = this.id;
 			element.classList.add("dropbox");
+			iconbox.id = `${this.id}-iconbox`;
+			iconbox.classList.add("iconbox");
+			textbox.id = `${this.id}-textbox`;
+			textbox.classList.add("textbox");
+			element.appendChild(iconbox);
+			element.appendChild(textbox);
 			document.body.appendChild(element);
 
 			window.addEventListener("pointerup", event => {
@@ -168,6 +176,14 @@
 			return document.getElementById(this.id);
 		}
 
+		get iconbox() {
+			return document.getElementById(`${this.id}-iconbox`);
+		}
+
+		get textbox() {
+			return document.getElementById(`${this.id}-textbox`);
+		}
+
 		get style() {
 			return this.element && this.element.style;
 		}
@@ -177,19 +193,25 @@
 		}
 
 		get caption() {
-			return this.element && this.element.innerHTML;
+			return this.element && this.element.dataset.caption;
 		}
 
 		set caption(string) {
-			if (this.element) this.element.innerHTML = string;
+			if (this.element) {
+				this.element.dataset.caption = string;
+				this.textbox.innerHTML = string;
+			}
 		}
 
 		get icon() {
-			return this.element && this.element.style.backgroundImage;
+			return this.element && this.element.dataset.icon;
 		}
 
 		set icon(string) {
-			if (this.element) this.element.style.backgroundImage = string;
+			if (this.element) {
+				this.element.dataset.icon = string;
+				this.iconbox.style.backgroundImage = string;
+			}
 		}
 
 		ondrop(event) { void(0) }

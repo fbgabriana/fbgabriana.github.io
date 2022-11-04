@@ -71,24 +71,42 @@ h1 {
 
 .dropbox {
 	position: absolute;
+	box-sizing: border-box;
 	max-width: 250px;
 	max-height: 250px;
 	width: min(30vw, 30vh);
 	height: min(30vw, 30vh);
 	min-width: 150px;
 	min-height: 150px;
-	background-size: 60%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
-	background-position: center 40%;
 	border-radius: 8px;
 	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	user-select: none;
+}
+
+.dropbox .iconbox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: 60%;
+	background-position: center 40%;
+	background-repeat: no-repeat;
+}
+
+.dropbox .textbox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	align-items: end;
 	justify-content: center;
 	font-weight: bold;
 	font-size: max(18px, 1.5vw);
 	line-height: 40px;
-	user-select: none;
 }
 
 .dialogbox {
@@ -160,9 +178,11 @@ h1 {
 	}
 
 	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(38, 33%, 19%, 0.5));
+		border: 2px solid hsla(38, 33%, 19%, 0.6);
+		filter: drop-shadow(0 0 25px hsla(38, 33%, 19%, 0.5)) brightness(90%);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(38, 33%, 19%, 0.25);
 		background-color: hsla(38, 33%, 76%, 0.25);
+		background-image: url("../textures/wood-light.jpg");
 		color: hsla(38, 33%, 8.5%, 0.6);
 	}
 
@@ -202,9 +222,11 @@ h1 {
 	}
 
 	.dropbox {
-		filter: drop-shadow(0 0 25px hsla(36, 32%, 15%, 0.5));
+		border: 2px solid hsla(36, 32%, 15%, 0.6);
+		filter: drop-shadow(0 0 25px hsla(36, 32%, 15%, 0.5)) brightness(90%);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(36, 32%, 15%, 0.25);
 		background-color: hsla(36, 32%, 60%, 0.25);
+		background-image: url("../textures/wood-dark.jpg");
 		color: hsla(36, 32%, 7.5%, 0.6);
 	}
 
