@@ -144,14 +144,16 @@
 
 	class DropBox {
 
-		constructor(id) {
+		constructor(id, title) {
 
 			this.id = id;
+			this.title = title;
 
 			const element = document.createElement("div");
 			const iconbox = document.createElement("div");
 			const textbox = document.createElement("div");
 			element.id = this.id;
+			element.title = this.title;
 			element.classList.add("dropbox");
 			element.classList.add(`dropbox-${this.id}`);
 			iconbox.id = `${this.id}-iconbox`;
@@ -388,11 +390,11 @@
 		portfolio["instructions"].content += "<ul><li>✓ The question mark gives more info</li><li>✓ The lens lets you view the site</li></ul>";
 
 		// Create two dropboxes
-		dropbox1 = new DropBox("moreinfo");
+		dropbox1 = new DropBox("moreinfo", "Drop an item to see more information about it");
 		dropbox1.icon = "url(icons/moreinfo.svg)";
 		dropbox1.caption = "More info";
 
-		dropbox2 = new DropBox("viewsite");
+		dropbox2 = new DropBox("viewsite", "Drop an item to view its website");
 		dropbox2.icon = "url(icons/viewsite.svg)";
 		dropbox2.caption = "View the site";
 
