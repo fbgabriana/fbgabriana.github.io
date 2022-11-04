@@ -399,10 +399,12 @@
 		dropbox1.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].infotext) {
-					dialogbox.title = portfolio[element.id].title;
-					dialogbox.content = portfolio[element.id].infotext;
-					dialogbox.oncancel = event => console.log(`${dialogbox.id} was cancelled`);
-					dialogbox.showModal();
+					setTimeout(event => {
+						dialogbox.title = portfolio[element.id].title;
+						dialogbox.content = portfolio[element.id].infotext;
+						dialogbox.oncancel = event => console.log(`${dialogbox.id} was cancelled`);
+						dialogbox.showModal();
+					}, 100);
 				} else {
 					console.log(`No infotext associated with item '${portfolio[element.id].title}'`);
 				}
@@ -411,7 +413,9 @@
 		dropbox2.ondrop = event => {
 			if (element = event.target.closest(".portfolio-item")) {
 				if (portfolio[element.id].url) {
-					window.open(portfolio[element.id].url, dropbox2.id);
+					setTimeout(event => {
+						window.open(portfolio[element.id].url, dropbox2.id);
+					}, 100);
 				} else {
 					console.log(`No URL associated with item '${portfolio[element.id].title}'`);
 				}
