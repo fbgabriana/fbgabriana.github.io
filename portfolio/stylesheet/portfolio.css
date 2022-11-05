@@ -191,8 +191,8 @@ h1 {
 		filter: drop-shadow(0 0 25px hsla(38, 33%, 19%, 0.5)) brightness(90%);
 		border: 2px solid hsla(38, 33%, 19%, 0.6);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(38, 33%, 19%, 0.25);
-		background-color: hsla(38, 33%, 76%, 0.25);
-		background-image: url("../textures/wood-light.jpg");
+		background-color: hsla(38, 33%, 38%, 0.25);
+		background: url("../textures/nailhead-light.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-light.png") no-repeat 95% 4% / 10%, url("../textures/wood-light.jpg") no-repeat center / cover;
 	}
 
 	.dropbox .iconbox {
@@ -243,8 +243,8 @@ h1 {
 		filter: drop-shadow(0 0 25px hsla(36, 32%, 15%, 0.5)) brightness(90%);
 		border: 2px solid hsla(36, 32%, 15%, 0.6);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(36, 32%, 15%, 0.25);
-		background-color: hsla(36, 32%, 60%, 0.25);
-		background-image: url("../textures/wood-dark.jpg");
+		background-color: hsla(36, 32%, 30%, 0.25);
+		background: url("../textures/nailhead-dark.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-dark.png") no-repeat 95% 4% / 10%, url("../textures/wood-dark.jpg") no-repeat center / cover;
 	}
 
 	.dropbox .iconbox {
