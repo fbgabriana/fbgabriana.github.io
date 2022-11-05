@@ -14,6 +14,7 @@ h1 {
 	line-height: min(75px, 8.2vw);
 	white-space: nowrap;
 	text-transform: uppercase;
+	opacity: 0.9;
 	user-select: none;
 }
 
@@ -93,6 +94,7 @@ h1 {
 	background-position: center 40%;
 	background-repeat: no-repeat;
 	font-size: max(18px, 1.5vw);
+	opacity: 0.9;
 }
 
 .dropbox .textbox {
@@ -106,6 +108,7 @@ h1 {
 	font-weight: bold;
 	font-size: max(18px, 1.5vw);
 	line-height: 40px;
+	opacity: 0.9;
 }
 
 .dropbox-moreinfo {
