@@ -196,25 +196,19 @@
 		}
 
 		get caption() {
-			return this.element && this.element.dataset.caption;
+			return this.textbox && this.textbox.innerText;
 		}
 
 		set caption(string) {
-			if (this.element) {
-				this.element.dataset.caption = string;
-				this.textbox.innerHTML = string;
-			}
+			if (this.textbox) this.textbox.innerText = string;
 		}
 
 		get icon() {
-			return this.element && this.element.dataset.icon;
+			return this.iconbox && (this.iconbox.style || window.getComputedStyle(this.iconbox)).backgroundImage;
 		}
 
 		set icon(string) {
-			if (this.element) {
-				this.element.dataset.icon = string;
-				this.iconbox.style.backgroundImage = string;
-			}
+			if (this.iconbox) this.iconbox.style.backgroundImage = string;
 		}
 
 		ondrop(event) { void(0) }
