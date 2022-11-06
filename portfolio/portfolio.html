@@ -152,6 +152,7 @@
 			const element = document.createElement("div");
 			const iconbox = document.createElement("div");
 			const textbox = document.createElement("div");
+			const fglayer = document.createElement("div");
 			element.id = this.id;
 			element.title = this.title;
 			element.classList.add("dropbox");
@@ -160,8 +161,11 @@
 			iconbox.classList.add("iconbox");
 			textbox.id = `${this.id}-textbox`;
 			textbox.classList.add("textbox");
+			fglayer.id = `${this.id}-fglayer`;
+			fglayer.classList.add("fglayer");
 			element.appendChild(iconbox);
 			element.appendChild(textbox);
+			element.appendChild(fglayer);
 			document.body.appendChild(element);
 
 			window.addEventListener("pointerup", event => {
@@ -185,6 +189,10 @@
 
 		get textbox() {
 			return document.getElementById(`${this.id}-textbox`);
+		}
+
+		get fglayer() {
+			return document.getElementById(`${this.id}-fglayer`);
 		}
 
 		get style() {
@@ -312,7 +320,7 @@
 	let addHeading = () => {
 		heading = document.createElement("h1");
 		document.body.appendChild(heading);
-		heading.textContent = "{My:Web.Projects}"
+		heading.textContent = "{ My: Web.Projects }"
 		heading.style.position = "absolute";
 		heading.style.zIndex = "-2";
 	}

@@ -111,6 +111,13 @@ h1 {
 	opacity: 0.9;
 }
 
+.dropbox .fglayer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 1.0;
+}
+
 .dropbox-moreinfo {
 	background-position: 75%;
 }
@@ -192,7 +199,7 @@ h1 {
 		border: 2px solid hsla(38, 33%, 19%, 0.6);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(38, 33%, 19%, 0.25);
 		background-color: hsla(38, 33%, 38%, 0.25);
-		background: url("../textures/nailhead-light.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-light.png") no-repeat 95% 4% / 10%, url("../textures/wood-light.jpg") no-repeat center / cover;
+		background: url("../textures/wood-light.jpg") no-repeat center / cover;
 	}
 
 	.dropbox .iconbox {
@@ -202,6 +209,10 @@ h1 {
 	.dropbox .textbox {
 		color: hsla(38, 33%, 15%, 1);
 		text-shadow: 0 0.05em 0 hsla(38, 33%, 90%, 0.5);
+	}
+
+	.dropbox .fglayer {
+		background: url("../textures/nailhead-light.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-light.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-light.png") no-repeat 98% 96% / 10%, url("../textures/nailhead-light.png") no-repeat 4% 97% / 10%;
 	}
 
 	.portfolio-item .titlebar {
@@ -244,7 +255,7 @@ h1 {
 		border: 2px solid hsla(36, 32%, 15%, 0.6);
 		box-shadow: inset 0 0 min(30vw, 30vh) hsla(36, 32%, 15%, 0.25);
 		background-color: hsla(36, 32%, 30%, 0.25);
-		background: url("../textures/nailhead-dark.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-dark.png") no-repeat 95% 4% / 10%, url("../textures/wood-dark.jpg") no-repeat center / cover;
+		background: url("../textures/wood-dark.jpg") no-repeat center / cover;
 	}
 
 	.dropbox .iconbox {
@@ -254,6 +265,10 @@ h1 {
 	.dropbox .textbox {
 		color: hsla(38, 33%, 12%, 1);
 		text-shadow: 0 0.05em 0 hsla(36, 32%, 72%, 0.5);
+	}
+
+	.dropbox .fglayer {
+		background: url("../textures/nailhead-dark.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-dark.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-dark.png") no-repeat 98% 96% / 10%, url("../textures/nailhead-dark.png") no-repeat 4% 97% / 10%;
 	}
 
 	.portfolio-item .titlebar {
