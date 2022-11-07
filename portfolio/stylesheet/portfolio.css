@@ -14,7 +14,7 @@ h1 {
 	justify-content: center;
 	width: 100vw;
 	height: 100vh;
-	font-family: "Fira Code";
+	font-family: "Fira Code", "Inter";
 	font-size: min(75px, 8.2vw);
 	line-height: min(75px, 8.2vw);
 	white-space: nowrap;
