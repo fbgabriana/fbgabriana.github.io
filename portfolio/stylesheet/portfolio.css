@@ -220,7 +220,7 @@ h1 {
 	}
 
 	.dropbox .fglayer {
-		background: url("../textures/nailhead-light.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-light.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-light.png") no-repeat 98% 96% / 10%, url("../textures/nailhead-light.png") no-repeat 4% 97% / 10%;
+		background: url("../textures/nailhead-light.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-light.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-light.png") no-repeat 98% 97% / 10%, url("../textures/nailhead-light.png") no-repeat 3% 96% / 10%;
 	}
 
 	.portfolio-item .titlebar {
@@ -276,7 +276,7 @@ h1 {
 	}
 
 	.dropbox .fglayer {
-		background: url("../textures/nailhead-dark.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-dark.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-dark.png") no-repeat 98% 96% / 10%, url("../textures/nailhead-dark.png") no-repeat 4% 97% / 10%;
+		background: url("../textures/nailhead-dark.png") no-repeat 4% 5% / 10%, url("../textures/nailhead-dark.png") no-repeat 95% 4% / 10%, url("../textures/nailhead-dark.png") no-repeat 98% 97% / 10%, url("../textures/nailhead-dark.png") no-repeat 3% 96% / 10%;
 	}
 
 	.portfolio-item .titlebar {
