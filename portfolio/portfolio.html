@@ -328,8 +328,8 @@
 	let repositionItems = () => {
 		let rect1 = dropbox1.element.getBoundingClientRect();
 		let rect2 = dropbox2.element.getBoundingClientRect();
-		dropbox1.style.left = (innerWidth - rect1.width)* 1/5 + "px";
-		dropbox2.style.left = (innerWidth - rect2.width)* 4/5 + "px";
+		dropbox1.style.left = (innerWidth - rect1.width)* 1/6 + "px";
+		dropbox2.style.left = (innerWidth - rect2.width)* 5/6 + "px";
 		dropbox1.style.top = (innerHeight - rect1.height)* 3.5/4 + "px";
 		dropbox2.style.top = (innerHeight - rect2.height)* 3.5/4 + "px";
 		heading = document.querySelector("h1");
