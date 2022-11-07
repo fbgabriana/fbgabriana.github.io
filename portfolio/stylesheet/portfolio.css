@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-	font-family: "Fira Code", "Monospace";
+	font-family: "Fira Code";
 	font-size: min(75px, 8.2vw);
 	line-height: min(75px, 8.2vw);
 	white-space: nowrap;
