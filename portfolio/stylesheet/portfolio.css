@@ -9,11 +9,17 @@ body {
 }
 
 h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
 	font-family: "Fira Code";
 	font-size: min(75px, 8.2vw);
 	line-height: min(75px, 8.2vw);
 	white-space: nowrap;
 	text-transform: uppercase;
+	text-align: center;
 	opacity: 0.9;
 	user-select: none;
 }
