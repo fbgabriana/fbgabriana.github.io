@@ -193,7 +193,7 @@ h1 {
 @media (prefers-color-scheme: light) {
 
 	body {
-		background-color: hsl(38, 33%, 70%);
+		background-color: hsla(38, 33%, 38%, 0.5);
 		background-image: url("../textures/wood-light.jpg");
 	}
 
@@ -249,7 +249,7 @@ h1 {
 @media (prefers-color-scheme: dark) {
 
 	body {
-		background-color: hsl(36, 32%, 22%);
+		background-color: hsla(36, 32%, 30%, 0.5);
 		background-image: url("../textures/wood-dark.jpg");
 	}
 
