@@ -136,7 +136,7 @@
 		adjustColorTheme() {
 			for (var i = 0; i < this.items.length; i++) {
 				let thumbs = window.matchMedia("(prefers-color-scheme: dark)").matches ? "thumbs/dark" : "thumbs/light" ;
-				this.items[i].contentElement.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`
+				this.items[i].thumb && this.items[i].contentElement.style.backgroundImage=`url(${thumbs}/${this.items[i].thumb})`;
 			}
 			return 0;
 		}
