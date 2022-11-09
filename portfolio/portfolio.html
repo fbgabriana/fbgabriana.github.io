@@ -342,7 +342,7 @@
 		repositionItems();
 	});
 
-	window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
+	window.matchMedia("(prefers-color-scheme: dark)").onchange = event => {
 		portfolio.adjustColorTheme();
 	}
 
