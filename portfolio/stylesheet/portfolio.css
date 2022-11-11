@@ -4,7 +4,8 @@ body {
 	margin: 0;
 	font: caption;
 	font-size: 16px;
-	background-size: max(100vw,100vh);
+	background-size: max(100vw, 150vh);
+	background-position: center top;
 	overflow: hidden;
 }
 
