@@ -5,7 +5,8 @@ body {
 	font: caption;
 	font-size: 16px;
 	background-size: 100vw;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 h1 {
