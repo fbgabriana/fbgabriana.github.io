@@ -4,9 +4,8 @@ body {
 	margin: 0;
 	font: caption;
 	font-size: 16px;
-	background-size: 100vw;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	background-size: max(100vw,100vh);
+	overflow: hidden;
 }
 
 h1 {
