@@ -83,8 +83,8 @@ h1 {
 	max-height: 250px;
 	width: min(30vw, 30vh);
 	height: min(30vw, 30vh);
-	min-width: 150px;
-	min-height: 150px;
+	min-width: 120px;
+	min-height: 120px;
 	border-radius: 8px;
 	background-size: cover;
 	background-repeat: no-repeat;
