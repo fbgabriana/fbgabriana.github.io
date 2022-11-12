@@ -9,7 +9,7 @@ article h2 {
 }
 article .subheading{
 	font-size: 1rem;
-	font-weight: none;
+	font-weight: normal;
 	font-style: italic;
 	margin-bottom: 1.5em;
 }
@@ -111,7 +111,7 @@ article table tr th:first-child {
 }
 article table tr:first-child th {
 	font-weight: bold;
-	font-style: none;
+	font-style: normal;
 	background-color: hsl(214, 50.0000%, 87.500%);
 	color: hsl(0, 0.0000%, 30.500%);
 }

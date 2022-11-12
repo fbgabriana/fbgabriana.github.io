@@ -111,25 +111,33 @@ header nav li a {
 	border-left: 1px solid rgba(0,0,0,0.75);
 	border-top-left-radius: 0.25em;
 	border-top-right-radius: 0.25em;
+	cursor: default;
+}
+header nav li a:link {
 	background-color: hsl(214, 65.500%, 25.0000%);
 	color: hsl(77.88, 34.500%, 90.6250%);
+	box-shadow: none;
+	cursor: pointer;
 }
-header nav li a:hover {
+header nav li a:link:hover {
 	background-color: hsl(214, 50.0000%, 33.8975%);
 	color: hsl(77.88, 62.2222%, 93.3333%);
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 }
-header nav li a:active {
+header nav li a:link:active {
 	color: hsl(60, 93.3333%, 75.000%);
 }
 header nav li a.current-page,
-header nav li a.current-section {
+header nav li a.current-section,
+header nav li a.current-section:hover {
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 	color: hsl(60, 93.3333%, 60.000%);
-	cursor: default;
 }
 header nav li:first-child a {
 	border-top-left-radius: 0.5em;
+}
+header nav li:last-child a {
+	border-top-right-radius: 0.5em;
 }
 
 /* The left side navigation bar */
