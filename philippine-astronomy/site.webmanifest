@@ -4,7 +4,7 @@
 	"description" : "Provide astronomical information and tools that are of value to local astronomy enthusiasts",
 	"icons" : [
 		{
-			"src" : "/svg/logoicon.svg",
+			"src" : "../svg/logoicon.svg",
 			"type" : "image/svg+xml",
 			"sizes" : "512x512",
 			"purpose" : "any"
