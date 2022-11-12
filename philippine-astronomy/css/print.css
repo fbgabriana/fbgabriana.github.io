@@ -2,7 +2,7 @@
 @import "typography.css";
 
 @page {
-	margin: 0.8in 1.0in;
+	margin: 0.8in;
 }
 
 /* Don't display the semantic tag labels */
@@ -13,7 +13,8 @@ nav, #menubutton, .sectionlist {display: none;}
 
 /* Styles for document content */
 body {
-	margin: 0;
+	margin: 0.2in;
+	font-size: 12pt;
 }
 a {
 	text-decoration: none;
@@ -74,8 +75,9 @@ aside div.boxinfo p {
 /* Print-specific Typography */
 
 article>p:first-of-type::first-letter {
-	line-height: 0.5em;
-	margin: 0.1em 0.1em -0.1em -0.1em;
+	font-size: 3.8rem;
+	line-height: 2rem;
+	margin: 0.1em 0.05em -0.1em -0.1em;
 }
 article table th,
 article table td {

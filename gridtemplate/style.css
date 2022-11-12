@@ -12,7 +12,7 @@ body>main>aside   {background-color: #ffffff;}
 /* Styles for document content */
 body {
 	margin: 0;
-	font-family: "Lucida Sans", Arial, Helvetica, sans-serif;
+	font-family: "Lucida Sans", sans-serif;
 }
 header h1 {
 	display: flex;
@@ -101,16 +101,17 @@ article p+p {
 }
 article p:first-of-type::first-letter {
 	float: left;
-	font-size: 4em;
+	font-size: 3.5rem;
 	font-weight: bold;
 	line-height: 0.75em;
-	margin: 0.05em 0.05em -0.05em -0.1em;
+	margin: 0.1em 0.05em -0.1em -0.1em;
 	opacity: 0.75;
 }
 article p:first-of-type>span:first-child {
-	text-transform: uppercase;
-	font-size: 0.85em;
-	letter-spacing: 0.17em;
+	font-variant: small-caps;
+	font-size-adjust: 0.48;
+	font-size: 1.25rem;
+	letter-spacing: 0.2em;
 }
 footer>p {
 	margin: 0;

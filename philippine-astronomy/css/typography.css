@@ -24,11 +24,9 @@ article h3 {
 	margin: 1em 0 0 0;
 	font-size: 1.17em;
 }
-article p {
+article>p {
 	margin: 0.5em 0;
 	line-height: 1.5em;
-}
-article>p {
 	text-indent: 2.5em;
 }
 article>p:first-of-type {
@@ -36,14 +34,14 @@ article>p:first-of-type {
 }
 article>p:first-of-type::first-letter {
 	float: left;
-	font-size: 4em;
 	font-weight: bold;
 	opacity: 0.75;
 }
 article>p:first-of-type>span:first-child {
-	text-transform: uppercase;
-	font-size: 0.85em;
-	letter-spacing: 0.17em;
+	font-variant: small-caps;
+	font-size-adjust: 0.48;
+	font-size: 1.25rem;
+	letter-spacing: 0.2em;
 }
 article .article-list h3 {
 	margin: 1.5em 0 0 0;
