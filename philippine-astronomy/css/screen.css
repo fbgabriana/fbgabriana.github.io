@@ -60,14 +60,16 @@ header h1 {
 	font-size: 48px;
 	color: hsl(214, 33.3333%, 75.0000%);
 	font-family: "Arial Narrow";
+	background: url("../svg/logoicon.svg") no-repeat 0% bottom / contain;
 }
 header h1 a {
+	padding-left: 0.5em;
 	text-decoration: inherit;
 	color: inherit;
-	background-image: radial-gradient(hsla(214, 50%, 20%, 0.2) 0%, hsla(214, 50%, 20%, 0.1) 50%, transparent 75%);
+	background: radial-gradient(hsla(214, 50%, 20%, 0.2) 0%, hsla(214, 50%, 20%, 0.1) 50%, transparent 75%);
 }
 header h1 a:hover {
-	background-image: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.1) 50%, transparent 75%);
+	background: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.1) 50%, transparent 75%);
 }
 header h1 a img {
 	vertical-align: text-top;
@@ -76,6 +78,7 @@ header h1 a img {
 }
 header nav {
 	text-align: center;
+	background: url("../svg/hilltop.svg") no-repeat left / contain;
 }
 header #menubtn {
 	position: absolute;
@@ -130,14 +133,12 @@ header nav li a:link:active {
 header nav li a.current-page,
 header nav li a.current-section,
 header nav li a.current-section:hover {
+	background-color: hsl(214, 65.500%, 24.0000%);
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 	color: hsl(60, 93.3333%, 60.000%);
 }
 header nav li:first-child a {
 	border-top-left-radius: 0.5em;
-}
-header nav li:last-child a {
-	border-top-right-radius: 0.5em;
 }
 
 /* The left side navigation bar */
