@@ -1,0 +1,43 @@
+{
+	"name" : "Bamm’s KodeGo Repository",
+	"short_name" : "Bamm’s Repo",
+	"description" : "This is my public repository for KodeGo bootcamp projects.",
+	"icons" : [
+		{
+			"src" : "/site.webicon.svg",
+			"type" : "image/svg+xml",
+			"sizes" : "512x512",
+			"purpose" : "any"
+		}
+		{
+			"src" : "/favicon.ico",
+			"type" : "image/x-icon",
+			"sizes" : "48x48 32x32 16x16",
+			"purpose" : "any"
+		}
+	],
+	"shortcuts" : [
+		{
+			"name" : "My Web Projects",
+			"url" : "/portfolio/"
+		},
+		{
+			"name" : "Philippine Astronomy Magazine",
+			"url" : "/philippine-astronomy/"
+		},
+		{
+			"name" : "Cyber Homies — Creative Web Developers",
+			"url" : "/miniproject2/"
+		},
+		{
+			"name" : "Harmonic Means",
+			"url" : "/harmonicmeans/"
+		},
+		{
+			"name" : "Some Random Thoughts",
+			"url" : "/thoughts/"
+		}
+	],
+	"display" : "browser",
+	"categories" : ["any"]
+}
