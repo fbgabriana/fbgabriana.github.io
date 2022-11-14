@@ -297,6 +297,9 @@ article hr.page-break {
 }
 
 @media screen and (max-width: 500px) {
+	header nav {
+		background: none;
+	}
 	header nav li {
 		display: block;
 	}
