@@ -8,7 +8,7 @@
 			"type" : "image/svg+xml",
 			"sizes" : "512x512",
 			"purpose" : "any"
-		}
+		},
 		{
 			"src" : "/favicon.ico",
 			"type" : "image/x-icon",
