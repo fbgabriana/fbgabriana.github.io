@@ -355,7 +355,8 @@ article hr.page-break {
 	header h1 a:hover {
 		background: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.08) 50%, transparent 75%);
 	}
-	header nav li a:link {
+	header nav li a:link,
+	header nav li a:visited {
 		background-color: hsl(214, 32.7500%, 12.5000%);
 		color: hsl(55.94, 34.500%, 62.250%);
 		box-shadow: none;
