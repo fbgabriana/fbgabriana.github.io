@@ -452,6 +452,9 @@ article hr.page-break {
 	article a:active {
 		color: hsl(44.000, 35.0000%, 50.0000%);
 	}
+	article img {
+		filter: brightness(67%) hue-rotate(-15deg);
+	}
 
 	main aside div.sectionlist ul li a {
 		color: hsl(44.000, 40.0000%, 40.0000%);
