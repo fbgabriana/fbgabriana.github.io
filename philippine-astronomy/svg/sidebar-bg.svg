@@ -227,7 +227,7 @@
 }
 @media screen and (prefers-color-scheme: dark) {
 	.star {fill:hsl(20,60%,30%);}
-	.constel {stroke:hsl(10,40%,30%);}
+	.constel {stroke:hsl(15,40%,30%);}
 }
 </style>
 <g id="surface1">
