@@ -33,7 +33,7 @@
 	}
 
 	body {
-		font-family: "Lucida Sans", "Lucida Grande", "Helvetica Neue", "Droid Sans", "sans-serif";
+		font-family: "Lucida Sans", "Lucida Grande", "Helvetica Neue", "Droid Sans", "Ascender Sans", "sans-serif";
 	}
 }
 
@@ -72,6 +72,6 @@
 	}
 
 	body {
-		font-family: "Playfair Display", "serif";
+		font-family: "Playfair Display", "Droid Serif", "Ascender Serif", "serif";
 	}
 }
