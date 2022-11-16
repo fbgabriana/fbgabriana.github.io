@@ -176,7 +176,7 @@ article blockquote p {
 	}
 	article img {
 		filter: brightness(66.6667%) hue-rotate(-15deg);
-		border-radius: 8px;
+		border-radius: 4px;
 	}
 
 }
