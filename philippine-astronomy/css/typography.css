@@ -85,6 +85,7 @@ article figure img {
 	background-color: hsl(34, 13.3333%, 87.5000%);
 }
 article figure figcaption {
+	margin-top: 0.25em;
 	text-align: center;
 }
 article table {
