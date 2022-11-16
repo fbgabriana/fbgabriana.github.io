@@ -362,7 +362,7 @@ article hr.page-break {
 	header nav li a:link,
 	header nav li a:visited {
 		background-color: hsl(214, 32.7500%, 12.5000%);
-		color: hsl(50, 34.500%, 62.250%);
+		color: hsl(50, 33.3333%, 62.250%);
 		box-shadow: none;
 		cursor: pointer;
 	}
