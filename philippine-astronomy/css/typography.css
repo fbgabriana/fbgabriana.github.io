@@ -179,6 +179,14 @@ article blockquote p {
 		filter: brightness(66.6667%) hue-rotate(-15deg);
 		border-radius: 4px;
 	}
+	article form button,
+	article form input,
+	article form textarea {
+		background-color: hsl(0, 0%, 9%);
+		color: #a09090;
+		border: 1px solid #504840;
+		outline: none;
+	}
 
 }
 

@@ -432,14 +432,6 @@ article hr.page-break {
 		background-color: hsl(34, 6.6667%, 11.2952%);
 		color: hsl(30, 13.3333%, 37.5000%);
 	}
-	article form button,
-	article form input,
-	article form textarea {
-		background-color: hsl(0, 0%, 9%);
-		color: #b0b0b0;
-		border: 1px solid gray;
-		outline: none;
-	}
 
 	footer p {
 		color: hsl(214, 20.000%, 40.000%);
