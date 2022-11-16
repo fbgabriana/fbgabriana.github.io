@@ -116,7 +116,8 @@ header nav li a {
 	border-top-right-radius: 0.25em;
 	cursor: default;
 }
-header nav li a:link {
+header nav li a:link,
+header nav li a:visited {
 	background-color: hsl(214, 65.500%, 25.0000%);
 	color: hsl(77.88, 34.500%, 90.6250%);
 	box-shadow: none;
