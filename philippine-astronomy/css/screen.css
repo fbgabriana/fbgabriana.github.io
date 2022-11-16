@@ -268,8 +268,8 @@ footer>p {
 	align-items: center;
 	justify-content: center;
 	font-size: 0.83333em;
-	color: hsl(214, 40.0000%, 80.0000%);
 	text-align: center;
+	color: hsl(214, 40.0000%, 80.0000%);
 	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
 }
 
@@ -350,10 +350,116 @@ article hr.page-break {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-	body>aside        {background-color: #202020; color: #d6d6d6; }
-	body>main         {background-color: #202020; color: #d6d6d6;}
-	body>main>section {background-color: #202020; color: #d6d6d6;}
-	body>main>aside   {background-color: #202020; color: #d6d6d6;}
-}
 
+	header h1 a:hover {
+		background: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.08) 50%, transparent 75%);
+	}
+	header nav li a:link {
+		background-color: hsl(214, 32.7500%, 12.5000%);
+		color: hsl(55.94, 34.500%, 62.250%);
+		box-shadow: none;
+		cursor: pointer;
+	}
+	header nav li a:link:hover {
+		background-color: hsl(214, 25.0000%, 16.9488%);
+		color: hsl(55.94, 62.2222%, 67.500%);
+		box-shadow: 0 0 20px hsla(55.94, 50.0000%, 60.0000%, 0.25);
+	}
+	header nav li a:link:active {
+		color: hsl(60, 46.6667%, 30.000%);
+	}
+	header nav li a.current-page,
+	header nav li a.current-section,
+	header nav li a.current-section:hover {
+		background-color: hsl(214, 32.7500%, 12.000%);
+		box-shadow: 0 0 20px hsla(55.94, 40.0000%, 60.0000%, 0.25);
+		color: hsl(60, 75.000%, 48.000%);
+	}
+	header nav li:first-child a {
+		border-top-left-radius: 0.5em;
+	}
+	article form button,
+	article form input,
+	article form textarea {
+		background-color: hsl(0, 0%, 9%);
+		color: #b0b0b0;
+		border: 1px solid gray;
+		outline: none;
+	}
+	body>header {
+		background-color: hsl(214, 58.3333%, 8.000%);
+		background-image: url("../svg/header-bg.svg"), linear-gradient(270deg, hsl(214, 58.3333%, 4.000%) 0%, hsl(34, 50.0000%, 10.000%) 75%, hsl(34, 66.6667%, 20.000%) 100%);
+	}
+	body>footer {
+		background-color: hsl(214, 50.0000%, 6.000%);
+		background-image: url("../svg/footer-bg.svg"), linear-gradient(270deg, hsl(214, 50.0000%, 2.000%) 0%, hsl(34, 25.0000%, 10.000%) 60%, hsl(34, 66.6667%, 15.000%) 120%);
+	}
+	body>aside {
+		background-image: url("../svg/sidebar-bg-dark.svg"), linear-gradient(90deg, hsl(20.000, 30.000%, 12.000%) 0%, hsl(42.350, 30.000%, 10.000%) 60%, transparent 100%);
+		background-color: hsl(0, 0%, 10%);
+	}
+	body>aside nav {
+		background-color: hsla(0, 0%, 10%, 0.45);
+		box-shadow: 10px 10px 80px hsla(0, 0%, 10%, 0.90);
+	}
+	body>main {
+		background-color: hsl(0, 0%, 10%);
+		box-shadow: 0px 0px 80px hsla(0, 0%, 10%, 0.5);
+	}
+	body>main>section {background-color: hsl(0, 0%, 10%); color: hsl(34, 20%, 58.470%);}
+	body>main>aside   {background-color: hsl(0, 0%, 10%); color: hsl(34, 20%, 48.000%);}
+
+	aside nav>ul li a {
+		background-color: hsl(39.525, 6.6667%, 11.1765%);
+		color: hsl(34, 33.3333%, 44.2360%);
+	}
+	aside nav>ul li a:hover {
+		background-color: hsl(39.525, 6.6667%, 11.0138%);
+		color: hsl(34, 33.3333%, 49.7600%);
+		border-right: 1px solid hsla(34, 66.6667%, 50.0000%, 0.5);
+	}
+	aside nav>ul li a:active {
+		background-color: hsl(34, 6.6667%, 11.1765%);
+		color: hsl(34, 33.3333%, 32.0000%);
+		border-right: 1px solid hsla(34, 66.6667%, 45.0000%, 0.5);
+	}
+	aside nav>ul li a.current-section {
+		background-color: hsl(34, 6.6667%, 11.2952%);
+		color: hsl(34, 20.0000%, 49.7600%);
+	}
+	aside nav>ul li a.current-page {
+		background-color: hsl(34, 6.6667%, 11.2952%);
+		color: hsl(34, 6.6667%, 49.7600%);
+	}
+
+	footer p {
+		color: hsl(214, 20.000%, 40.000%);
+		text-shadow: 0 0 2px hsla(34, 20.0000%, 10.0000%, 0.5);
+	}
+
+	article a {
+		color: hsl(44.000, 35.0000%, 40.0000%);
+	}
+	article a:hover {
+		color: hsl(44.000, 35.0000%, 55.0000%);
+	}
+	article a:active {
+		color: hsl(44.000, 35.0000%, 50.0000%);
+	}
+
+	main aside div.sectionlist ul li a {
+		color: hsl(44.000, 40.0000%, 40.0000%);
+	}
+	main aside div.sectionlist ul li a:hover {
+		color: hsl(44.000, 40.0000%, 55.0000%);
+	}
+	main aside div.sectionlist ul li a:active {
+		color: hsl(44.000, 40.0000%, 50.0000%);
+	}
+	main aside div.sectionlist ul li a.current-page {
+		color: hsl(44.000, 6.0000%, 50.0000%);
+		text-shadow: 0px 0px 1px hsl(44.000, 5.0000%, 15.0000%);
+	}
+
+}
 

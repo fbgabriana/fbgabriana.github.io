@@ -153,3 +153,27 @@ article blockquote p {
 	text-indent: 2em;
 	margin: 0;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+
+	article table th {
+		background-color: hsl(34, 12.5000%, 14.500%);
+		color: hsl(34, 20.000%, 60.00%);
+	}
+	article table tr th:first-child {
+		background-color: hsl(34, 12.5000%, 11.200%);
+		color: hsl(34, 20.000%, 55.00%);
+	}
+	article table tr:first-child th {
+		background-color: hsl(34, 12.5000%, 14.500%);
+		color: hsl(34, 20.000%, 60.00%);
+	}
+	article table.table-row-striped tr:nth-child(even) td {
+		background: hsl(34, 0.000%, 12.500%);
+	}
+	article table.table-row-striped tr:nth-child(odd) td {
+		background: hsl(34, 0.000%, 10.000%);
+	}
+
+}
+
