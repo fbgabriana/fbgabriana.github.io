@@ -348,3 +348,12 @@ article hr.page-break {
 		}
 	}
 }
+
+@media screen and (prefers-color-scheme: dark) {
+	body>aside        {background-color: #202020; color: #d6d6d6; }
+	body>main         {background-color: #202020; color: #d6d6d6;}
+	body>main>section {background-color: #202020; color: #d6d6d6;}
+	body>main>aside   {background-color: #202020; color: #d6d6d6;}
+}
+
+
