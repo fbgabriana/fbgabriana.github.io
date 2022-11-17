@@ -470,9 +470,8 @@ article hr.page-break {
 		body>aside  {grid-area: aside;}
 
 		body>header {
-			border-bottom: none;
+			border-bottom: 1px solid transparent;
 		}
-
 		header nav {
 			text-align: right;
 		}
