@@ -104,12 +104,13 @@ header nav li {
 	margin: 1px 0;
 }
 header nav li a {
+	box-sizing: border-box;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
 	min-height: 2em;
-	min-width: 4em;
+	min-width: 6em;
 	padding: 0.16667px 1em;
 	font-size: 0.83333rem;
 	border-bottom: 1px solid rgba(0,0,0,0.75);
