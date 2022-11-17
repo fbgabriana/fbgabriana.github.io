@@ -100,7 +100,6 @@ header nav ul {
 }
 header nav li {
 	display: inline-block;
-	margin: 1px 0;
 }
 header nav li a {
 	display: flex;
