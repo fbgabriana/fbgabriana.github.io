@@ -77,10 +77,6 @@ header h1 a img {
 	margin-top: 0.35em;
 	height: 1.25em;
 }
-header nav {
-	text-align: center;
-	background: url("../svg/hilltop.svg") no-repeat left / contain;
-}
 header #menubtn {
 	position: absolute;
 	top: 20px;
@@ -93,6 +89,10 @@ header #menubtn {
 }
 header #menubtn:hover {
 	background-image: radial-gradient(hsla(214, 20%, 90%, 0.25) 0%, hsla(214, 20%, 90%, 0.10) 50%, transparent 80%);
+}
+header nav {
+	text-align: center;
+	background: url("../svg/hilltop.svg") no-repeat left / contain;
 }
 header nav ul {
 	margin: 0 20px;
@@ -109,7 +109,7 @@ header nav li a {
 	text-decoration: none;
 	min-height: 2em;
 	min-width: 4em;
-	padding: 0 1em;
+	padding: 0.16667px 1em;
 	font-size: 0.83333rem;
 	border-bottom: 1px solid rgba(0,0,0,0.75);
 	border-left: 1px solid rgba(0,0,0,0.75);
