@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="800px" height="120px" viewBox="0 0 7960 1050">
 	<style>@media (prefers-color-scheme: dark) { g { fill: hsl(34, 20.0000%, 60.000%) } }</style>
-	<style>svg { filter: drop-shadow(-2px -2px 2px hsla(353, 50%, 75%, 0.2)) }</style>
+	<style>svg { filter: drop-shadow(-2px -2px 2px hsla(353, 50.000%, 75.000%, 0.2)) }</style>
 	<g transform="scale(1,-1)" fill="hsl(214, 33.3333%, 75.0000%)">
 		<path d="M 1190 -37 c -70 -26 -65 -123 6 -123 30 0 74 41 74 70 0 23 -33 60 -52 59 -7 0 -20 -3 -28 -6 z"/>
 		<path d="M 1635 -40 c -70 -28 -60 -120 12 -120 56 0 85 83 41 114 -25 18 -25 18 -53 6 z"/>
