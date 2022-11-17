@@ -469,9 +469,6 @@ article hr.page-break {
 		body>main   {grid-area: main;}
 		body>aside  {grid-area: aside;}
 
-		body>header {
-			border-bottom: 1px solid transparent;
-		}
 		header nav {
 			text-align: right;
 		}
