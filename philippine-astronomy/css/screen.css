@@ -388,7 +388,7 @@ article hr.page-break {
 
 	body>header {
 		background-color: hsl(214, 58.3333%, 8.000%);
-		background-image: url("../svg/header-bg.svg"), linear-gradient(270deg, hsl(214, 58.3333%, 6.000%) 0%, hsl(34, 50.0000%, 12.000%) 80%, hsl(34, 66.6667%, 20.000%) 100%);
+		background-image: url("../svg/header-bg.svg"), linear-gradient(270deg, hsl(214, 58.3333%, 4.000%) 0%, hsl(34, 50.0000%, 12.000%) 80%, hsl(34, 66.6667%, 20.000%) 100%);
 	}
 	body>footer {
 		background-color: hsl(214, 50.0000%, 6.000%);
