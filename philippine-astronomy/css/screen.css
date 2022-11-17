@@ -352,6 +352,9 @@ article hr.page-break {
 		header nav {
 			text-align: right;
 		}
+		header nav li {
+			margin: 1px 0;
+		}
 	}
 }
 
