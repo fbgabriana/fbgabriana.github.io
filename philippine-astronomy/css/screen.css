@@ -426,7 +426,7 @@ article hr.page-break {
 	aside nav>ul li a.current-section {
 		background-image: radial-gradient(hsla(34, 25%, 50%, 0.1) 0%, hsla(34, 25%, 50%, 0.05) 50%, transparent 75%);;
 		background-color: hsl(34, 6.6667%, 11.2952%);
-		color: hsl(34, 30.0000%, 37.5000%);
+		color: hsl(34, 26.6667%, 37.5000%);
 	}
 	aside nav>ul li a.current-page {
 		background-color: hsl(34, 6.6667%, 11.2952%);
