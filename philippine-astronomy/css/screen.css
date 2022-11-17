@@ -6,7 +6,7 @@
 
 /* Define backgrounds */
 body>header {
-	border-bottom: 1px solid hsl(0, 0%, 6.000%);
+	border-bottom: 1px solid hsla(0, 0%, 6.000%, 0.5);
 	background-color: hsl(214, 58.3333%, 12.5000%);
 	background-image: url("../svg/header-bg.svg"), linear-gradient(90deg, hsl(214, 58.3333%, 12.5000%) 0%, hsl(214, 50.0000%, 33.8975%) 75%, hsl(214, 66.6667%, 55.2950%) 100%);
 	background-position: center top;
