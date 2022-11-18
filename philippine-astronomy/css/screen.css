@@ -136,7 +136,7 @@ header nav li a:link:active {
 header nav li a.current-page,
 header nav li a.current-section,
 header nav li a.current-section:hover {
-	background-color: hsl(214, 65.500%, 24.0000%);
+	background-color: hsl(214, 65.500%, 25.0000%);
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 	color: hsl(60, 93.3333%, 60.000%);
 }
@@ -459,6 +459,16 @@ article hr.page-break {
 	}
 	header nav li {
 		display: block;
+	}
+	header nav li a {
+		box-shadow: none !important;
+	}
+	header nav li a.current-section {
+		border-bottom: 1px solid rgba(0,0,0,0.75);
+		border-left: 1px solid rgba(0,0,0,0.75);
+		border-top: 1px solid hsla(214,50%,35%,0.25);
+		border-right: 1px solid hsla(214,50%,40%,0.25);
+		filter: brightness(80%);
 	}
 }
 
