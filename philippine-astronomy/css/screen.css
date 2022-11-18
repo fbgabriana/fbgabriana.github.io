@@ -441,7 +441,7 @@ article hr.page-break {
 	@media screen and (min-width: 600px ) {
 		/* laptop light */
 		body>main {
-			background-image: linear-gradient(90deg, hsl(42.350, 60.9375%, 99.2%) 0%, hsl(42.350, 0%, 96.875%) 30%, hsl(214, 12.5%, 98.2375%) 60%, hsl(77.88, 12.5%, 99.6%) 100%);
+			background-image: linear-gradient(90deg, hsl(42.350, 60.9375%, 99.2%) 0%, hsl(42.350, 0%, 96.875%) 30%, hsl(214, 12.5%, 98.5%) 60%, hsl(77.88, 12.5%, 99.6%) 100%);
 		}
 	}
 	@media screen and (max-width: 600px ) {
