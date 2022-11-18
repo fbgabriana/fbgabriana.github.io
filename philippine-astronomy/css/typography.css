@@ -147,9 +147,31 @@ article form input {
 article form button {
 	min-height: 2em;
 }
+
+article form input,
+article form textarea {
+	font-size: smaller;
+	font-family: inherit;
+	line-height: 1.8em;
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(214, 0%, 12.5%);
+	border: 1px solid hsl(214, 20%, 50%);
+}
+article form input:focus,
+article form textarea:focus {
+	outline: 1px solid hsl(214, 20%, 50%);
+}
+article form button {
+	background-color: hsl(0, 0%, 90%);
+	color: hsl(214, 0%, 12.5%);
+	border: 1px solid hsl(214, 20%, 60%);
+}
 article blockquote {
-	margin: 1.5em 3em;
+	box-sizing: border-box;
+	margin: 2em;
+	padding-left: 2em;
 	line-height: 1.5em;
+	border-left: 2px solid hsl(214, 25%, 75%);
 }
 article blockquote p {
 	text-indent: 2em;
@@ -179,14 +201,23 @@ article blockquote p {
 	article img {
 		filter: brightness(66.6667%) hue-rotate(-15deg);
 	}
-	article form button,
 	article form input,
 	article form textarea {
 		background-color: hsl(0, 0%, 9%);
-		color: #a09090;
-		border: 1px solid #504840;
-		outline: none;
+		color: hsl(30, 50%, 58.470%);
+		border: 1px solid hsl(30, 20%, 25.000%);
 	}
-
+	article form input:focus,
+	article form textarea:focus {
+		outline: 1px solid hsl(30, 20%, 28.125%);
+	}
+	article form button {
+		background-color: hsl(0, 0%, 12.5%);
+		color: hsl(30, 50%, 50%);
+		border: 1px solid hsl(30, 20%, 28.125%);
+	}
+	article blockquote {
+		border-left: 2px solid hsl(30, 25%, 25%);
+	}
 }
 
