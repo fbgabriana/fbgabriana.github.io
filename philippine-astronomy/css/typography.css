@@ -83,6 +83,7 @@ article figure img {
 	width: 100%;
 	height: auto;
 	background-color: hsl(34, 13.3333%, 87.5000%);
+	border-radius: 4px;
 }
 article figure figcaption {
 	margin-top: 0.25em;
@@ -177,7 +178,6 @@ article blockquote p {
 	}
 	article img {
 		filter: brightness(66.6667%) hue-rotate(-15deg);
-		border-radius: 40px;
 	}
 	article form button,
 	article form input,
