@@ -262,7 +262,7 @@ main aside div.boxinfo a {
 	text-decoration: none;
 }
 main aside div.boxinfo a:hover {
-	color: hsl(214, 80.0000%, 60.0000%);
+	color: hsl(214, 80.0000%, 65.0000%);
 	text-decoration: underline;
 }
 
