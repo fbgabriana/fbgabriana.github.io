@@ -66,6 +66,5 @@ window.addEventListener("resize", event => {
 window.addEventListener("DOMContentLoaded", event => {
 	setDocumentTitle();
 	setCurrentPage();
-	watchColorScheme();
 });
 
