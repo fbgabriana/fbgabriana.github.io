@@ -62,12 +62,15 @@ function watchColorScheme() {
 
 window.addEventListener("load", event => {
 	windowResize();
-	setDocumentTitle();
-	setCurrentPage();
-	watchColorScheme();
 });
 
 window.addEventListener("resize", event => {
 	windowResize();
+});
+
+window.addEventListener("DOMContentLoaded", event => {
+	setDocumentTitle();
+	setCurrentPage();
+	watchColorScheme();
 });
 
