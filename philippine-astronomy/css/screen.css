@@ -230,7 +230,7 @@ main aside div.sectionlist ul li a:active {
 }
 main aside div.sectionlist ul li a.current-page {
 	color: hsl(214, 10.0000%, 65.0000%);
-	text-shadow: 0px 0px 1px hsl(34, 10.0000%, 95.0000%);
+	text-shadow: 0px 0px 1px hsl(34, 10.0000%, 85.0000%);
 	text-decoration: none;
 	cursor: default;
 }
