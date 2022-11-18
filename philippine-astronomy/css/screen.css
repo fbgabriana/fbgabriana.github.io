@@ -475,9 +475,7 @@ article hr.page-break {
 @media screen and (min-width: 600px ) {
 
 	/* Switch flex direction when wide enough */
-	main {
-		flex-direction: row;
-	}
+	main {flex-direction: row;}
 	main>section {flex: 1 1 auto;}
 	main>aside   {flex: 0 0 30%;}
 
@@ -485,12 +483,8 @@ article hr.page-break {
 		display: flex;
 		flex-direction: column;
 	}
-	main>aside .sectionlist {
-		order: -1;
-	}
-	main>aside.empty {
-		opacity: 0;
-	}
+	main>aside.empty {opacity: 0;}
+	main>aside .sectionlist {order: -1;}
 
 	@media screen and (min-width: 900px ) {
 
@@ -499,7 +493,7 @@ article hr.page-break {
 			display: grid;
 			grid-template-areas:
 			"header header"
-			"aside   main"
+			"aside   main "
 			"footer footer";
 			height: 100vh;
 			grid-template-columns: 25vw auto;
