@@ -55,7 +55,7 @@ function getColorScheme() {
 	return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-window.addEventListener("load", event => {
+window.addEventListener("DOMContentLoaded", event => {
 	windowResize();
 	setDocumentTitle();
 	setCurrentPage();
