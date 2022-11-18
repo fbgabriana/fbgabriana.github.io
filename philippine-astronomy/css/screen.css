@@ -425,13 +425,13 @@ article hr.page-break {
 	@media screen and (min-width: 600px ) {
 		body>main>section {background: none;}
 		body>main>aside   {background: none;}
-		body>main {background-image: linear-gradient(90deg, hsl(42.350, 4%, 10%) 0%, hsl(34, 8%, 10%) 30%, hsl(34, 0%, 8%) 60%, hsl(214, 58%, 4%) 100%  )}
+		body>main {background-image: linear-gradient(90deg, hsl(42.350, 4%, 10%) 0%, hsl(34, 10%, 8%) 30%, hsl(34, 0%, 8%) 60%, hsl(214, 58%, 4%) 100%  )}
 	}
 
 	@media screen and (max-width: 600px ) {
 		body>main>section {background: none;}
 		body>main>aside   {background: none;}
-		body>main {background-image: linear-gradient(180deg, hsl(34, 30%, 7.2%) 0%, hsl(34, 8%, 10%) 120px, hsl(34, 0%, 8%) 75%, hsl(42.350, 17.5%, 10%) 100% )}
+		body>main {background-image: linear-gradient(180deg, hsl(34, 30%, 7.2%) 0%, hsl(34, 10%, 8%) 120px, hsl(34, 0%, 8%) 75%, hsl(42.350, 17.5%, 10%) 100% )}
 	}
 }
 
