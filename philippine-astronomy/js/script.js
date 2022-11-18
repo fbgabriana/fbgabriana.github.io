@@ -55,12 +55,13 @@ function getColorScheme() {
 	return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-window.onload = function() {
+window.addEventListener("load", event => {
 	windowResize();
 	setDocumentTitle();
 	setCurrentPage();
-}
+});
 
-window.onresize = function() {
+window.addEventListener("resize", event => {
 	windowResize();
-}
+});
+
