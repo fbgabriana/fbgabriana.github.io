@@ -2,12 +2,7 @@
 
 const toggleMenuBar = () => {
 	let menubar = document.getElementById("menubar");
-	if (menubar.style.display == "none") {
-		menubar.style.display = "block";
-	}
-	else {
-		menubar.style.display = "none";
-	}
+	menubar.style.display = menubar.style.display == "none" ? "block" : "none";
 }
 
 const windowResize = () => {
@@ -39,7 +34,7 @@ const setDocumentTitle = () => {
 const setCurrentPage = () => {
 	let a = document.querySelectorAll("a");
 	let currentLocation = location.href.replace("index.html","");
-	for (i=0; i<a.length; i++) {
+	for (i = 0; i < a.length; i++) {
 		if (a[i].href == currentLocation) {
 			a[i].classList.add("current-page");
 			a[i].removeAttribute("href");
