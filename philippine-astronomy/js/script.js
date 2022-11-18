@@ -1,7 +1,7 @@
 // Philippine Astronomy Magazine
 
 function toggleMenuBar() {
-	var menubar = document.getElementById("menubar");
+	let menubar = document.getElementById("menubar");
 	if (menubar.style.display == "none") {
 		menubar.style.display = "block";
 	}
@@ -11,9 +11,9 @@ function toggleMenuBar() {
 }
 
 function windowResize() {
-	var menubar = document.getElementById("menubar");
-	var menubtn = document.getElementById("menubtn");
-	var heading = document.querySelector("h1");
+	let menubar = document.getElementById("menubar");
+	let menubtn = document.getElementById("menubtn");
+	let heading = document.querySelector("h1");
 	if (window.innerWidth <= 500) {
 		heading.style.fontSize = window.innerWidth / 192 + "rem";
 		menubar.style.display = "none";
@@ -30,15 +30,15 @@ function windowResize() {
 }
 
 function setDocumentTitle() {
-	var websiteTitleElement = document.querySelector("h1 a img");
-	var articleTitleElement = document.querySelector("article h2");
+	let websiteTitleElement = document.querySelector("h1 a img");
+	let articleTitleElement = document.querySelector("article h2");
 	document.title = websiteTitleElement.alt + ": " + articleTitleElement.innerHTML;
 	websiteTitleElement.parentElement.title = "Back to Home";
 }
 
 function setCurrentPage() {
-	var a = document.querySelectorAll("a");
-	var currentLocation = location.href.replace("index.html","");
+	let a = document.querySelectorAll("a");
+	let currentLocation = location.href.replace("index.html","");
 	for (i=0; i<a.length; i++) {
 		if (a[i].href == currentLocation) {
 			a[i].classList.add("current-page");
@@ -51,14 +51,20 @@ function setCurrentPage() {
 	}
 }
 
-function getColorScheme() {
-	return window.matchMedia("(prefers-color-scheme: dark)").matches;
+function watchColorScheme() {
+	let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+	let rootElement = document.documentElement;
+	rootElement.dataset.colorscheme = mediaQueryList.matches ? "light" : "dark";
+	mediaQueryList.addEventListener("change", event => {
+		rootElement.dataset.colorscheme = event.target.matches ? "light" : "dark";
+	});
 }
 
-window.addEventListener("DOMContentLoaded", event => {
+window.addEventListener("load", event => {
 	windowResize();
 	setDocumentTitle();
 	setCurrentPage();
+	watchColorScheme();
 });
 
 window.addEventListener("resize", event => {
