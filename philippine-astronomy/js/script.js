@@ -1,6 +1,6 @@
 // Philippine Astronomy Magazine
 
-function toggleMenuBar() {
+const toggleMenuBar = () => {
 	let menubar = document.getElementById("menubar");
 	if (menubar.style.display == "none") {
 		menubar.style.display = "block";
@@ -10,7 +10,7 @@ function toggleMenuBar() {
 	}
 }
 
-function windowResize() {
+const windowResize = () => {
 	let menubar = document.getElementById("menubar");
 	let menubtn = document.getElementById("menubtn");
 	let heading = document.querySelector("h1");
@@ -29,14 +29,14 @@ function windowResize() {
 	}
 }
 
-function setDocumentTitle() {
+const setDocumentTitle = () => {
 	let websiteTitleElement = document.querySelector("h1 a img");
 	let articleTitleElement = document.querySelector("article h2");
 	document.title = websiteTitleElement.alt + ": " + articleTitleElement.innerHTML;
 	websiteTitleElement.parentElement.title = "Back to Home";
 }
 
-function setCurrentPage() {
+const setCurrentPage = () => {
 	let a = document.querySelectorAll("a");
 	let currentLocation = location.href.replace("index.html","");
 	for (i=0; i<a.length; i++) {
@@ -51,7 +51,7 @@ function setCurrentPage() {
 	}
 }
 
-function watchColorScheme() {
+const watchColorScheme = () => {
 	let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
 	let rootElement = document.documentElement;
 	rootElement.dataset.colorscheme = mediaQueryList.matches ? "light" : "dark";
