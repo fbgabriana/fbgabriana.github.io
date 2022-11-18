@@ -51,6 +51,10 @@ function setCurrentPage() {
 	}
 }
 
+function getColorScheme() {
+	return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
 window.onload = function() {
 	windowResize();
 	setDocumentTitle();
