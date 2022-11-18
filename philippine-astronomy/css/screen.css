@@ -36,10 +36,11 @@ body>aside nav {
 	border-radius: 20px;
 }
 body>main {
-	background-color: white;
-	color: #404040;
+	background-color: hsl(39.525, 0%, 96.875%);
 	box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
 }
+body>main>section {color: #303030;}
+body>main>aside   {color: #404040;}
 
 /* Styles for document content */
 body {
