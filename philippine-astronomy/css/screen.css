@@ -468,7 +468,7 @@ article hr.page-break {
 		border-left: 1px solid rgba(0,0,0,0.75);
 		border-top: 1px solid hsla(214,50%,35%,0.25);
 		border-right: 1px solid hsla(214,50%,40%,0.25);
-		filter: brightness(80%);
+		filter: brightness(90%);
 	}
 }
 
