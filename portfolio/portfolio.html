@@ -339,13 +339,13 @@
 		portfolio.arrangeItems(true);
 	}
 
+	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => {
+		portfolio.adjustColorTheme();
+	});
+
 	window.addEventListener("resize", event => {
 		repositionItems();
 	});
-
-	window.matchMedia("(prefers-color-scheme: dark)").onchange = event => {
-		portfolio.adjustColorTheme();
-	}
 
 	window.addEventListener("DOMContentLoaded", event => {
 		main();
