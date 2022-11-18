@@ -219,13 +219,13 @@ main aside div.sectionlist ul li {
 	padding: 0;
 }
 main aside div.sectionlist ul li a {
-	color: hsl(77.88, 80.0000%, 40.0000%);
+	color: hsl(214, 80.0000%, 40.0000%);
 }
 main aside div.sectionlist ul li a:hover {
-	color: hsl(77.88, 80.0000%, 55.0000%);
+	color: hsl(214, 80.0000%, 55.0000%);
 }
 main aside div.sectionlist ul li a:active {
-	color: hsl(77.88, 80.0000%, 50.0000%);
+	color: hsl(214, 80.0000%, 50.0000%);
 	text-decoration: none;
 }
 main aside div.sectionlist ul li a.current-page {
@@ -258,11 +258,11 @@ main aside div.boxinfo dfn {
 	font-style: italic;
 }
 main aside div.boxinfo a {
-	color: hsl(214, 80.0000%, 40.0000%);
+	color: hsl(77.88, 80.0000%, 40.0000%);
 	text-decoration: none;
 }
 main aside div.boxinfo a:hover {
-	color: hsl(214, 80.0000%, 55.0000%);
+	color: hsl(77.88, 80.0000%, 55.0000%);
 	text-decoration: underline;
 }
 
