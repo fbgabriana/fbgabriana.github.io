@@ -35,13 +35,13 @@ body>aside nav {
 	box-shadow: 10px 10px 80px rgba(255, 255, 255, 0.5);
 	border-radius: 20px;
 }
-body>main   {
+body>main {
 	background-color: white;
 	color: #202020;
 	box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
 }
-body>main>section {background-color: white; color: #202020;}
-body>main>aside   {background-color: white; color: #202020;}
+body>main>section {color: #202020;}
+body>main>aside   {color: #202020;}
 
 /* Styles for document content */
 body {
@@ -423,15 +423,28 @@ article hr.page-break {
 	}
 
 	@media screen and (min-width: 600px ) {
-		body>main>section {background: none;}
-		body>main>aside   {background: none;}
-		body>main {background-image: linear-gradient(90deg, hsl(42.350, 4%, 10%) 0%, hsl(34, 10%, 8.5%) 30%, hsl(34, 0%, 8%) 60%, hsl(214, 58%, 4%) 100%  )}
+		body>main {
+			background-image: linear-gradient(90deg, hsl(42.350, 4%, 10%) 0%, hsl(34, 10%, 8.5%) 30%, hsl(34, 0%, 8%) 60%, hsl(214, 58%, 4%) 100%);
+		}
 	}
-
 	@media screen and (max-width: 600px ) {
-		body>main>section {background: none;}
-		body>main>aside   {background: none;}
-		body>main {background-image: linear-gradient(180deg, hsl(34, 30%, 7.2%) 0%, hsl(34, 10%, 8.5%) 120px, hsl(34, 0%, 8%) 75%, hsl(42.350, 17.5%, 10%) 100% )}
+		body>main {
+			background-image: linear-gradient(180deg, hsl(34, 30%, 7.2%) 0%, hsl(34, 10%, 8.5%) 120px, hsl(34, 0%, 8%) 75%, hsl(42.350, 17.5%, 10%) 100%);
+		}
+	}
+}
+
+@media screen and (prefers-color-scheme: light) {
+
+	@media screen and (min-width: 600px ) {
+		body>main {
+			background-image: linear-gradient(90deg, hsl(42.350, 60.9375%, 99.2%) 0%, hsl(214, 0%, 99.2%) 30%, hsl(214, 12.5%, 96.875%) 60%, hsl(77.88, 66.6667%, 93.75%) 100%);
+		}
+	}
+	@media screen and (max-width: 600px ) {
+		body>main {
+			background-image: linear-gradient(180deg, hsl(214, 58.3333%, 99.2%) 0%, hsl(214, 12.5%, 96.875%) 120px, hsl(214, 0%, 96.875%) 75%, hsl(42.350, 60.9375%, 99.2%) 100%);
+		}
 	}
 }
 
