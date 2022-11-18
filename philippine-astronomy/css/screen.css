@@ -414,6 +414,7 @@ article hr.page-break {
 		border: 1px solid hsl(39.525, 10.000%, 17.500%);
 		background-color: hsl(39.525, 15.000%, 12.500%);
 		box-shadow: 1px 1px 2px hsla(39.525, 10.000%, 9.250%, 0.5);
+		color: inherit;
 	}
 	main aside div.boxinfo a {
 		color: hsl(44, 50.0000%, 40.0000%);
