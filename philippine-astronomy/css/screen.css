@@ -139,6 +139,7 @@ header nav li a.current-section:hover {
 	background-color: hsl(214, 65.500%, 25.0000%);
 	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
 	color: hsl(60, 93.3333%, 60.000%);
+	user-select: none;
 }
 header nav li:first-child a {
 	border-top-left-radius: 0.5em;
@@ -190,6 +191,7 @@ aside nav>ul li a.current-page {
 	background-image: radial-gradient(hsla(214, 25%, 50%, 0.1) 0%, hsla(214, 25%, 50%, 0.05) 50%, transparent 75%);;
 	color: hsl(214, 13.3333%, 62.2000%);
 	cursor: default;
+	user-select: none;
 }
 
 /* The main content */
