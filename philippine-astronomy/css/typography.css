@@ -62,30 +62,37 @@ article li {
 	padding: 0;
 }
 article figure {
-	float: right;
-	margin: 0.5em 1em;
-	width: 240px;
-	height: auto;
 	font-size: 0.833333em;
 }
 article figure.fullwidth {
-	float: none;
 	margin: 1.5em 0;
 	width: 100%;
 }
 article figure.halfwidth {
-	float: none;
 	margin: 1.5em 4em;
 	width: calc(100% - 8em);
 }
+article figure.smallwidth {
+	max-width: min(240px, 45%);
+}
+article figure.left {
+	float: left;
+	margin: 0.5em 1.5em 0.5em 0;
+}
+article figure.right {
+	float: right;
+	margin: 0.5em 1em;
+}
 article figure img {
 	display: block;
-	min-width: 240px;
-	min-height: 180px;
 	width: 100%;
 	height: auto;
 	background-color: hsl(34, 13.3333%, 87.5000%);
 	border-radius: 4px;
+}
+article figure img[src=""] {
+	min-width: 240px;
+	min-height: 180px;
 }
 article figure figcaption {
 	margin-top: 0.25em;
