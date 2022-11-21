@@ -59,7 +59,8 @@ header h1 {
 	padding: 0 20px;
 	font-size: 48px;
 	color: hsl(214, 33.3333%, 75.0000%);
-	font-family: "Proxima Nova Extra Condensed", "Ascender Sans Narrow", "Arial Narrow";
+	font-family: "Proxima Nova Extra Condensed", "Liberation Sans Narrow", "Arial Narrow";
+	font-weight: bold;
 	font-style: italic;
 	background: url("../svg/logoicon.svg") no-repeat 0% bottom / contain;
 }
