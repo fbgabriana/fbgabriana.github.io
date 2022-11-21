@@ -1,0 +1,147 @@
+
+body {
+	background-color: hsl(39.525, 0%, 96.875%);
+	color: #303030;
+}
+body>header {
+	background-color: hsl(214, 58.3333%, 12.5000%);
+	background-image: url("../svg/header-bg.svg"), linear-gradient(90deg, hsl(214, 58.3333%, 12.5000%) 0%, hsl(214, 50.0000%, 33.8975%) 75%, hsl(214, 66.6667%, 55.2950%) 100%);
+	color: #ffffe0;
+}
+body>footer {
+	background-color: hsl(214, 50.0000%, 12.5000%);
+	background-image: url("../svg/footer-bg.svg"), linear-gradient(90deg, hsl(214, 50.0000%, 12.5000%) 0%, hsl(214, 25.0000%, 33.8975%) 55%, hsl(214, 50.0000%, 12.5000%) 120%);
+	color: #ffffe0;
+}
+body>footer p {
+	background-color: hsla(214, 50.0000%, 12.5000%, 0.25);
+}
+body>aside {
+	background-color: hsl(39.525, 60.9375%, 99.2000%);
+	background-image: url("../svg/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
+}
+body>aside nav {
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 10px 10px 80px rgba(255, 255, 255, 0.5);
+}
+body>main {
+	background-color: hsl(39.525, 0%, 96.875%);
+	box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
+}
+body>main>section {color: #303030;}
+body>main>aside   {color: #404040;}
+
+header h1 {
+	color: hsl(214, 33.3333%, 75.0000%);
+}
+header h1 a {
+	background: radial-gradient(hsla(214, 50%, 20%, 0.2) 0%, hsla(214, 50%, 20%, 0.1) 50%, transparent 75%);
+}
+header h1 a:hover {
+	background: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.08) 50%, transparent 75%);
+}
+header nav li a:link,
+header nav li a:visited {
+	background-color: hsl(214, 65.500%, 25.0000%);
+	color: hsl(77.88, 34.500%, 90.6250%);
+}
+header nav li a:link:hover {
+	background-color: hsl(214, 50.0000%, 33.8975%);
+	color: hsl(77.88, 62.2222%, 93.3333%);
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
+}
+header nav li a:link:active {
+	color: hsl(60, 93.3333%, 75.000%);
+}
+header nav li a.current-page,
+header nav li a.current-section,
+header nav li a.current-section:hover {
+	background-color: hsl(214, 65.500%, 25.0000%);
+	box-shadow: 0 0 20px hsla(77.88, 50.0000%, 75.0000%, 0.25);
+	color: hsl(60, 93.3333%, 60.000%);
+}
+
+aside nav>ul li a {
+	background-color: hsl(39.525, 6.6667%, 93.3333%);
+	color: hsl(214, 66.6667%, 55.2950%);
+}
+aside nav>ul li a:hover {
+	background-color: hsl(39.525, 6.6667%, 94.5000%);
+	color: hsl(214, 66.6667%, 62.2000%);
+	border-right: 1px solid hsla(214, 66.6667%, 50.0000%, 0.5);
+}
+aside nav>ul li a:active {
+	background-color: hsl(214, 6.6667%, 93.3333%);
+	color: hsl(214, 66.6667%, 40.0000%);
+	border-right: 1px solid hsla(214, 66.6667%, 45.0000%, 0.5);
+}
+aside nav>ul li a.current-section {
+	background-color: hsl(214, 6.6667%, 92.5000%);
+	background-image: radial-gradient(hsla(214, 25%, 50%, 0.1) 0%, hsla(214, 25%, 50%, 0.05) 50%, transparent 75%);;
+	color: hsl(214, 40.0000%, 62.2000%);
+	border-right: 1px solid hsla(214, 33.3333%, 40.0000%, 0.35);
+}
+aside nav>ul li a.current-page {
+	background-color: hsl(214, 3.3333%, 92.5000%);
+	background-image: radial-gradient(hsla(214, 25%, 50%, 0.1) 0%, hsla(214, 25%, 50%, 0.05) 50%, transparent 75%);;
+	color: hsl(214, 13.3333%, 62.2000%);
+	border-right: 1px solid hsla(214, 1.5000%, 50.0000%, 0.35);
+}
+
+main aside div.sectionlist ul {
+	color: gray;
+}
+main aside div.sectionlist ul li a {
+	color: hsl(214, 80.0000%, 40.0000%);
+}
+main aside div.sectionlist ul li a:hover {
+	color: hsl(214, 80.0000%, 55.0000%);
+}
+main aside div.sectionlist ul li a:active {
+	color: hsl(214, 80.0000%, 50.0000%);
+}
+main aside div.sectionlist ul li a.current-page {
+	color: hsl(214, 10.0000%, 40.0000%);
+	text-shadow: 0px 0px 1px hsl(34, 10.0000%, 85.0000%);
+}
+main aside div.boxinfo {
+	border: 1px solid hsl(39.525, 15.000%, 75.000%);
+	background-color: hsl(39.525, 50.000%, 93.750%);
+	box-shadow: 1px 1px 2px hsla(39.525, 10.000%, 56.250%, 0.5);
+	color: #605540;
+}
+main aside div.boxinfo a {
+	color: hsl(214, 50.0000%, 40.0000%);
+}
+main aside div.boxinfo a:hover {
+	color: hsl(214, 50.0000%, 55.0000%);
+}
+
+footer p {
+	color: hsl(214, 40.0000%, 80.0000%);
+	text-shadow: 0 0 2px hsla(34, 40.0000%, 20.0000%, 0.5);
+}
+
+article a {
+	color: hsl(214, 65.0000%, 40.0000%);
+}
+article a:hover {
+	color: hsl(214, 65.0000%, 55.0000%);
+}
+article a:active {
+	color: hsl(214, 65.0000%, 50.0000%);
+}
+
+@media screen and (min-width: 600px ) {
+	/* laptop light */
+	body>main {
+		background-image: linear-gradient(90deg, hsl(42.350, 60.9375%, 99.2%) 0%, hsl(42.350, 0%, 96.875%) 30%, hsl(214, 12.5%, 98.45%) 60%, hsl(77.88, 12.5%, 99.6%) 100%);
+	}
+}
+@media screen and (max-width: 600px ) {
+	/* mobile light */
+	body>main {
+		background-image: linear-gradient(180deg, hsl(214, 58.3333%, 99.2%) 0%, hsl(214, 12.5%, 96.875%) 120px, hsl(214, 0%, 96.875%) 75%, hsl(42.350, 60.9375%, 99.2%) 100%);
+	}
+}
+

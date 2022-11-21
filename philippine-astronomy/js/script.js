@@ -46,15 +46,6 @@ const setCurrentPage = () => {
 	}
 }
 
-const watchColorScheme = () => {
-	let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
-	let rootElement = document.documentElement;
-	rootElement.dataset.colorscheme = mediaQueryList.matches ? "light" : "dark";
-	mediaQueryList.addEventListener("change", event => {
-		rootElement.dataset.colorscheme = event.target.matches ? "light" : "dark";
-	});
-}
-
 window.addEventListener("load", event => {
 	windowResize();
 });

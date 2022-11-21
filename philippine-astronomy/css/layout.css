@@ -1,0 +1,284 @@
+/* Label the semantic tags */
+.semantic-tag-label {position: absolute; font-size: smaller; opacity: 0.0;}
+
+/* Define backgrounds */
+body>header {
+	border-bottom: 1px solid hsla(0, 0%, 0%, 0.6667);
+	background-position: center top;
+	background-size: cover;
+}
+body>footer {
+	background-position: center top;
+	background-size: cover;
+}
+body>aside {
+	background-position: center top;
+	background-size: cover;
+}
+body>aside nav {
+	border-radius: 20px;
+}
+
+/* Styles for document content */
+body {
+	margin: 0;
+	font-size: 16px;
+}
+
+/* The header */
+header h1 {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	white-space: nowrap;
+	margin: 0;
+	height: 80px;
+	padding: 0 20px;
+	font-size: 48px;
+	font-family: "Proxima Nova Extra Condensed", "Liberation Sans Narrow", "Arial Narrow";
+	font-weight: bold;
+	font-style: italic;
+	background: url("../svg/logoicon.svg") no-repeat 0% bottom / contain;
+}
+header h1 a {
+	padding-left: 0.5em;
+	text-decoration: inherit;
+	color: inherit;
+}
+header h1 a img {
+	vertical-align: text-top;
+	margin-top: 0.35em;
+	height: 1.25em;
+}
+header #menubtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	display: none;
+	background-image: radial-gradient(hsla(214, 45%, 45%, 0.25) 0%, hsla(214, 45%, 45%, 0.10) 50%, transparent 100%);
+}
+header #menubtn:hover {
+	background-image: radial-gradient(hsla(214, 20%, 90%, 0.25) 0%, hsla(214, 20%, 90%, 0.10) 50%, transparent 80%);
+}
+header nav {
+	text-align: center;
+	background: url("../svg/hilltop.svg") no-repeat left / contain;
+}
+header nav ul {
+	margin: 0 20px;
+	padding: 0;
+}
+header nav li {
+	display: inline-block;
+	margin: 1px 0;
+}
+header nav li a {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	min-height: 2em;
+	min-width: 6em;
+	padding: 0.16667px 1em;
+	font-size: 0.83333rem;
+	border-bottom: 1px solid rgba(0,0,0,0.75);
+	border-left: 1px solid rgba(0,0,0,0.75);
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	cursor: default;
+}
+header nav li a:link,
+header nav li a:visited {
+	box-shadow: none;
+	cursor: pointer;
+}
+header nav li a.current-page,
+header nav li a.current-section,
+header nav li a.current-section:hover {
+	user-select: none;
+}
+header nav li:first-child a {
+	border-top-left-radius: 0.5em;
+}
+
+/* The left side navigation bar */
+aside nav {
+	padding: 10px;
+}
+aside nav>ul {
+	list-style: none;
+	padding: 0;
+	margin: 1em auto;
+}
+aside nav>ul>li:first-child a {
+	border-top-left-radius: 6px;
+}
+aside nav>ul li a {
+	display: block;
+	padding: 0.25em 1em;
+	margin: 0.25em;
+	line-height: 1.5em;
+	text-decoration: none;
+	border-right: 1px solid transparent;
+}
+aside nav>ul li a:hover {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+aside nav>ul li a.current-page {
+	cursor: default;
+	user-select: none;
+}
+
+/* The main content */
+main {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+main article {
+	max-width: 40em;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	padding: 20px;
+}
+
+/* The right sidebar */
+main aside div.sectionlist h4 {
+	margin: 20px;
+}
+main aside div.sectionlist ul {
+	margin: 20px;
+	padding: 0 20px;
+}
+main aside div.sectionlist ul li {
+	margin: 1em 0;
+	padding: 0;
+}
+main aside div.sectionlist ul li a:active {
+	text-decoration: none;
+}
+main aside div.sectionlist ul li a.current-page {
+	text-decoration: none;
+	cursor: default;
+}
+main aside div.boxinfo {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 10px 20px;
+	padding: 1em;
+	min-width: 150px;
+	border-top-left-radius: 13px;
+	border-top-right-radius: 2px;
+	border-bottom-left-radius: 3px;
+	font-size: 0.95rem;
+}
+main aside div.boxinfo p {
+	margin: 0;
+	padding: 0;
+}
+main aside div.boxinfo dfn {
+	font-weight: bold;
+	font-style: italic;
+}
+main aside div.boxinfo a {
+	text-decoration: none;
+}
+main aside div.boxinfo a:hover {
+	text-decoration: underline;
+}
+
+/* The footer */
+footer>p {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 1em;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.83333em;
+	text-align: center;
+}
+
+/* Screen-specific Typography */
+
+article>p:first-of-type::first-letter {
+	font-size: 3.5rem;
+	line-height: 2.5rem;
+	margin: 0.1em 0.05em -0.1em -0.1em;
+}
+article a {
+	text-decoration: none;
+}
+article a:hover {
+	text-decoration: underline;
+}
+article a:active {
+	text-decoration: none;
+}
+article hr.page-break {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	header nav {
+		background: none;
+	}
+	header nav li {
+		display: block;
+	}
+	header nav li a {
+		box-shadow: none !important;
+	}
+	header nav li a.current-section {
+		border-bottom: 1px solid hsla(214,0%,0%,0.75);
+		border-left: 1px solid hsla(214,0%,0%,0.75);
+		border-top: 1px solid hsla(214,50%,35%,0.25);
+		border-right: 1px solid hsla(214,50%,40%,0.25);
+		filter: brightness(90%);
+	}
+}
+
+@media screen and (min-width: 600px ) {
+
+	/* Switch flex direction when wide enough */
+	main {flex-direction: row;}
+	main>section {flex: 1 1 auto;}
+	main>aside   {flex: 0 0 30%;}
+
+	main>aside {
+		display: flex;
+		flex-direction: column;
+	}
+	main>aside.empty {opacity: 0;}
+	main>aside .sectionlist {order: -1;}
+
+	@media screen and (min-width: 900px ) {
+
+		/* Code to define the grid */
+		body {
+			display: grid;
+			grid-template-areas:
+			"header header"
+			"aside   main "
+			"footer footer";
+			height: 100vh;
+			grid-template-columns: 25vw auto;
+			grid-template-rows: 110px auto 42.6667px;
+		}
+		body>header {grid-area: header;}
+		body>footer {grid-area: footer;}
+		body>main   {grid-area: main;}
+		body>aside  {grid-area: aside;}
+
+		header nav {
+			text-align: right;
+		}
+	}
+}
+
