@@ -31,7 +31,6 @@
 	border-radius: 0.5em;
 	vertical-align: baseline;
 	box-sizing: border-box;
-	color: yellow;
 }
 
 #watch_colormode_checkbox+label[data-colormode="dark"]:before,
@@ -39,7 +38,8 @@
 	content: "☼";
 	text-align: left;
 	padding-left: 0.12em;
-	background: linear-gradient(90deg, hsl(214, 66.6667%, 44.7050%) 0%, hsl(214, 66.6667%, 44.7050%) 40%, #dcdcdc 60%);
+	background: linear-gradient(90deg, hsl(214, 66.6667%, 66.6667%) 0%, hsl(214, 66.6667%, 66.6667%) 40%, rgba(128,128,128,0.5) 60%);
+	color: hsl(60,100%,100%);
 }
 
 #watch_colormode_checkbox+label[data-colormode="light"]:before,
@@ -47,6 +47,7 @@
 	content: "☽";
 	text-align: right;
 	padding-right: 0.24em;
-	background: linear-gradient(270deg, hsl(0, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, #242424 60%);
+	background: linear-gradient(270deg, hsl(0, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, rgba(64,64,64,0.5) 60%);
+	color: hsl(60,100%,100%);
 }
 
