@@ -18,7 +18,7 @@ body>footer p {
 }
 body>aside {
 	background-color: hsl(39.525, 60.9375%, 99.2000%);
-	background-image: url("../svg/dark/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
+	background-image: url("../svg/light/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
 }
 body>aside nav {
 	background-color: rgba(255, 255, 255, 0.5);
