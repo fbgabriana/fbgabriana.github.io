@@ -46,6 +46,9 @@ const setCurrentPage = () => {
 	}
 }
 const watch_colormode = (colormode) => {
+	if (! window.matchMedia ) return;
+	if (! CSS.supports("color-scheme", "light") ) return;
+
 	const element = document.querySelector("footer p.copyright");
 	if (element) {
 		const media_colormode = window.matchMedia("(prefers-color-scheme: light)");

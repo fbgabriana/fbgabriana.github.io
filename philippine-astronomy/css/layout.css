@@ -1,7 +1,11 @@
 /* Label the semantic tags */
 .semantic-tag-label {position: absolute; font-size: smaller; opacity: 0.0;}
 
-/* Define backgrounds */
+/* Styles for document content */
+body {
+	margin: 0;
+	font-size: 16px;
+}
 body>header {
 	border-bottom: 1px solid hsla(0, 0%, 0%, 0.6667);
 	background-position: center top;
@@ -17,12 +21,6 @@ body>aside {
 }
 body>aside nav {
 	border-radius: 20px;
-}
-
-/* Styles for document content */
-body {
-	margin: 0;
-	font-size: 16px;
 }
 
 /* The header */
