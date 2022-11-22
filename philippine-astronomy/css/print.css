@@ -10,6 +10,10 @@
 
 /* Don't display interface elements */
 nav, #menubutton, .sectionlist {display: none;}
+#watch_colormode_checkbox, #watch_colormode_checkbox+label {display: none;}
+
+/* Specify color adjust */
+:root { print-color-adjust: economy; }
 
 /* Styles for document content */
 body {
