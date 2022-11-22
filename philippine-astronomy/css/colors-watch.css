@@ -38,7 +38,7 @@
 	content: "☼";
 	text-align: left;
 	padding-left: 0.10em;
-	background: linear-gradient(90deg, hsl(210, 66.6667%, 66.6667%) 0%, hsl(225, 66.6667%, 66.6667%) 40%, rgba(128,128,128,0.5) 60%);
+	background: linear-gradient(90deg, hsl(210, 66.6667%, 55.2950%) 0%, hsl(225, 66.6667%, 55.2950%) 40%, rgba(128,128,128,0.5) 60%);
 	color: hsl(60,100%,100%);
 }
 
