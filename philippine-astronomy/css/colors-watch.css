@@ -35,19 +35,21 @@
 
 #watch_colormode_checkbox+label[data-colormode="dark"]:before,
 #watch_colormode_checkbox:checked+label[data-colormode="light"]:before {
-	content: "☼";
+	content: url("../svg/sunmoon/sun.svg");
 	text-align: left;
-	padding-left: 0.10em;
+	padding: 1px;
+	padding-left: 0.2em;
 	background: linear-gradient(90deg, hsl(214, 66.6667%, 55.2950%) 0%, hsl(214, 66.6667%, 55.2950%) 40%, rgba(128,128,128,0.5) 60%);
 	color: hsl(60,100%,100%);
 }
 
 #watch_colormode_checkbox+label[data-colormode="light"]:before,
 #watch_colormode_checkbox:checked+label[data-colormode="dark"]:before {
-	content: "☽";
+	content: url("../svg/sunmoon/moon.svg");
 	text-align: right;
-	padding-right: 0.24em;
-	background: linear-gradient(270deg, hsl(8, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, rgba(64,64,64,0.5) 60%);
+	padding: 1px;
+	padding-right: 0.2em;
+	background: linear-gradient(270deg, hsl(0, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, rgba(64,64,64,0.5) 60%);
 	color: hsl(60,100%,75%);
 }
 
