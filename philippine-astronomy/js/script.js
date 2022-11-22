@@ -84,7 +84,7 @@ const watch_colormode = (colormode) => {
 
 		checkbox_colormode.addEventListener("change", event => {
 			set_colormode(colormode);
-			navigator.vibrate(200);
+			if (navigator.vibrate) navigator.vibrate(200);
 		});
 	}
 }
