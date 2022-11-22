@@ -111,26 +111,14 @@ article table td {
 }
 article table th {
 	white-space: nowrap;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
 }
 article table tr th:first-child {
 	font-weight: normal;
 	font-style: italic;
-	background-color: hsl(214, 50.0000%, 91.500%);
-	color: hsl(0, 0.0000%, 20.000%);
 }
 article table tr:first-child th {
 	font-weight: bold;
 	font-style: normal;
-	background-color: hsl(214, 50.0000%, 87.500%);
-	color: hsl(0, 0.0000%, 30.500%);
-}
-article table.table-row-striped tr:nth-child(even) td {
-	background: hsl(214, 0.000%, 92.1875%);
-}
-article table.table-row-striped tr:nth-child(odd) td {
-	background: hsl(214, 0.000%, 100%);
 }
 article div.table-container {
 	display: flex;
@@ -162,18 +150,6 @@ article form textarea {
 	font-size: smaller;
 	font-family: inherit;
 	line-height: 1.8em;
-	background-color: hsl(0, 0%, 100%);
-	color: hsl(214, 0%, 12.5%);
-	border: 1px solid hsl(214, 20%, 50%);
-}
-article form input:focus,
-article form textarea:focus {
-	outline: 1px solid hsl(214, 20%, 50%);
-}
-article form button {
-	background-color: hsl(0, 0%, 90%);
-	color: hsl(214, 0%, 12.5%);
-	border: 1px solid hsl(214, 20%, 60%);
 }
 article blockquote {
 	box-sizing: border-box;
@@ -185,48 +161,5 @@ article blockquote {
 article blockquote p {
 	text-indent: 2em;
 	margin: 0;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-
-	article table th {
-		background-color: hsl(34, 12.5000%, 14.500%);
-		color: hsl(34, 20.000%, 60.00%);
-	}
-	article table tr th:first-child {
-		background-color: hsl(34, 12.5000%, 11.200%);
-		color: hsl(34, 20.000%, 55.00%);
-	}
-	article table tr:first-child th {
-		background-color: hsl(34, 12.5000%, 14.500%);
-		color: hsl(34, 20.000%, 60.00%);
-	}
-	article table.table-row-striped tr:nth-child(even) td {
-		background: hsl(34, 0.000%, 12.500%);
-	}
-	article table.table-row-striped tr:nth-child(odd) td {
-		background: hsl(34, 0.000%, 10.000%);
-	}
-	article img {
-		filter: brightness(66.6667%) hue-rotate(-15deg);
-	}
-	article form input,
-	article form textarea {
-		background-color: hsl(0, 0%, 9%);
-		color: hsl(30, 50%, 58.470%);
-		border: 1px solid hsl(30, 20%, 25.000%);
-	}
-	article form input:focus,
-	article form textarea:focus {
-		outline: 1px solid hsl(30, 20%, 28.125%);
-	}
-	article form button {
-		background-color: hsl(0, 0%, 12.5%);
-		color: hsl(30, 50%, 50%);
-		border: 1px solid hsl(30, 20%, 28.125%);
-	}
-	article blockquote {
-		border-left: 2px solid hsl(30, 25%, 25%);
-	}
 }
 

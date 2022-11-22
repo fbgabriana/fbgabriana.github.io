@@ -45,6 +45,48 @@ const setCurrentPage = () => {
 		}
 	}
 }
+const watch_colormode = (colormode) => {
+	const element = document.querySelector("footer p.copyright");
+	if (element) {
+		const media_colormode = window.matchMedia("(prefers-color-scheme: light)");
+		const link_colormode = document.querySelector("link[href='../css/colors.css']");
+		const checkbox_colormode = document.createElement("input");
+		const label_colormode = document.createElement("label");
+
+		checkbox_colormode.type = "checkbox";
+		checkbox_colormode.id = "watch_colormode_checkbox";
+		label_colormode.htmlFor = "watch_colormode_checkbox";
+
+		element.appendChild(checkbox_colormode);
+		element.appendChild(label_colormode);
+
+		const logotext = document.querySelector("header h1 a img");
+		const menubtn = document.querySelector("#menubtn");
+		const favicon = document.querySelector("link[rel='icon']");
+
+		const set_colormode = (colormode) => {
+			colormode = colormode || (media_colormode.matches ? "dark" : "light");
+			link_colormode.href = "../css/" + (checkbox_colormode.checked ? `colors-${colormode}.css` : "colors.css");
+			label_colormode.innerText = `To ${colormode} mode`;
+			label_colormode.dataset.colormode = colormode;
+			colorstyle = !media_colormode.matches ^ checkbox_colormode.checked ? "dark" : "light";
+			logotext.src = `../svg/${colorstyle}/logotext.svg`;
+			menubtn.src  = `../svg/${colorstyle}/menu.svg`;
+			favicon.href = `../svg/${colorstyle}/favicon.svg`;
+			localStorage.setItem("checkbox_colormode", checkbox_colormode.checked);
+		}
+		checkbox_colormode.checked = (localStorage.getItem("checkbox_colormode") == "true");
+		set_colormode(colormode);
+
+		media_colormode.addEventListener("change", event => {
+			set_colormode(colormode);
+		});
+
+		checkbox_colormode.addEventListener("change", event => {
+			set_colormode(colormode);
+		});
+	}
+}
 
 window.addEventListener("load", event => {
 	windowResize();
@@ -57,5 +99,6 @@ window.addEventListener("resize", event => {
 window.addEventListener("DOMContentLoaded", event => {
 	setDocumentTitle();
 	setCurrentPage();
+	watch_colormode();
 });
 

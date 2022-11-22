@@ -1,5 +1,5 @@
-@import "woff.css";
-@import "typography.css";
-@import "layout.css";
-@import "colors.css";
+@import url("woff.css") screen;
+@import url("typography.css") screen;
+@import url("layout.css") screen;
+@import url("colors-watch.css") screen;
 

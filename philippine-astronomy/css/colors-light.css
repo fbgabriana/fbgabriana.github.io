@@ -18,7 +18,7 @@ body>footer p {
 }
 body>aside {
 	background-color: hsl(39.525, 60.9375%, 99.2000%);
-	background-image: url("../svg/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
+	background-image: url("../svg/dark/sidebar-bg.svg"), linear-gradient(90deg, hsl(39.525, 60.9375%, 98.0000%) 0%, hsl(42.350, 60.9375%, 98.0000%) 60%, transparent 100%);
 }
 body>aside nav {
 	background-color: rgba(255, 255, 255, 0.5);
@@ -33,12 +33,16 @@ body>main>aside   {color: #404040;}
 
 header h1 {
 	color: hsl(214, 33.3333%, 75.0000%);
+	background: url("../svg/light/logoicon.svg") no-repeat 0% bottom / contain;
 }
 header h1 a {
 	background: radial-gradient(hsla(214, 50%, 20%, 0.2) 0%, hsla(214, 50%, 20%, 0.1) 50%, transparent 75%);
 }
 header h1 a:hover {
 	background: radial-gradient(hsla(214, 50%, 80%, 0.2) 0%, hsla(214, 50%, 80%, 0.08) 50%, transparent 75%);
+}
+header nav {
+	background: url("../svg/light/hilltop.svg") no-repeat left / contain;
 }
 header nav li a:link,
 header nav li a:visited {
@@ -130,6 +134,45 @@ article a:hover {
 }
 article a:active {
 	color: hsl(214, 65.0000%, 50.0000%);
+}
+article table th {
+	background-color: hsl(214, 50.0000%, 87.500%);
+	color: hsl(0, 0.0000%, 30.500%);
+}
+article table tr th:first-child {
+	background-color: hsl(214, 50.0000%, 91.500%);
+	color: hsl(0, 0.0000%, 20.000%);
+}
+article table tr:first-child th {
+	background-color: hsl(214, 50.0000%, 87.500%);
+	color: hsl(0, 0.0000%, 30.500%);
+}
+article table.table-row-striped tr:nth-child(even) td {
+	background: hsl(214, 0.000%, 92.1875%);
+}
+article table.table-row-striped tr:nth-child(odd) td {
+	background: hsl(214, 0.000%, 100%);
+}
+article img {
+	filter: none;
+}
+article form input,
+article form textarea {
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(214, 0%, 12.5%);
+	border: 1px solid hsl(214, 20%, 50%);
+}
+article form input:focus,
+article form textarea:focus {
+	outline: 1px solid hsl(214, 20%, 50%);
+}
+article form button {
+	background-color: hsl(0, 0%, 90%);
+	color: hsl(214, 0%, 12.5%);
+	border: 1px solid hsl(214, 20%, 60%);
+}
+article blockquote {
+	border-left: 2px solid hsl(214, 25%, 75%);
 }
 
 @media screen and (min-width: 600px ) {
