@@ -6,7 +6,7 @@ input.colorswitcher {
 }
 
 label.colorswitcher {
-	font-size: smaller;
+	font-size: 10px;
 	user-select: none;
 }
 
