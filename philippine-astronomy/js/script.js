@@ -96,7 +96,7 @@ const addColorSwitcher = (selector) => {
 
 		checkbox_colorswitcher.addEventListener("change", event => {
 			set_colorscheme();
-			if (navigator.vibrate) navigator.vibrate(200);
+			if (navigator.vibrate) navigator.vibrate(50);
 		});
 	}
 }
