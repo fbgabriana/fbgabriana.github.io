@@ -6,6 +6,7 @@ input.colorswitcher {
 }
 
 label.colorswitcher {
+	margin-top: 2.5px;
 	font-size: 10px;
 	user-select: none;
 }
@@ -18,7 +19,7 @@ label.colorswitcher::before {
 	padding: 1px;
 	border-radius: 6px;
 	margin: 0 2px 0 4px;
-	vertical-align: middle;
+	vertical-align: text-top;
 }
 
 label.colorswitcher[data-colorscheme="light"]::before {
