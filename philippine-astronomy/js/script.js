@@ -78,9 +78,10 @@ const addColorSwitcher = (selector) => {
 		const set_colorscheme = () => {
 			let colorscheme = media_colorswitcher.matches ^ checkbox_colorswitcher.checked ? "light" : "dark";
 			link_colorswitcher.href = link_href.replace(".css", `-${colorscheme}.css`);
+			checkbox_colorswitcher.dataset.colorscheme = colorscheme;
 			label_colorswitcher.dataset.colorscheme = colorscheme;
-			meta_colorswitcher.content = colorscheme;
 			document.documentElement.style.colorScheme = colorscheme;
+			meta_colorswitcher.content = colorscheme;
 			logotext.src = `../svg/${colorscheme}/logotext.svg`;
 			menubtn.src  = `../svg/${colorscheme}/menu.svg`;
 			favicon.href = `../svg/${colorscheme}/favicon.svg`;
