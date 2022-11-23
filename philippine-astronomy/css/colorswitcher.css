@@ -2,38 +2,33 @@
 /* Uses pure CSS. Feel free to add images if you want */
 
 input.colorswitcher {
-	position: absolute;
-	visibility: hidden;
-	margin: -1px;
+	display: none;
 }
 
 label.colorswitcher {
-	font-size: 10px;
+	font-size: smaller;
 }
 
 label.colorswitcher::before {
 	display: inline-block;
-	width: 20px;
-	height: 10px;
-	border-radius: 10px;
-	padding: 1px;
-	font-size: 8px;
-	vertical-align: middle;
 	box-sizing: border-box;
+	width: 19.4164px;
+	height: 12px;
+	padding: 1px;
+	border-radius: 6px;
 	margin: 0 2px 0 4px;
+	vertical-align: middle;
 }
 
 label.colorswitcher[data-colorscheme="light"]::before {
+	background: linear-gradient(90deg, hsl(214, 66.6667%, 55.2950%) 0%, hsl(214, 66.6667%, 55.2950%) 40%, rgba(128,128,128,0.5) 60%);
 	content: url("../svg/symbols/sun.svg");
 	text-align: left;
-	background: linear-gradient(90deg, hsl(214, 66.6667%, 55.2950%) 0%, hsl(214, 66.6667%, 55.2950%) 40%, rgba(128,128,128,0.5) 60%);
-	color: hsl(60,100%,100%);
 }
 
 label.colorswitcher[data-colorscheme="dark"]::before {
+	background: linear-gradient(270deg, hsl(0, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, rgba(64,64,64,0.5) 60%);
 	content: url("../svg/symbols/moon.svg");
 	text-align: right;
-	background: linear-gradient(270deg, hsl(0, 66.6667%, 44.7050%) 0%, hsl(0, 66.6667%, 44.7050%) 40%, rgba(64,64,64,0.5) 60%);
-	color: hsl(60,100%,75%);
 }
 

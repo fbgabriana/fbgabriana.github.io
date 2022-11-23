@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="8px" height="8px" viewBox="0 0 480 480">
-<g transform="scale(1,-1)" fill="hsl(60,100%,100%)">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="10px" height="10px" viewBox="0 0 480 480">
+<g transform="scale(1,-1)" fill="hsl(60,100%,50%)">
 <path d="M182 -165 c-38 -32 -46 -65 -28 -110 11 -25 26 -40 51 -51 45 -18 78 -10 110 28 35 42 34 91 -4 129 -38 38 -87 39 -129 4z m105 -27 c43 -40 18 -108 -39 -108 -42 0 -68 25 -68 66 0 58 63 83 107 42z"/>
 <path d="M230 -65 c0 -51 10 -69 25 -44 10 15 -4 99 -16 99 -5 0 -9 -25 -9 -55z"/>
 <path d="M367 -98 c-40 -41 -45 -52 -23 -52 18 0 78 68 71 81 -8 12 -7 14 -48 -29z"/>
