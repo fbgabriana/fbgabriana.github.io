@@ -45,48 +45,56 @@ const setCurrentPage = () => {
 		}
 	}
 }
-const watch_colormode = (colormode) => {
+const addColorSwitcher = (selector) => {
 	if (! window.matchMedia ) return;
-	if (! CSS.supports("color-scheme", "light") ) return;
+	if (! (CSS && CSS.supports("color-scheme", "light")) ) return;
 
-	const element = document.querySelector("footer p.copyright");
-	if (element) {
-		const media_colormode = window.matchMedia("(prefers-color-scheme: light)");
-		const link_colormode = document.querySelector("link[href='../css/colors.css']");
-		const checkbox_colormode = document.createElement("input");
-		const label_colormode = document.createElement("label");
+	const selectorElement = document.querySelector(selector);
+	if (selectorElement) {
+		const media_colorswitcher = window.matchMedia("(prefers-color-scheme: light)");
+		const link_colorswitcher = document.querySelector("link[href$='colors.css']");
+		const checkbox_colorswitcher = document.createElement("input");
+		const label_colorswitcher = document.createElement("label");
+		const meta_colorswitcher = document.createElement("meta");
+		const link_href = link_colorswitcher.getAttribute("href");
 
-		checkbox_colormode.type = "checkbox";
-		checkbox_colormode.id = "watch_colormode_checkbox";
-		label_colormode.htmlFor = "watch_colormode_checkbox";
+		checkbox_colorswitcher.type = "checkbox";
+		checkbox_colorswitcher.id = "colorswitcher_checkbox";
+		checkbox_colorswitcher.className = "colorswitcher";
+		label_colorswitcher.id = "colorswitcher_label";
+		label_colorswitcher.className = "colorswitcher";
+		label_colorswitcher.innerText = "Toggle Night Mode";
+		label_colorswitcher.htmlFor = checkbox_colorswitcher.id;
+		meta_colorswitcher.setAttribute("name", "color-scheme");
 
-		element.appendChild(checkbox_colormode);
-		element.appendChild(label_colormode);
+		selectorElement.appendChild(checkbox_colorswitcher);
+		selectorElement.appendChild(label_colorswitcher);
+		document.head.appendChild(meta_colorswitcher);
 
 		const logotext = document.querySelector("header h1 a img");
 		const menubtn = document.querySelector("#menubtn");
 		const favicon = document.querySelector("link[rel='icon']");
 
-		const set_colormode = (colormode) => {
-			colormode = colormode || (media_colormode.matches ? "dark" : "light");
-			link_colormode.href = "../css/" + (checkbox_colormode.checked ? `colors-${colormode}.css` : "colors.css");
-			label_colormode.innerText = `To ${colormode} mode`;
-			label_colormode.dataset.colormode = colormode;
-			colorstyle = !media_colormode.matches ^ checkbox_colormode.checked ? "dark" : "light";
-			logotext.src = `../svg/${colorstyle}/logotext.svg`;
-			menubtn.src  = `../svg/${colorstyle}/menu.svg`;
-			favicon.href = `../svg/${colorstyle}/favicon.svg`;
-			localStorage.setItem("checkbox_colormode", checkbox_colormode.checked);
+		const set_colorscheme = () => {
+			let colorscheme = media_colorswitcher.matches ^ checkbox_colorswitcher.checked ? "light" : "dark";
+			link_colorswitcher.href = link_href.replace(".css", `-${colorscheme}.css`);
+			label_colorswitcher.dataset.colorscheme = colorscheme;
+			meta_colorswitcher.content = colorscheme;
+			document.documentElement.style.colorScheme = colorscheme;
+			logotext.src = `../svg/${colorscheme}/logotext.svg`;
+			menubtn.src  = `../svg/${colorscheme}/menu.svg`;
+			favicon.href = `../svg/${colorscheme}/favicon.svg`;
+			localStorage.setItem("checkbox_colorswitcher", checkbox_colorswitcher.checked);
 		}
-		checkbox_colormode.checked = (localStorage.getItem("checkbox_colormode") == "true");
-		set_colormode(colormode);
+		checkbox_colorswitcher.checked = (localStorage.getItem("checkbox_colorswitcher") == "true");
+		set_colorscheme();
 
-		media_colormode.addEventListener("change", event => {
-			set_colormode(colormode);
+		media_colorswitcher.addEventListener("change", event => {
+			set_colorscheme();
 		});
 
-		checkbox_colormode.addEventListener("change", event => {
-			set_colormode(colormode);
+		checkbox_colorswitcher.addEventListener("change", event => {
+			set_colorscheme();
 			if (navigator.vibrate) navigator.vibrate(200);
 		});
 	}
@@ -103,6 +111,6 @@ window.addEventListener("resize", event => {
 window.addEventListener("DOMContentLoaded", event => {
 	setDocumentTitle();
 	setCurrentPage();
-	watch_colormode();
+	addColorSwitcher("footer p.copyright");
 });
 
