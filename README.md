@@ -18,3 +18,5 @@ It contains the following folders:
 
 * [portfolio](portfolio/) - My web development projects.
 
+* [brgykodego](brgykodego/) - Barangay KodeGo project.
+
