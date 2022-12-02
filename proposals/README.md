@@ -1,4 +1,4 @@
-## ![favicon](/favicon.svg) [fbgabriana.github.io](/ "Bamm's KodeGo Repository") / [proposals](/proposals/)
+## [fbgabriana.github.io](/ "Bamm's KodeGo Repository") / [proposals](/proposals/)
 
 # Project Proposals for KodeGo
 
