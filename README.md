@@ -10,7 +10,7 @@ It contains the following project folders:
 
 * [philippine-astronomy](/philippine-astronomy/) - _Philippine Astronomy Magazine_, my miniproject1.
 
-* [cyberhomies](/cyberhomies/) - _Cyber Homies - Creative Web Developers_, our Group 4 miniproject2.
+* [cyberhomies](/cyberhomies/) - _Cyber Homies—Creative Web Developers_, our Group 4 miniproject2.
 
 * [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a personal project.
 
