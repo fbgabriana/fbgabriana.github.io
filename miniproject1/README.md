@@ -1,4 +1,4 @@
-## [fbgabriana.github.io](/) / [miniproject1](/miniproject1/)
+## [fbgabriana.github.io](/ "Bamm's KodeGo Repository") / [miniproject1](/miniproject1/)
 
 # Mini Project 1 - Philippine Astronomy Magazine
 

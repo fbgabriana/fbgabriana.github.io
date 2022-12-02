@@ -1,4 +1,4 @@
-## [fbgabriana.github.io](/) / [thoughts](/thoughts/)
+## [fbgabriana.github.io](/ "Bamm's KodeGo Repository") / [thoughts](/thoughts/)
 
 # Some Random Thoughts
 
