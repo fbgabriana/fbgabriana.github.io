@@ -1,4 +1,4 @@
-## [fbgabriana.github.io](https://fbgabriana.github.io/)
+## [fbgabriana.github.io](/) > [miniproject2](/miniproject2/)
 
 # Mini Project 2 - Cyber Homies Group Website
 
