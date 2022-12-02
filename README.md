@@ -2,23 +2,23 @@
 
 # Bamm's KodeGo Repository
 
-This is my public repository for KodeGo bootcamp projects.
+This is my public repository for development during the KodeGo bootcamp.
 
-It contains the following folders:
+It contains the following project folders:
 
-* [proposals](proposals/) - My KodeGo project proposals.
+* [proposals](/proposals/) - My KodeGo project proposals.
 
-* [miniproject1](miniproject1/) - A requirement for KodeGo's web development course.
+* [philippine-astronomy](/philippine-astronomy/) - _Philippine Astronomy Magazine_, my miniproject1.
 
-* [miniproject2](miniproject2/) - Group project for KodeGo's web development course.
+* [cyberhomies](/cyberhomies/) - _Cyber Homies - Creative Web Developers_, our Group 4 miniproject2.
 
-* [philippine-astronomy](philippine-astronomy/) - _Philippine Astronomy Magazine_, a continuation of miniproject1.
+* [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a personal project.
 
-* [harmonicmeans](harmonicmeans/) - Website of _Harmonic Means_, my sister's musical band.
+* [gg-tournament](/gg-tournament/) - _GG Tournament_, a personal project.
 
-* [thoughts](thoughts/) - Some random thoughts.
+* [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 capstone project.
 
-* [portfolio](portfolio/) - My web development projects.
+* [portfolio](/portfolio/) - _{My:Web.Projects}_, a portfolio of my web development projects.
 
-* [brgykodego](brgykodego/) - Barangay KodeGo project.
+* [thoughts](/thoughts/) - Some random thoughts.
 
