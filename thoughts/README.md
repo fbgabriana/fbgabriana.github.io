@@ -1,4 +1,4 @@
-## [fbgabriana.github.io](/) > [thoughts](/thoughts/)
+## [fbgabriana.github.io](/) / [thoughts](/thoughts/)
 
 # Some Random Thoughts
 
