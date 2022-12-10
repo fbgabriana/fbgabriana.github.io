@@ -18,7 +18,7 @@ It contains the following project folders:
 
 * [gg-tournament](/gg-tournament/) - _GG Tournament_, a personal project.
 
-* [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development project **portfolio**.
+* [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **project portfolio**.
 
 * [thoughts](/thoughts/) - Some random thoughts.
 
