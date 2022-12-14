@@ -8,17 +8,17 @@ It contains the following project folders:
 
 * [proposals](/proposals/) - My KodeGo project proposals.
 
-* [philippine-astronomy](/philippine-astronomy/) - _Philippine Astronomy Magazine_, my **miniproject1**.
+* [philippine-astronomy](/philippine-astronomy/) - _Philippine Astronomy Magazine_, my **Mini Project 1**.
 
-* [cyberhomies](/cyberhomies/) - _Cyber Homies—Creative Web Developers_, our Group 4 **miniproject2**.
+* [cyberhomies](/cyberhomies/) - _Cyber Homies—Creative Web Developers_, our Group 4 **Mini Project 2**.
 
-* [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 **capstone project**.
+* [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 **Capstone Project**.
 
 * [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a personal project.
 
 * [gg-tournament](/gg-tournament/) - _GG Tournament_, a personal project.
 
-* [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **project portfolio**.
+* [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
 
 * [thoughts](/thoughts/) - Some random thoughts.
 
