@@ -21,5 +21,3 @@ It contains the following project folders:
 * [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
 
 * [thoughts](/thoughts/) - Some random thoughts.
-
-
