@@ -14,9 +14,9 @@ It contains the following project folders:
 
 * [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 **Capstone Project**.
 
-* [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a personal project.
+* [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a musical band (personal project).
 
-* [gg-tournament](/gg-tournament/) - _GG Tournament_, a personal project.
+* [gg-tournament](/gg-tournament/) - _GG Tournament_, an HTML/JavaScript app (personal project).
 
 * [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
 
