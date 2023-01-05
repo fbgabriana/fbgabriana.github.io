@@ -18,8 +18,9 @@ class HTMLTemplate {
 	}
 }
 
-window.addEventListener("DOMContentLoaded", event => {
+if (typeof window === "object") window.addEventListener("DOMContentLoaded", event => {
 	let template = new HTMLTemplate("template.html");
 	template.selector = "#content";
 	template.loadContent();
 });
+

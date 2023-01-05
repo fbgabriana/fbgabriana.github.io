@@ -2,7 +2,7 @@
 
 # Bamm's KodeGo Repository
 
-This is my public repository for development during the KodeGo bootcamp.
+This page shows my [https://github.com/fbgabriana/](public repository) for development during the KodeGo bootcamp.
 
 It contains the following project folders:
 
