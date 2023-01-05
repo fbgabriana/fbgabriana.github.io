@@ -24,4 +24,4 @@ It contains the following project folders:
 
 * [thoughts](/thoughts/) - Some random thoughts.
 
-You can check out my [source code](https://github.com/fbgabriana/).
+You may check out my [source code](https://github.com/fbgabriana/).
