@@ -2,7 +2,7 @@
 
 # Bamm's KodeGo Repository
 
-This is my [public repository](https://github.com/fbgabriana/) for development during the KodeGo bootcamp.
+This is my public repository for development during the KodeGo bootcamp.
 
 It contains the following project folders:
 
@@ -18,6 +18,10 @@ It contains the following project folders:
 
 * [gg-tournament](/gg-tournament/) - _GG Tournament_, an HTML/JavaScript app (personal project).
 
+* [localserver](/localserver/) - _Local Server_, a development tool (personal project).
+
 * [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
 
 * [thoughts](/thoughts/) - Some random thoughts.
+
+You can check out my [source code](https://github.com/fbgabriana/).
