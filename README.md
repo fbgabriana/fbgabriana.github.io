@@ -18,7 +18,7 @@ It contains the following project folders:
 
 * [gg-tournament](/gg-tournament/) - _GG Tournament_, an HTML/JavaScript app (personal project).
 
-* [localserver](/localserver/) - _Local Server_, a development tool (personal project).
+* [localserver](/localserver/) - a personal development tool.
 
 * [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
 
