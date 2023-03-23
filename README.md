@@ -6,13 +6,11 @@ This is my public repository for development during the KodeGo bootcamp.
 
 It contains the following project folders:
 
-* [proposals](/proposals/) - My KodeGo project proposals.
+* [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 **Capstone Project**.
 
 * [philippine-astronomy](/philippine-astronomy/) - _Philippine Astronomy Magazine_, my **Mini Project 1**.
 
 * [cyberhomies](/cyberhomies/) - _Cyber Homies—Creative Web Developers_, our Group 4 **Mini Project 2**.
-
-* [brgykodego](/brgykodego/) - _Barangay KodeGo_, our Group 4 **Capstone Project**.
 
 * [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a musical band (personal project).
 
@@ -21,6 +19,8 @@ It contains the following project folders:
 * [localserver](/localserver/) - a personal development tool.
 
 * [portfolio](/portfolio/) - _{My:Web.Projects}_, my web development **Project Portfolio**.
+
+* [proposals](/proposals/) - My KodeGo project proposals.
 
 * [thoughts](/thoughts/) - Some random thoughts.
 
