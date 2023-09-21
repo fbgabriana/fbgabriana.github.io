@@ -14,6 +14,8 @@ It contains the following project folders:
 
 * [harmonicmeans](/harmonicmeans/) - _Harmonic Means_, a musical band (personal project).
 
+* [planetweight](/planetweight/) - _Age and weight on each planet_, an HTML/JavaScript app (personal project).
+
 * [gg-tournament](/gg-tournament/) - _GG Tournament_, an HTML/JavaScript app (personal project).
 
 * [localserver](/localserver/) - a personal development tool.
